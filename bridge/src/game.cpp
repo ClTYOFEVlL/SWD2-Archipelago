@@ -38,6 +38,10 @@ const Build kSteam = {
     .Localize = 0x30BE00,
     .ToolsScreenMode = 0x168430,
     .ToolsScreenRefresh = 0x16C680,
+    .SetHealth = 0x1F2360,
+    .DeathEventInit = 0x165410,
+    .DeathEventSend = 0x167180,
+    .SelfDestruct = 0x166490,
 
     .DeathThreshold = 0x537268,
     .UpgradeDefs = 0x622948,
@@ -72,6 +76,10 @@ const Build kGog = {
     .Localize = 0x30D290,
     .ToolsScreenMode = 0x168230,
     .ToolsScreenRefresh = 0x16C480,
+    .SetHealth = 0x1F1B90,
+    .DeathEventInit = 0x165220,
+    .DeathEventSend = 0x166F80,
+    .SelfDestruct = 0x166290,
 
     .DeathThreshold = 0x534DF8,
     .UpgradeDefs = 0x61CFB0,
@@ -90,6 +98,7 @@ const Build* const kBuilds[] = {&kSteam, &kGog};
 // The Simulators object that Simulators::Update receives
 const uintptr_t kSimulatorsGame = 0xC;  // points at an object with the Game at +4
 const uintptr_t kSimulatorsPlayer = 0x20;  // the PlayerSimulator
+const uintptr_t kSimulatorsHealth = 0x48;  // the HealthSimulator
 const uintptr_t kSimulatorsPickup = 0x6C;  // the PickupSimulator
 
 // The Game object
@@ -126,6 +135,11 @@ const uintptr_t kEntityPosition = 0x30;
 const uintptr_t kPlayerHealth = 0x14;  // the player component's Health
 const uintptr_t kHealthPoints = 0x10;  // a float
 
+// The event that starts the player's death
+const size_t kDeathEventSize = 0x68;
+const uintptr_t kDeathEventSelfDestruct = 0;  // a bool
+const uintptr_t kDeathEventKiller = 4;  // an entity id
+
 // Each function's first bytes, the same in both builds, up to its first absolute address (those get relocated)
 struct Prologue {
     uintptr_t offset;
@@ -158,6 +172,11 @@ bool ProloguesMatch(const Build& build, std::string& why)
         {build.ToolsScreenMode, "ToolsScreen mode",
          {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x83, 0xEC, 0x0C, 0x8B, 0x45, 0x08, 0x53, 0x56, 0x8B, 0xF1}, 16},
         {build.ToolsScreenRefresh, "ToolsScreen refresh", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
+        {build.SetHealth, "SetHealth", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
+        {build.DeathEventInit, "DeathEvent init", {0x0F, 0x57, 0xC0, 0xF3, 0x0F, 0x10, 0x0D}, 7},
+        {build.DeathEventSend, "DeathEvent send", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
+        {build.SelfDestruct, "Self-Destruct",
+         {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x83, 0xEC, 0x6C, 0x83, 0x7D, 0x08, 0x00, 0x53, 0x56, 0x57}, 16},
     };
 
     for (const Prologue& prologue : prologues) {
@@ -180,6 +199,7 @@ typedef uintptr_t(__fastcall* FindCollectibleFn)(const char** name);
 typedef void(__stdcall* GiveCollectibleFn)(uintptr_t pickupSim, uintptr_t definition, const float* pos);
 typedef void(__stdcall* BannerShowFn)(uintptr_t bannerUI, const char* key, const char* headerId, const char* headerArg,
                                       const char* textId, const char* textArg, const char* icon);
+typedef void(__stdcall* SetHealthFn)(uintptr_t healthSim, uint32_t entity, float health);
 
 // A game function at an offset, as a pointer of the right type
 template <typename T>
@@ -258,6 +278,28 @@ bool PlayerPosition(const Frame& frame, float pos[2])
     return false;
 }
 
+// FindPlayerComponent takes the entity system in eax and the entity id on the stack, and pops it (ret 4). It returns
+// 0 when the player doesn't exist or is being destroyed
+bool PlayerHealth(const Frame& frame, float& health)
+{
+    void* fn = reinterpret_cast<void*>(g_base + g_build->FindPlayerComponent);
+    uint32_t entities = frame.game + kGameEntities;
+    uint32_t id = ReadU32(frame.game + kGamePlayerId);
+    uint32_t component = 0;
+
+    __asm {
+        push id
+        mov eax, entities
+        call fn
+        mov component, eax
+    }
+
+    if (!component) return false;
+
+    health = ReadF32(ReadU32(component + kPlayerHealth) + kHealthPoints);
+    return true;
+}
+
 }  // namespace
 
 bool Init(std::string& why)
@@ -295,13 +337,14 @@ Frame FrameOf(uintptr_t simulators)
     frame.game = ReadU32(ReadU32(simulators + kSimulatorsGame) + 4);
     frame.playerSim = ReadU32(simulators + kSimulatorsPlayer);
     frame.pickupSim = ReadU32(simulators + kSimulatorsPickup);
+    frame.healthSim = ReadU32(simulators + kSimulatorsHealth);
     frame.profile = frame.game ? ReadU32(frame.game + kGameProfile) : 0;
     return frame;
 }
 
 bool Frame::Valid() const
 {
-    return game && profile && playerSim && pickupSim && ReadU32(playerSim + kPlayerSimGame) == game;
+    return game && profile && playerSim && pickupSim && healthSim && ReadU32(playerSim + kPlayerSimGame) == game;
 }
 
 const char* Intern(const char* s)
@@ -309,25 +352,44 @@ const char* Intern(const char* s)
     return Fn<InternFn>(g_build->Intern)(s);
 }
 
-// FindPlayerComponent takes the entity system in eax and the entity id on the stack, and pops it (ret 4). It returns
-// 0 when the player doesn't exist or is being destroyed
 bool PlayerAlive(const Frame& frame)
 {
-    void* fn = reinterpret_cast<void*>(g_base + g_build->FindPlayerComponent);
-    uint32_t entities = frame.game + kGameEntities;
-    uint32_t id = ReadU32(frame.game + kGamePlayerId);
-    uint32_t component = 0;
+    float health;
+    return PlayerHealth(frame, health) && health > ReadF32(g_base + g_build->DeathThreshold);
+}
+
+bool PlayerDead(const Frame& frame)
+{
+    float health;
+    return PlayerHealth(frame, health) && health <= ReadF32(g_base + g_build->DeathThreshold);
+}
+
+// Same as the pause menus Self-Destruct
+void KillPlayer(const Frame& frame)
+{
+    uint32_t player = ReadU32(frame.game + kGamePlayerId);
+    Fn<SetHealthFn>(g_build->SetHealth)(frame.healthSim, player, 0.0f);
+
+    // The health alone doesn't kill, the death event does. Its init takes it in eax, its send in esi
+    uint8_t event[kDeathEventSize];
+    uint8_t* at = event;
+    void* init = reinterpret_cast<void*>(g_base + g_build->DeathEventInit);
+    void* send = reinterpret_cast<void*>(g_base + g_build->DeathEventSend);
 
     __asm {
-        push id
-        mov eax, entities
-        call fn
-        mov component, eax
+        mov eax, at
+        call init
     }
 
-    if (!component) return false;
+    event[kDeathEventSelfDestruct] = 1;
+    *reinterpret_cast<uint32_t*>(event + kDeathEventKiller) = player;
 
-    return ReadF32(ReadU32(component + kPlayerHealth) + kHealthPoints) > ReadF32(g_base + g_build->DeathThreshold);
+    __asm {
+        push esi
+        mov esi, at
+        call send
+        pop esi
+    }
 }
 
 double GameTime(uintptr_t profile)

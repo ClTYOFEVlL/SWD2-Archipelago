@@ -7,7 +7,7 @@ from . import texts
 from .patcher.flags import GOAL_FLAG, shop_flag
 
 PORT = 23850  # the bridge listens on 127.0.0.1 only
-PROTOCOL_VERSION = 1  # the bridge names its version in its hello
+PROTOCOL_VERSION = 2  # the bridge names its version in its hello
 
 ITEMS_BY_ID = {BASE_ID + item.id: item for item in ITEMS}
 
@@ -102,6 +102,10 @@ def items_message(grant_list: list[dict], banners: list[tuple[str, str]], start:
         for grant, (header, text) in zip(grant_list[start:], banners[start:])
     ]
     return {"type": "items", "start": start, "shown": shown, "items": items}
+
+
+def kill_message() -> dict:
+    return {"type": "kill"}
 
 
 def banner_message(header: str, text: str, icon: str = "") -> dict:

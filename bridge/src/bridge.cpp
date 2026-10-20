@@ -66,6 +66,7 @@ bool g_slotConnected = false;  // the connected client has said which slot it pl
 std::vector<Item> g_items;  // every item that slot has received, in order
 int g_shown = 0;  // items below this index were shown before, so they're given back silently
 std::deque<Banner> g_banners;
+bool g_kill = false;  // a DeathLink death came in since the last frame
 
 // Flags that scripts set during the last frame, applied at the start of this one
 std::vector<std::pair<std::string, int>> g_heldFlags;
@@ -77,6 +78,9 @@ bool g_reportAll = true;
 std::map<std::string, int, std::less<>> g_reportedFlags;
 std::set<std::string> g_reportedTeleporters;
 std::map<std::string, int> g_reportedLists;
+
+bool g_wasDead = false;
+bool g_quietDeath = false;  // the next death is a Self-Destruct or a DeathLink one, which isn't sent
 
 uintptr_t g_profile = 0;
 double g_lastGameTime = -1;
@@ -180,6 +184,8 @@ void HandleMessages()
                 OnPrices(message);
             else if (type == "banner")
                 OnBanner(message);
+            else if (type == "kill")
+                g_kill = true;
             else
                 Log("unknown message type '%s'", type.c_str());
         } catch (const json::exception& error) {
@@ -351,11 +357,37 @@ void ReportChecks(const game::Frame& frame)
     g_reportAll = false;
 }
 
+void HandleDeaths(const game::Frame& frame, bool ours, bool kill)
+{
+    bool dead = game::PlayerDead(frame);
+    if (dead && !g_wasDead && !g_quietDeath && ours && g_slotConnected) {
+        net::Send(json{{"type", "death"}}.dump());
+        Log("the player died");
+    }
+
+    // A Self-Destruct or a DeathLink death shows in the first frame after it
+    g_wasDead = dead;
+    g_quietDeath = false;
+
+    if (!kill) return;
+
+    if (ours && g_slotConnected && game::PlayerAlive(frame)) {
+        game::KillPlayer(frame);
+        g_quietDeath = true;
+        Log("DeathLink: the player is killed");
+    } else {
+        Log("DeathLink: death dropped");
+    }
+}
+
 }  // namespace
 
 void OnFrameStart(uintptr_t simulators)
 {
     HandleMessages();
+
+    bool kill = g_kill;
+    g_kill = false;
 
     game::Frame frame = game::FrameOf(simulators);
     if (!frame.Valid()) return;
@@ -384,6 +416,8 @@ void OnFrameStart(uintptr_t simulators)
         if (ours && g_slotConnected)
             ReportChecks(frame);
     }
+
+    HandleDeaths(frame, ours, kill);
 
     // Nothing changes while the game is paused or unfocused, or while the player is dead: the game ignores most
     // changes then, and the save is about to roll back
@@ -415,6 +449,11 @@ void OnScriptFlag(const char* id, int tier)
 bool MuteGameBanners()
 {
     return g_muted;
+}
+
+void OnSelfDestruct()
+{
+    g_quietDeath = true;
 }
 
 }  // namespace bridge

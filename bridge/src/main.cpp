@@ -13,7 +13,7 @@ bool LoadRealVersionDll();  // version_proxy.cpp
 
 namespace {
 
-const int kProtocolVersion = 1;  // sent in the hello message: the client refuses a bridge it doesn't know
+const int kProtocolVersion = 2;  // sent in the hello message, the client refuses a bridge it doesn't know
 
 uintptr_t g_exeStart = 0;
 uintptr_t g_exeEnd = 0;

@@ -12,4 +12,7 @@ void OnScriptFlag(const char* id, int tier);
 // True while the bridge gives an item, so the game's own banner is dropped
 bool MuteGameBanners();
 
+// The player chose to Self-Destruct, a death DeathLink doesn't send
+void OnSelfDestruct();
+
 }  // namespace bridge

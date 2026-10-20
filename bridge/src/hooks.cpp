@@ -90,6 +90,18 @@ void __stdcall BannerShow(void* ui, const char* key, const char* headerId, const
         g_bannerShow(ui, key, headerId, headerArg, textId, textArg, icon);
 }
 
+// The answer to the pause menu's Self-Destruct question, 0 for yes. Yes sets the player's health to 0
+typedef void(__thiscall* SelfDestructFn)(void* menu, int button);
+SelfDestructFn g_selfDestruct;
+
+void __fastcall SelfDestruct(void* menu, void*, int button)
+{
+    if (button == 0)
+        bridge::OnSelfDestruct();
+
+    g_selfDestruct(menu, button);
+}
+
 struct Hook {
     uintptr_t offset;
     void* detour;
@@ -114,6 +126,7 @@ bool Install(std::string& why)
         MakeHook(game::g_build->Localize, &Localize, &g_localize, "Localize"),
         MakeHook(game::g_build->GiveBlueprint, &GiveBlueprint, &g_giveBlueprint, "GiveBlueprint"),
         MakeHook(game::g_build->BannerShow, &BannerShow, &g_bannerShow, "BannerUI::Show"),
+        MakeHook(game::g_build->SelfDestruct, &SelfDestruct, &g_selfDestruct, "Self-Destruct"),
     };
 
     if (MH_Initialize() != MH_OK) {

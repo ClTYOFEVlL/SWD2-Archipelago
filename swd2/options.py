@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 from Options import (
     Choice,
+    DeathLink,
     DefaultOnToggle,
     NamedRange,
     OptionGroup,
@@ -102,6 +103,7 @@ class CogAmount(Range):
 
 @dataclass
 class SWD2Options(PerGameCommonOptions):
+    death_link: DeathLink
     logic_difficulty: LogicDifficulty
     tricks: Tricks
     shop_price_percent: ShopPricePercent

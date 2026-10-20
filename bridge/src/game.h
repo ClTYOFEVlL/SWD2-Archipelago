@@ -30,6 +30,10 @@ struct Build {
     uintptr_t Localize;  // the text lookup: text id -> text
     uintptr_t ToolsScreenMode;  // the workbench screen switches between upgrades and cog mods
     uintptr_t ToolsScreenRefresh;
+    uintptr_t SetHealth;
+    uintptr_t DeathEventInit;
+    uintptr_t DeathEventSend;  // to its listeners, which start the death
+    uintptr_t SelfDestruct;  // the pause menu's Self-Destruct, once its confirmation is answered
 
     // Data in the exe
     uintptr_t DeathThreshold;  // a float, the player is dead below it
@@ -60,6 +64,7 @@ struct Frame {
     uintptr_t profile = 0;
     uintptr_t playerSim = 0;
     uintptr_t pickupSim = 0;
+    uintptr_t healthSim = 0;
 
     bool Valid() const;
 };
@@ -68,8 +73,11 @@ Frame FrameOf(uintptr_t simulators);
 // The engine's id for a string
 const char* Intern(const char* s);
 
-// False while the player is dead, and while there's no player (during level loads)
+// Both false while there's no player (during level loads)
 bool PlayerAlive(const Frame& frame);
+bool PlayerDead(const Frame& frame);
+
+void KillPlayer(const Frame& frame);
 
 // Stands still while the game is paused or its window unfocused
 double GameTime(uintptr_t profile);

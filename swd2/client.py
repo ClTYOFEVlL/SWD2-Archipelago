@@ -52,6 +52,17 @@ class SWD2CommandProcessor(ClientCommandProcessor):
         game_copy.launch()
         return True
 
+    def _cmd_deathlink(self) -> bool:
+        """Turn DeathLink on or off until the client closes."""
+        if self.ctx.slot_data is None:
+            self.output("Connect to your room first.")
+            return False
+
+        death_link = "DeathLink" not in self.ctx.tags
+        Utils.async_start(self.ctx.update_death_link(death_link), name="DeathLink")
+        self.output(f"DeathLink is {'on' if death_link else 'off'}.")
+        return True
+
 
 class SWD2Context(CommonContext):
     game = GAME
@@ -67,6 +78,7 @@ class SWD2Context(CommonContext):
         self.shown = 0
         self.save_report: dict | None = None  # the bridge's last "save" report
         self.bridge_busy = False  # the bridge said another client is connected
+        self.death_link_slot: str | None = None  # the slot whose YAML setting DeathLink took
 
     def make_gui(self):
         ui = super().make_gui()
@@ -108,6 +120,12 @@ class SWD2Context(CommonContext):
             self.shown = Utils.persistent_load().get(SHOWN_STORE, {}).get(self.shown_key, 0)
             Utils.async_start(self.scout_items_on_offer(), name="scout")
 
+            # Once per slot, so a /deathlink lasts through reconnects. A seed from 0.1.0 has no such option
+            if self.death_link_slot != self.shown_key:
+                self.death_link_slot = self.shown_key
+                death_link = self.slot_data.get("death_link", False)
+                Utils.async_start(self.update_death_link(death_link), name="DeathLink")
+
             if self.game_ready:
                 self.send_slot()
 
@@ -141,6 +159,12 @@ class SWD2Context(CommonContext):
             self.location_names.lookup_in_slot(item.location, self.slot),
         )
         self.bridge.send(protocol.banner_message(header, text))
+
+    def on_deathlink(self, data: dict):
+        super().on_deathlink(data)
+
+        if self.game_ready:
+            self.bridge.send(protocol.kill_message())
 
     async def scout_items_on_offer(self):
         show = self.slot_data["options"]["show_shop_items"]
@@ -205,6 +229,8 @@ class SWD2Context(CommonContext):
             await self.on_checks(message)
         elif kind == "busy":
             self.on_busy()
+        elif kind == "death" and "DeathLink" in self.tags:
+            await self.send_death()
 
     def on_hello(self, message: dict):
         self.bridge_busy = False

@@ -166,6 +166,7 @@ class SWD2World(World):
             "base_id": BASE_ID,
             "shop_prices": prices_by_location,
             "money_bundles": dollars_by_bundle,
+            "death_link": bool(self.options.death_link),
         }
 
     @staticmethod
