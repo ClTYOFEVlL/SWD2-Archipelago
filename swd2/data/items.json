@@ -1,0 +1,950 @@
+{
+ "about": "GENERATED FILE: any changes made here are overwritten the next time it is built. This file holds the item table of the SteamWorld Dig 2 world. It is generated from the game's own data files and the world's logic.",
+ "items": [
+  {
+   "id": 1,
+   "name": "Progressive Pickaxe",
+   "group": "tool",
+   "count": 7,
+   "logic": "Pickaxe",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "pickaxe",
+    "first_tier": 2
+   }
+  },
+  {
+   "id": 2,
+   "name": "Progressive Backpack",
+   "group": "tool",
+   "count": 9,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "backpack",
+    "first_tier": 2
+   }
+  },
+  {
+   "id": 3,
+   "name": "Progressive Lamp",
+   "group": "tool",
+   "count": 7,
+   "logic": "Lamp",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "lamp",
+    "first_tier": 2
+   }
+  },
+  {
+   "id": 4,
+   "name": "Progressive Armor",
+   "group": "tool",
+   "count": 7,
+   "logic": "Armor",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "armor",
+    "first_tier": 2
+   }
+  },
+  {
+   "id": 5,
+   "name": "Progressive Water Tank",
+   "group": "tool",
+   "count": 4,
+   "logic": "Tank",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "watertank",
+    "first_tier": 2
+   }
+  },
+  {
+   "id": 6,
+   "name": "Progressive Pressure Bomb",
+   "group": "tool",
+   "count": 4,
+   "logic": "Bomb",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "pressurebomb",
+    "first_tier": 1
+   }
+  },
+  {
+   "id": 7,
+   "name": "Progressive Jackhammer",
+   "group": "tool",
+   "count": 4,
+   "logic": "Jackhammer",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "jackhammer",
+    "first_tier": 1
+   }
+  },
+  {
+   "id": 8,
+   "name": "Progressive Jet Engine",
+   "group": "tool",
+   "count": 3,
+   "logic": "Jet",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "steampack",
+    "first_tier": 1
+   }
+  },
+  {
+   "id": 9,
+   "name": "Hook Shot",
+   "group": "tool",
+   "count": 1,
+   "logic": "Hook",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "hook",
+    "first_tier": 1
+   }
+  },
+  {
+   "id": 10,
+   "name": "Sprint Hydraulics",
+   "group": "tool",
+   "count": 1,
+   "logic": "Sprint",
+   "class": "useful",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "run_boots",
+    "first_tier": 1
+   }
+  },
+  {
+   "id": 101,
+   "name": "Grenade Launcher",
+   "group": "blueprint",
+   "count": 1,
+   "logic": "Launcher",
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "pressurebomb.launcher"
+   }
+  },
+  {
+   "id": 102,
+   "name": "Long-Range Grappler",
+   "group": "blueprint",
+   "count": 1,
+   "logic": "Grappler",
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "hook.long_hook"
+   }
+  },
+  {
+   "id": 103,
+   "name": "Ignition Axe",
+   "group": "blueprint",
+   "count": 1,
+   "logic": "Axe",
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "pickaxe.fire"
+   }
+  },
+  {
+   "id": 104,
+   "name": "Ultra Composite Armor",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "armor.damage_reduction"
+   }
+  },
+  {
+   "id": 105,
+   "name": "Ramjet Vigor",
+   "group": "blueprint",
+   "count": 1,
+   "logic": "Ramjet",
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "steampack.slayer"
+   }
+  },
+  {
+   "id": 106,
+   "name": "ThreeForce Grenade",
+   "group": "blueprint",
+   "count": 1,
+   "logic": "ThreeForce",
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "pressurebomb.launcher_triple"
+   }
+  },
+  {
+   "id": 107,
+   "name": "Deathplosions",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "filler",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "fate.explosions"
+   }
+  },
+  {
+   "id": 108,
+   "name": "Thrillseeker's Tale",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "filler",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "fate.xpx2"
+   }
+  },
+  {
+   "id": 109,
+   "name": "Blood Quest",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "filler",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "fate.bloodquest"
+   }
+  },
+  {
+   "id": 110,
+   "name": "Gaze of Odin",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "minimap.hp_bar"
+   }
+  },
+  {
+   "id": 111,
+   "name": "Criss-Cross Combustion",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "fate.resource_exploder"
+   }
+  },
+  {
+   "id": 112,
+   "name": "Core Diversity",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "armor.rainbow_orbs"
+   }
+  },
+  {
+   "id": 113,
+   "name": "Pocket of Freyr",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "backpack.extra_ore"
+   }
+  },
+  {
+   "id": 114,
+   "name": "More-Hoarder's Map",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "minimap.mineral_detector"
+   }
+  },
+  {
+   "id": 115,
+   "name": "Sharpened Edge",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "pickaxe.enemy_damage_01"
+   }
+  },
+  {
+   "id": 116,
+   "name": "Aquatic Regenesis",
+   "group": "blueprint",
+   "count": 1,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "watertank.health_regen"
+   }
+  },
+  {
+   "id": 117,
+   "name": "Sigillum Caelum et Infernum",
+   "group": "blueprint",
+   "count": 1,
+   "logic": "Sigil",
+   "class": "useful",
+   "grant": {
+    "kind": "blueprint",
+    "upgrade": "fate.hell_cave_sigil"
+   }
+  },
+  {
+   "id": 201,
+   "name": "Upgrade Cog",
+   "group": "cog",
+   "count": 84,
+   "logic": "Cogs",
+   "class": "useful",
+   "grant": {
+    "kind": "cog",
+    "amount": 1
+   }
+  },
+  {
+   "id": 301,
+   "name": "Amulet of Baal Ahdahli-Dihla",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "amulet"
+   }
+  },
+  {
+   "id": 302,
+   "name": "Bowl of Cereal",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "cereal"
+   }
+  },
+  {
+   "id": 303,
+   "name": "Rattus norvegicus",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "dead_rat"
+   }
+  },
+  {
+   "id": 304,
+   "name": "Fertilizer",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "fertilizer"
+   }
+  },
+  {
+   "id": 305,
+   "name": "Scented Candle",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "scented_candle"
+   }
+  },
+  {
+   "id": 306,
+   "name": "Schrödinger's What?",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "wrapped_gift"
+   }
+  },
+  {
+   "id": 307,
+   "name": "Holy Toast",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "holy_toast"
+   }
+  },
+  {
+   "id": 308,
+   "name": "Lime Snowman",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "lime_snowman"
+   }
+  },
+  {
+   "id": 309,
+   "name": "Inflatable Friend",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "inflatable_friend"
+   }
+  },
+  {
+   "id": 310,
+   "name": "Dr. Groda Children's Book",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "book_groda"
+   }
+  },
+  {
+   "id": 311,
+   "name": "Birdie Num Num Seeds",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "birdie_seeds"
+   }
+  },
+  {
+   "id": 312,
+   "name": "Acupuncture Straw Doll",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "straw_doll"
+   }
+  },
+  {
+   "id": 313,
+   "name": "Glowing Goo",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "glowing_goo"
+   }
+  },
+  {
+   "id": 314,
+   "name": "Photo of a Missing Love",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "lost_penguin"
+   }
+  },
+  {
+   "id": 315,
+   "name": "Old Unopened Invitations",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "old_invitations"
+   }
+  },
+  {
+   "id": 316,
+   "name": "Sacred Documentation",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "sacred_documentation"
+   }
+  },
+  {
+   "id": 317,
+   "name": "Hallo Katze Chainsaw",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "chainsaw"
+   }
+  },
+  {
+   "id": 318,
+   "name": "Toy Rocket",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "toy_rocket"
+   }
+  },
+  {
+   "id": 319,
+   "name": "Monster Face Plushy",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "monster_plushy"
+   }
+  },
+  {
+   "id": 320,
+   "name": "Ginsu Shark Tooth",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "shark_tooth"
+   }
+  },
+  {
+   "id": 321,
+   "name": "Bag of Rubber Chickens",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "rubber_chickens"
+   }
+  },
+  {
+   "id": 322,
+   "name": "Cake",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "cake"
+   }
+  },
+  {
+   "id": 323,
+   "name": "Preserved Banana Peels",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "banana_peels"
+   }
+  },
+  {
+   "id": 324,
+   "name": "Theremin",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "theremin"
+   }
+  },
+  {
+   "id": 325,
+   "name": "Weird-Looking Stone",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "weird_stone"
+   }
+  },
+  {
+   "id": 326,
+   "name": "Ninja Cat Action Figure",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "action_figure"
+   }
+  },
+  {
+   "id": 327,
+   "name": "Fossil",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "fossil"
+   }
+  },
+  {
+   "id": 328,
+   "name": "Spelunky Diary",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "diary"
+   }
+  },
+  {
+   "id": 329,
+   "name": "Fifty Shades of Cliché",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "fifty"
+   }
+  },
+  {
+   "id": 330,
+   "name": "Wagon Wheel",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "wagon_wheel"
+   }
+  },
+  {
+   "id": 331,
+   "name": "Rocket Black Box",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "black_box"
+   }
+  },
+  {
+   "id": 332,
+   "name": "Piece of Red Cloth",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "red_cloth"
+   }
+  },
+  {
+   "id": 333,
+   "name": "Doom Cult To-Do List",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "cult_list"
+   }
+  },
+  {
+   "id": 334,
+   "name": "Amiigo Figurine",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "amiigo"
+   }
+  },
+  {
+   "id": 335,
+   "name": "Fire Token",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "stone_tablet"
+   }
+  },
+  {
+   "id": 336,
+   "name": "Radiant Orchid",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "orchid"
+   }
+  },
+  {
+   "id": 337,
+   "name": "INCREA Product Manual",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "manual"
+   }
+  },
+  {
+   "id": 338,
+   "name": "Yellow Pills",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "pills"
+   }
+  },
+  {
+   "id": 339,
+   "name": "Still life, still hope",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "painting"
+   }
+  },
+  {
+   "id": 340,
+   "name": "Rosie's Dumbbells",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "dumbells"
+   }
+  },
+  {
+   "id": 341,
+   "name": "Six-Pack o' Moon Juice",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "six_pack"
+   }
+  },
+  {
+   "id": 342,
+   "name": "Rejected Building Plans",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "building_plans"
+   }
+  },
+  {
+   "id": 343,
+   "name": "Proof of Completion",
+   "group": "artifact",
+   "count": 1,
+   "logic": "Artifacts",
+   "class": "progression",
+   "grant": {
+    "kind": "artifact",
+    "collectible": "completion_proof"
+   }
+  },
+  {
+   "id": 401,
+   "name": "Small Money Bundle",
+   "group": "money",
+   "count": 0,
+   "logic": null,
+   "class": "filler",
+   "weight": 50,
+   "grant": {
+    "kind": "money",
+    "vanilla": 100
+   }
+  },
+  {
+   "id": 402,
+   "name": "Medium Money Bundle",
+   "group": "money",
+   "count": 0,
+   "logic": null,
+   "class": "filler",
+   "weight": 35,
+   "grant": {
+    "kind": "money",
+    "vanilla": 250
+   }
+  },
+  {
+   "id": 403,
+   "name": "Large Money Bundle",
+   "group": "money",
+   "count": 0,
+   "logic": null,
+   "class": "filler",
+   "weight": 15,
+   "grant": {
+    "kind": "money",
+    "vanilla": 500
+   }
+  }
+ ],
+ "mods": {
+  "CruiseControl": {
+   "upgrade": "steampack.feather_fall",
+   "name": "Cruise Control",
+   "needs": "Jet",
+   "count": 1,
+   "cogs": 1
+  },
+  "Afterburner": {
+   "upgrade": "steampack.boost",
+   "name": "Maverick Afterburner",
+   "needs": "Jet",
+   "count": 2,
+   "cogs": 2
+  },
+  "AirCooling": {
+   "upgrade": "steampack.in_air_cooling",
+   "name": "Air Cooling",
+   "needs": "Jet",
+   "count": 3,
+   "cogs": 4
+  },
+  "SkyAssailant": {
+   "upgrade": "pressurebomb.air_bomb",
+   "name": "Sky Assailant",
+   "needs": "Bomb",
+   "count": 4,
+   "cogs": 3
+  },
+  "BusterShells": {
+   "upgrade": "pressurebomb.brickbreaker",
+   "name": "Buster Shells",
+   "needs": "Bomb",
+   "count": 3,
+   "cogs": 1
+  },
+  "SlipstreamJet": {
+   "upgrade": "jackhammer.push",
+   "name": "Slipstream Jet",
+   "needs": "Jackhammer",
+   "count": 3,
+   "cogs": 2
+  }
+ }
+}

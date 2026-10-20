@@ -1,0 +1,24 @@
+# Game files and anything derived from them
+*.impak
+*.irc2
+*.le
+*.z
+*.mdmp
+
+# Build output
+/build/
+/dist/
+*.apworld
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors
+.vscode/
