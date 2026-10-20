@@ -11,19 +11,81 @@
 
 namespace game {
 
+const Build* g_build = nullptr;
+
 namespace {
 
 uintptr_t g_base = 0;
 
-// The supported build: Steam build 2103185 of Dig2.exe (2017-09-08, never patched since)
-const char kSteamSha256[] = "4583a9b1ec614d23ea3503c97a89c0d6e36d88d3292203f409adc1f529d0b5e5";
+// Steam build 2103185 of Dig2.exe (2017-09-08)
+const Build kSteam = {
+    .name = "Steam",
+    .sha256 = "4583a9b1ec614d23ea3503c97a89c0d6e36d88d3292203f409adc1f529d0b5e5",
 
-// Data in the exe, as offsets from the module base
-const uintptr_t kDeathThreshold = 0x537268;  // a float: the player is dead below it
-const uintptr_t kUpgradeDefs = 0x622948;  // a vector of 8-byte entries, the definition pointer first
-const uintptr_t kPriceListDefs = 0x622150;  // the same, for price lists
-const uintptr_t kEntityTableIndex = 0x619860;
-const uintptr_t kEntityTableVtable = 0x508384;
+    .SimulatorsUpdate = 0x25C830,
+    .SetUpgradeNode = 0x253A60,
+    .SetUpgradeTier = 0x235760,
+    .PlayerUpgradesSet = 0x26CD80,
+    .GiveBlueprint = 0x2371F0,
+    .AddMoney = 0x236CB0,
+    .AddCogs = 0x237150,
+    .FindCollectible = 0x229B40,
+    .GiveCollectible = 0x228680,
+    .BannerShow = 0x2749F0,
+    .Intern = 0x38D160,
+    .FindPlayerComponent = 0x21BD80,
+    .PriceListCount = 0x269E40,
+    .Localize = 0x30BE00,
+    .ToolsScreenMode = 0x168430,
+    .ToolsScreenRefresh = 0x16C680,
+
+    .DeathThreshold = 0x537268,
+    .UpgradeDefs = 0x622948,
+    .PriceListDefs = 0x622150,
+    .EntityTableIndex = 0x619860,
+    .EntityTableVtable = 0x508384,
+
+    .ScreenMode = 0x140,
+    .ScreenCanBuy = 0x144,
+    .ScreenRows = 0x154,
+    .RowDefinition = 0x29C,
+};
+
+// GOG's 1.1 (2017-09-18) - the same code at other addresses
+const Build kGog = {
+    .name = "GOG",
+    .sha256 = "0814849a24fcbddebb63172372268a58a36aaf29d5489b19714b573b9cfcc7b9",
+
+    .SimulatorsUpdate = 0x25C250,
+    .SetUpgradeNode = 0x2534D0,
+    .SetUpgradeTier = 0x235210,
+    .PlayerUpgradesSet = 0x26C710,
+    .GiveBlueprint = 0x236CA0,
+    .AddMoney = 0x236760,
+    .AddCogs = 0x236C00,
+    .FindCollectible = 0x229750,
+    .GiveCollectible = 0x228220,
+    .BannerShow = 0x274570,
+    .Intern = 0x38F220,
+    .FindPlayerComponent = 0x21BAA0,
+    .PriceListCount = 0x2698C0,
+    .Localize = 0x30D290,
+    .ToolsScreenMode = 0x168230,
+    .ToolsScreenRefresh = 0x16C480,
+
+    .DeathThreshold = 0x534DF8,
+    .UpgradeDefs = 0x61CFB0,
+    .PriceListDefs = 0x61C7B8,
+    .EntityTableIndex = 0x613EE0,
+    .EntityTableVtable = 0x506394,
+
+    .ScreenMode = 0x148,
+    .ScreenCanBuy = 0x14C,
+    .ScreenRows = 0x15C,
+    .RowDefinition = 0x2A4,
+};
+
+const Build* const kBuilds[] = {&kSteam, &kGog};
 
 // The Simulators object that Simulators::Update receives
 const uintptr_t kSimulatorsGame = 0xC;  // points at an object with the Game at +4
@@ -64,36 +126,49 @@ const uintptr_t kEntityPosition = 0x30;
 const uintptr_t kPlayerHealth = 0x14;  // the player component's Health
 const uintptr_t kHealthPoints = 0x10;  // a float
 
-// Each function's first bytes in the supported build, up to its first absolute address (those get relocated)
+// Each function's first bytes, the same in both builds, up to its first absolute address (those get relocated)
 struct Prologue {
     uintptr_t offset;
     const char* name;
     unsigned char bytes[20];
     size_t size;
 };
-const Prologue kPrologues[] = {
-    {rva::SimulatorsUpdate, "Simulators::Update", {0x55, 0x8B, 0xEC, 0x53, 0x8B, 0x1D}, 6},
-    {rva::SetUpgradeNode, "SetUpgrade node", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
-    {rva::SetUpgradeTier, "SetUpgradeTier", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
-    {rva::PlayerUpgradesSet, "PlayerUpgrades::Set", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
-    {rva::GiveBlueprint, "GiveBlueprint",
-     {0x55, 0x8B, 0xEC, 0x83, 0xEC, 0x10, 0x53, 0x8B, 0x5D, 0x08, 0x56, 0x8B, 0x73, 0x14}, 14},
-    {rva::AddMoney, "AddMoney", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
-    {rva::AddCogs, "AddCogs",
-     {0x55, 0x8B, 0xEC, 0x8B, 0x47, 0x14, 0x8B, 0x88, 0x60, 0x02, 0x00, 0x00, 0x53, 0x56, 0x51}, 15},
-    {rva::FindCollectible, "FindCollectible", {0x55, 0x8B, 0xEC, 0x51, 0x83, 0x3D}, 6},
-    {rva::GiveCollectible, "GiveCollectible", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
-    {rva::BannerShow, "BannerUI::Show", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
-    {rva::Intern, "Intern", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
-    {rva::FindPlayerComponent, "FindPlayerComponent",
-     {0x55, 0x8B, 0xEC, 0x83, 0xEC, 0x08, 0x56, 0x8B, 0x75, 0x08, 0x57, 0x8B, 0xF8, 0x8B, 0x47, 0x04}, 16},
-    {rva::PriceListCount, "PriceListCount",
-     {0x55, 0x8B, 0xEC, 0x51, 0x56, 0x8B, 0xF0, 0x83, 0xBE, 0x1C, 0x01, 0x00, 0x00}, 13},
-    {rva::Localize, "Localize", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
-    {rva::ToolsScreenMode, "ToolsScreen mode",
-     {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x83, 0xEC, 0x0C, 0x8B, 0x45, 0x08, 0x53, 0x56, 0x8B, 0xF1}, 16},
-    {rva::ToolsScreenRefresh, "ToolsScreen refresh", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
-};
+
+bool ProloguesMatch(const Build& build, std::string& why)
+{
+    const Prologue prologues[] = {
+        {build.SimulatorsUpdate, "Simulators::Update", {0x55, 0x8B, 0xEC, 0x53, 0x8B, 0x1D}, 6},
+        {build.SetUpgradeNode, "SetUpgrade node", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
+        {build.SetUpgradeTier, "SetUpgradeTier", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
+        {build.PlayerUpgradesSet, "PlayerUpgrades::Set", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
+        {build.GiveBlueprint, "GiveBlueprint",
+         {0x55, 0x8B, 0xEC, 0x83, 0xEC, 0x10, 0x53, 0x8B, 0x5D, 0x08, 0x56, 0x8B, 0x73, 0x14}, 14},
+        {build.AddMoney, "AddMoney", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
+        {build.AddCogs, "AddCogs",
+         {0x55, 0x8B, 0xEC, 0x8B, 0x47, 0x14, 0x8B, 0x88, 0x60, 0x02, 0x00, 0x00, 0x53, 0x56, 0x51}, 15},
+        {build.FindCollectible, "FindCollectible", {0x55, 0x8B, 0xEC, 0x51, 0x83, 0x3D}, 6},
+        {build.GiveCollectible, "GiveCollectible", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
+        {build.BannerShow, "BannerUI::Show", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
+        {build.Intern, "Intern", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
+        {build.FindPlayerComponent, "FindPlayerComponent",
+         {0x55, 0x8B, 0xEC, 0x83, 0xEC, 0x08, 0x56, 0x8B, 0x75, 0x08, 0x57, 0x8B, 0xF8, 0x8B, 0x47, 0x04}, 16},
+        {build.PriceListCount, "PriceListCount",
+         {0x55, 0x8B, 0xEC, 0x51, 0x56, 0x8B, 0xF0, 0x83, 0xBE, 0x1C, 0x01, 0x00, 0x00}, 13},
+        {build.Localize, "Localize", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
+        {build.ToolsScreenMode, "ToolsScreen mode",
+         {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x83, 0xEC, 0x0C, 0x8B, 0x45, 0x08, 0x53, 0x56, 0x8B, 0xF1}, 16},
+        {build.ToolsScreenRefresh, "ToolsScreen refresh", {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x6A, 0xFF, 0x68}, 9},
+    };
+
+    for (const Prologue& prologue : prologues) {
+        if (memcmp(reinterpret_cast<const void*>(g_base + prologue.offset), prologue.bytes, prologue.size) != 0) {
+            why = std::string("unexpected code at ") + prologue.name;
+            return false;
+        }
+    }
+
+    return true;
+}
 
 // The game's calling conventions. __thiscall functions are called through a pointer of that type
 typedef const char*(__cdecl* InternFn)(const char* s);
@@ -155,7 +230,7 @@ uintptr_t TierOf(const char* id, int tier)
 uintptr_t FindCollectibleDef(const char* name)
 {
     const char* id = Intern(name);
-    return Fn<FindCollectibleFn>(rva::FindCollectible)(&id);
+    return Fn<FindCollectibleFn>(g_build->FindCollectible)(&id);
 }
 
 // The player's position (the middle of the feet), found in the entity table. Its nodes are chained in one list that
@@ -163,8 +238,8 @@ uintptr_t FindCollectibleDef(const char* name)
 bool PlayerPosition(const Frame& frame, float pos[2])
 {
     uintptr_t entities = frame.game + kGameEntities;
-    uintptr_t table = ReadU32(ReadU32(entities) + ReadU32(g_base + kEntityTableIndex) * kEntityTableStride);
-    if (ReadU32(table) != g_base + kEntityTableVtable) return false;
+    uintptr_t table = ReadU32(ReadU32(entities) + ReadU32(g_base + g_build->EntityTableIndex) * kEntityTableStride);
+    if (ReadU32(table) != g_base + g_build->EntityTableVtable) return false;
 
     uint32_t player = ReadU32(frame.game + kGamePlayerId);
     uintptr_t buckets = ReadU32(table + 4);
@@ -194,19 +269,18 @@ bool Init(std::string& why)
         why = "could not read Dig2.exe";
         return false;
     }
-    if (hash != kSteamSha256) {
-        why = "unsupported Dig2.exe (SHA-256 " + hash + "): only the Steam build is supported";
+    for (const Build* build : kBuilds)
+        if (hash == build->sha256)
+            g_build = build;
+
+    if (!g_build) {
+        why = "unsupported Dig2.exe (SHA-256 " + hash + "): only the Steam and GOG builds are supported";
         return false;
     }
 
-    for (const Prologue& prologue : kPrologues) {
-        if (memcmp(reinterpret_cast<const void*>(g_base + prologue.offset), prologue.bytes, prologue.size) != 0) {
-            why = std::string("unexpected code at ") + prologue.name;
-            return false;
-        }
-    }
+    if (!ProloguesMatch(*g_build, why)) return false;
 
-    Log("Dig2.exe is the Steam build; base %08X", static_cast<unsigned>(g_base));
+    Log("Dig2.exe is the %s build; base %08X", g_build->name, static_cast<unsigned>(g_base));
     return true;
 }
 
@@ -232,14 +306,14 @@ bool Frame::Valid() const
 
 const char* Intern(const char* s)
 {
-    return Fn<InternFn>(rva::Intern)(s);
+    return Fn<InternFn>(g_build->Intern)(s);
 }
 
 // FindPlayerComponent takes the entity system in eax and the entity id on the stack, and pops it (ret 4). It returns
 // 0 when the player doesn't exist or is being destroyed
 bool PlayerAlive(const Frame& frame)
 {
-    void* fn = reinterpret_cast<void*>(g_base + rva::FindPlayerComponent);
+    void* fn = reinterpret_cast<void*>(g_base + g_build->FindPlayerComponent);
     uint32_t entities = frame.game + kGameEntities;
     uint32_t id = ReadU32(frame.game + kGamePlayerId);
     uint32_t component = 0;
@@ -253,7 +327,7 @@ bool PlayerAlive(const Frame& frame)
 
     if (!component) return false;
 
-    return ReadF32(ReadU32(component + kPlayerHealth) + kHealthPoints) > ReadF32(g_base + kDeathThreshold);
+    return ReadF32(ReadU32(component + kPlayerHealth) + kHealthPoints) > ReadF32(g_base + g_build->DeathThreshold);
 }
 
 double GameTime(uintptr_t profile)
@@ -302,20 +376,20 @@ int TierIn(const std::vector<Upgrade>& table, const char* id)
 // shows no banner
 void SetUpgradeTier(const Frame& frame, const char* id, int tier, bool hideNew)
 {
-    Fn<SetUpgradeTierFn>(rva::SetUpgradeTier)(frame.playerSim, Intern(id), tier, hideNew ? 1 : 0);
+    Fn<SetUpgradeTierFn>(g_build->SetUpgradeTier)(frame.playerSim, Intern(id), tier, hideNew ? 1 : 0);
 }
 
 // The table write itself, PlayerUpgrades::Set. It refuses an id that isn't defined or a tier past the upgrade's last.
 // It doesn't rebuild the tools, so it's safe for flags at any point of a frame
 void SetFlag(uintptr_t profile, const char* id, int tier)
 {
-    Fn<PlayerUpgradesSetFn>(rva::PlayerUpgradesSet)(profile + kProfileUpgrades, Intern(id), tier, 1);
+    Fn<PlayerUpgradesSetFn>(g_build->PlayerUpgradesSet)(profile + kProfileUpgrades, Intern(id), tier, 1);
 }
 
 // Unlocks a blueprint (a cog mod), with or without the game's banner
 void GiveBlueprint(const Frame& frame, const char* id, bool banner)
 {
-    Fn<GiveBlueprintFn>(rva::GiveBlueprint)(frame.playerSim, Intern(id), banner ? 1 : 0);
+    Fn<GiveBlueprintFn>(g_build->GiveBlueprint)(frame.playerSim, Intern(id), banner ? 1 : 0);
 }
 
 // GiveCollectible adds the artifact unless it's owned already, with its "+1" text at a position (here the player's)
@@ -331,7 +405,7 @@ bool GiveArtifact(const Frame& frame, const char* collectible)
     float pos[2];
     if (!PlayerPosition(frame, pos)) return false;
 
-    Fn<GiveCollectibleFn>(rva::GiveCollectible)(frame.pickupSim, definition, pos);
+    Fn<GiveCollectibleFn>(g_build->GiveCollectible)(frame.pickupSim, definition, pos);
     return true;
 }
 
@@ -339,14 +413,14 @@ bool GiveArtifact(const Frame& frame, const char* collectible)
 // the player is dead
 void AddMoney(const Frame& frame, int amount, bool silent)
 {
-    Fn<AddMoneyFn>(rva::AddMoney)(frame.playerSim, amount, silent ? 0 : 3);
+    Fn<AddMoneyFn>(g_build->AddMoney)(frame.playerSim, amount, silent ? 0 : 3);
 }
 
 // AddCogs takes the PlayerSimulator in edi and (cogs, silent) on the stack, and pops them (ret 8). It shows the HUD's
 // cog counter unless silent
 void AddCogs(const Frame& frame, int amount, bool silent)
 {
-    void* fn = reinterpret_cast<void*>(g_base + rva::AddCogs);
+    void* fn = reinterpret_cast<void*>(g_base + g_build->AddCogs);
     uint32_t sim = frame.playerSim;
     uint32_t quiet = silent ? 1 : 0;
 
@@ -366,7 +440,7 @@ void ShowBanner(const Frame& frame, const char* header, const char* text, const 
 {
     static const char* key = Intern("banner_blueprint");
     static const char* plain = Intern("menu_map_no_secrets");
-    Fn<BannerShowFn>(rva::BannerShow)(ReadU32(frame.game + kGameBanners), key, plain, header, plain, text, icon);
+    Fn<BannerShowFn>(g_build->BannerShow)(ReadU32(frame.game + kGameBanners), key, plain, header, plain, text, icon);
 }
 
 void ReadTeleporters(uintptr_t profile, std::vector<std::string>& out)
@@ -386,7 +460,7 @@ void ReadTeleporters(uintptr_t profile, std::vector<std::string>& out)
 // PriceListCount takes the profile in eax and the list id on the stack, and pops it (ret 4)
 int PriceListCount(uintptr_t profile, const char* list)
 {
-    void* fn = reinterpret_cast<void*>(g_base + rva::PriceListCount);
+    void* fn = reinterpret_cast<void*>(g_base + g_build->PriceListCount);
     uint32_t p = profile;
     int count = 0;
 
@@ -407,7 +481,7 @@ int CartographerPaid(uintptr_t profile)
 
 uintptr_t FindUpgradeDef(const char* id)
 {
-    return FindDef(kUpgradeDefs, id);
+    return FindDef(g_build->UpgradeDefs, id);
 }
 
 const char* UpgradeIcon(const char* id, int tier)
@@ -433,7 +507,7 @@ bool SetUpgradePrice(const char* id, int tier, int price)
 
 bool SetPriceListPrice(const char* list, int index, int price)
 {
-    uintptr_t definition = FindDef(kPriceListDefs, list);
+    uintptr_t definition = FindDef(g_build->PriceListDefs, list);
     uintptr_t at = definition ? ReadU32(definition + kPriceListPrices) + 4 * index : 0;
     if (!definition || index < 0 || at >= ReadU32(definition + kPriceListPrices + 4)) return false;
 

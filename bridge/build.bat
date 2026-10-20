@@ -19,7 +19,7 @@ if not exist "%OUTPUT%" mkdir "%OUTPUT%"
 
 set "SOURCES=src\*.cpp %MINHOOK%\src\buffer.c %MINHOOK%\src\hook.c %MINHOOK%\src\trampoline.c %MINHOOK%\src\hde\hde32.c"
 set "INCLUDES=/I %MINHOOK%\include /I third_party"
-set "COMPILER_OPTIONS=/nologo /LD /O2 /MT /W3 /EHsc /std:c++17 /DWIN32_LEAN_AND_MEAN /DNOMINMAX"
+set "COMPILER_OPTIONS=/nologo /LD /O2 /MT /W3 /EHsc /std:c++20 /DWIN32_LEAN_AND_MEAN /DNOMINMAX"
 set "LINKER_OPTIONS=/DEF:src\version.def /MACHINE:X86 kernel32.lib user32.lib ws2_32.lib"
 
 cl %COMPILER_OPTIONS% %INCLUDES% %SOURCES% /Fo%OUTPUT%\ /Fe%OUTPUT%\version.dll /link %LINKER_OPTIONS% || exit /b 1

@@ -1,4 +1,4 @@
-// Where Dig2.exe's functions and data are (in the Steam build only), and wrappers that call them the way the game
+// Where Dig2.exe's functions and data are and wrappers that call them the way the game
 // does. The game is 32-bit MSVC 2010, so its strings are read and built by hand.
 #pragma once
 #include <cstdint>
@@ -7,27 +7,48 @@
 
 namespace game {
 
-// The functions the bridge hooks or calls, as offsets from the module base (Windows moves the exe at each start)
-namespace rva {
-const uintptr_t SimulatorsUpdate = 0x25C830;   // runs once a frame, also while paused: the bridge's tick
-const uintptr_t SetUpgradeNode = 0x253A60;     // the SetUpgrade script node
-const uintptr_t SetUpgradeTier = 0x235760;     // what scripts and the workbench use, which rebuilds the player's tools
-const uintptr_t PlayerUpgradesSet = 0x26CD80;  // the table write underneath it, without the rebuild
-const uintptr_t GiveBlueprint = 0x2371F0;
-const uintptr_t AddMoney = 0x236CB0;
-const uintptr_t AddCogs = 0x237150;
-const uintptr_t FindCollectible = 0x229B40;
-const uintptr_t GiveCollectible = 0x228680;    // gives an artifact the way a pickup does
-const uintptr_t BannerShow = 0x2749F0;
-const uintptr_t Intern = 0x38D160;
-const uintptr_t FindPlayerComponent = 0x21BD80;
-const uintptr_t PriceListCount = 0x269E40;     // how many items of a price list (Carson, Clifford) were bought
-const uintptr_t Localize = 0x30BE00;           // the text lookup: text id -> text
-const uintptr_t ToolsScreenMode = 0x168430;    // the workbench screen switches between upgrades and cog mods
-const uintptr_t ToolsScreenRefresh = 0x16C680;
-}  // namespace rva
+// What differs between the builds: where the functions and data are, as offsets from the module base (Windows moves
+// the exe at each start), and the fields of the tools screen, the one object whose layout changed
+struct Build {
+    const char* name;
+    const char* sha256;
 
-// Checks the exe and finds it in memory. Returns false, and why, unless this is the supported Steam build
+    // The functions the bridge hooks or calls
+    uintptr_t SimulatorsUpdate;  // runs once a frame, also while paused: the bridge's tick
+    uintptr_t SetUpgradeNode;  // the SetUpgrade script node
+    uintptr_t SetUpgradeTier;  // what scripts and the workbench use, which rebuilds the player's tools
+    uintptr_t PlayerUpgradesSet;  // the table write underneath it, without the rebuild
+    uintptr_t GiveBlueprint;
+    uintptr_t AddMoney;
+    uintptr_t AddCogs;
+    uintptr_t FindCollectible;
+    uintptr_t GiveCollectible;  // gives an artifact the way a pickup does
+    uintptr_t BannerShow;
+    uintptr_t Intern;
+    uintptr_t FindPlayerComponent;
+    uintptr_t PriceListCount;  // how many items of a price list (Carson, Clifford) were bought
+    uintptr_t Localize;  // the text lookup: text id -> text
+    uintptr_t ToolsScreenMode;  // the workbench screen switches between upgrades and cog mods
+    uintptr_t ToolsScreenRefresh;
+
+    // Data in the exe
+    uintptr_t DeathThreshold;  // a float, the player is dead below it
+    uintptr_t UpgradeDefs;  // a vector of 8-byte entries, the definition pointer first
+    uintptr_t PriceListDefs;  // the same, for price lists
+    uintptr_t EntityTableIndex;
+    uintptr_t EntityTableVtable;
+
+    // The tools screen's fields
+    uintptr_t ScreenMode;  // 0 upgrades, 1 cog mods
+    uintptr_t ScreenCanBuy;  // true only at the workbench itself
+    uintptr_t ScreenRows;  // its rows, begin then end, 8-byte shared pointers, the row first
+    uintptr_t RowDefinition;  // the upgrade definition a row shows
+};
+
+// The running build once Init has found it
+extern const Build* g_build;
+
+// Checks the exe and finds it in memory. Returns false, and why, unless this is the Steam or the GOG build
 bool Init(std::string& why);
 
 // The module base + offset

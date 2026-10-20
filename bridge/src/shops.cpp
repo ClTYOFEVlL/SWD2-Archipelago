@@ -15,11 +15,7 @@ const char* const kTools[] = {
 };
 const int kToolCount = 8;
 
-// The tools screen's fields
-const uintptr_t kScreenRows = 0x154;     // its rows, begin then end: 8-byte shared pointers, the row first
-const uintptr_t kScreenMode = 0x140;     // 0 upgrades, 1 cog mods
-const uintptr_t kScreenCanBuy = 0x144;   // true only at the workbench itself
-const uintptr_t kRowDefinition = 0x29C;  // the upgrade definition a row shows
+// The tools screen's rows
 const uintptr_t kRowPointerSize = 8;
 const uintptr_t kMaxRows = 64;
 
@@ -60,22 +56,22 @@ bool OnScreenMode(uintptr_t screen, int mode, bool canBuy)
     bool selling = mode == 0 && canBuy;
     int changed = 0;
 
-    uintptr_t rowsBegin = ReadU32(screen + kScreenRows);
-    uintptr_t rowsEnd = ReadU32(screen + kScreenRows + 4);
+    uintptr_t rowsBegin = ReadU32(screen + game::g_build->ScreenRows);
+    uintptr_t rowsEnd = ReadU32(screen + game::g_build->ScreenRows + 4);
     uintptr_t rowsLimit = rowsBegin + kRowPointerSize * kMaxRows;
 
     for (uintptr_t it = rowsBegin; it < rowsEnd && it < rowsLimit; it += kRowPointerSize) {
         uintptr_t row = ReadU32(it);
         if (!row) continue;
 
-        uintptr_t shown = ReadU32(row + kRowDefinition);
+        uintptr_t shown = ReadU32(row + game::g_build->RowDefinition);
 
         for (int i = 0; i < kToolCount; ++i) {
             uintptr_t from = selling ? g_tools[i] : g_chains[i];
             uintptr_t to = selling ? g_chains[i] : g_tools[i];
 
             if (shown == from) {
-                *reinterpret_cast<uintptr_t*>(row + kRowDefinition) = to;
+                *reinterpret_cast<uintptr_t*>(row + game::g_build->RowDefinition) = to;
                 ++changed;
             }
         }
@@ -85,9 +81,9 @@ bool OnScreenMode(uintptr_t screen, int mode, bool canBuy)
 
     // Refresh the screen ourselves. It reads every row again from its definition, then runs the mode switch, which
     // changes nothing by now
-    *reinterpret_cast<uint32_t*>(screen + kScreenMode) = mode;
-    *reinterpret_cast<uint8_t*>(screen + kScreenCanBuy) = canBuy ? 1 : 0;
-    reinterpret_cast<RefreshFn>(game::At(game::rva::ToolsScreenRefresh))(screen, 1);
+    *reinterpret_cast<uint32_t*>(screen + game::g_build->ScreenMode) = mode;
+    *reinterpret_cast<uint8_t*>(screen + game::g_build->ScreenCanBuy) = canBuy ? 1 : 0;
+    reinterpret_cast<RefreshFn>(game::At(game::g_build->ToolsScreenRefresh))(screen, 1);
 
     return true;
 }

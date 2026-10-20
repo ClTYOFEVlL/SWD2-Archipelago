@@ -12,9 +12,15 @@ from . import patcher
 
 GAME_FOLDER = "SteamWorld Dig 2"
 STEAM_APP_ID = 571310
+GOG_GAME_ID = 1861082507
 EXE = "Dig2.exe"
-EXE_SHA256 = "4583a9b1ec614d23ea3503c97a89c0d6e36d88d3292203f409adc1f529d0b5e5"  # the build the bridge supports
 DLL = "version.dll"
+
+# The builds the bridge supports, by the exe's SHA-256
+BUILDS = {
+    "4583a9b1ec614d23ea3503c97a89c0d6e36d88d3292203f409adc1f529d0b5e5": "Steam",
+    "0814849a24fcbddebb63172372268a58a36aaf29d5489b19714b573b9cfcc7b9": "GOG",
+}
 MARKER = "swd2ap_copy.json"  # what the copy was made from. Only a folder with this file is ever deleted
 
 
@@ -85,6 +91,26 @@ def find_steam_install() -> pathlib.Path | None:
     return None
 
 
+def find_gog_install() -> pathlib.Path | None:
+    if sys.platform != "win32":
+        return None
+
+    import winreg
+    try:
+        # GOG writes its key in the 32-bit view of the registry
+        access = winreg.KEY_READ | winreg.KEY_WOW64_32KEY
+        with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, rf"SOFTWARE\GOG.com\Games\{GOG_GAME_ID}", 0, access) as key:
+            game = pathlib.Path(winreg.QueryValueEx(key, "path")[0])
+    except OSError:
+        return None
+
+    return game if (game / EXE).is_file() else None
+
+
+def find_install() -> pathlib.Path | None:
+    return find_steam_install() or find_gog_install()
+
+
 def _in_use(dll: pathlib.Path) -> bool:
     # Windows won't open a loaded DLL for writing
     try:
@@ -96,20 +122,24 @@ def _in_use(dll: pathlib.Path) -> bool:
         return True
 
 
-def check_source(source: pathlib.Path) -> None:
+def check_source(source: pathlib.Path) -> str:
+    """The build the folder holds, Steam or GOG."""
     exe = source / EXE
     if not exe.is_file():
         raise FileNotFoundError(f"no {EXE} in {source}")
 
-    if _sha256(exe.read_bytes()) != EXE_SHA256:
-        raise ValueError(f"{exe} is not the Steam build this integration supports (the bridge would stay off)")
+    build = BUILDS.get(_sha256(exe.read_bytes()))
+    if build is None:
+        raise ValueError(f"{exe} is not the Steam or GOG version this integration supports (the bridge would stay off)")
 
     if patcher.status(source) is not None or (source / DLL).exists():
         raise ValueError(f"{source} has a patch or a {DLL} in it: remove them first, the copy must start vanilla")
 
+    return build
+
 
 def make_patched_copy(source: pathlib.Path, log=print) -> pathlib.Path:
-    check_source(source)
+    build = check_source(source)
     dll = _bundled_dll()
     target = copy_dir()
 
@@ -122,12 +152,15 @@ def make_patched_copy(source: pathlib.Path, log=print) -> pathlib.Path:
         log(f"removing the old copy in {target}")
         shutil.rmtree(target)
 
-    log(f"copying {source} to {target}")
+    log(f"copying the {build} version from {source} to {target}")
     try:
         shutil.copytree(source, target)
         patcher.install(target, log=log)
         (target / DLL).write_bytes(dll)
-        (target / "steam_appid.txt").write_text(str(STEAM_APP_ID), encoding="ascii")
+
+        # Without it the Steam exe hands over to Steam which starts the unpatched install
+        if build == "Steam":
+            (target / "steam_appid.txt").write_text(str(STEAM_APP_ID), encoding="ascii")
     except Exception:
         # A copy without its marker would block every later /auto_patch, so a half-made one goes
         shutil.rmtree(target, ignore_errors=True)

@@ -38,12 +38,12 @@ class SWD2CommandProcessor(ClientCommandProcessor):
 
     @mark_raw
     def _cmd_auto_patch(self, game_folder: str = "") -> bool:
-        """Make the patched copy of the game in Archipelago's folder from the Steam install, which is found by itself or given as the game folder."""
+        """Make the patched copy of the game in Archipelago's folder from the Steam or GOG install, which is found by itself or given as the game folder."""
         Utils.async_start(self.ctx.auto_patch(game_folder.strip().strip('"')), name="auto patch")
         return True
 
     def _cmd_launch(self) -> bool:
-        """Start the patched copy of the game (Steam must be running)."""
+        """Start the patched copy of the game."""
         problem = game_copy.copy_problem()
         if problem:
             self.output(f"Can't start the game: {problem}. Run /auto_patch first.")
@@ -267,9 +267,9 @@ class SWD2Context(CommonContext):
             await self.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
 
     async def auto_patch(self, game_folder: str):
-        source = pathlib.Path(game_folder) if game_folder else game_copy.find_steam_install()
+        source = pathlib.Path(game_folder) if game_folder else game_copy.find_install()
         if source is None:
-            logger.info("The Steam install of SteamWorld Dig 2 wasn't found: give its folder, /auto_patch <folder>.")
+            logger.info("No Steam or GOG install of SteamWorld Dig 2 was found: give its folder, /auto_patch <folder>.")
             return
 
         # The copy runs in a thread, so its messages go back to the client's loop
@@ -288,7 +288,7 @@ class SWD2Context(CommonContext):
             logger.exception("Patching failed")
             return
 
-        logger.info(f"The patched game is ready in {target}. Start it with /launch (Steam must be running).")
+        logger.info(f"The patched game is ready in {target}. Start it with /launch.")
 
     def report_patched_copy(self):
         problem = game_copy.copy_problem()

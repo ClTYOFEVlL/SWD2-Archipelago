@@ -108,12 +108,12 @@ Hook MakeHook(uintptr_t offset, Detour detour, Original* original, const char* n
 bool Install(std::string& why)
 {
     const Hook all[] = {
-        MakeHook(game::rva::SimulatorsUpdate, &SimulatorsUpdate, &g_simulatorsUpdate, "Simulators::Update"),
-        MakeHook(game::rva::SetUpgradeNode, &SetUpgradeNode, &g_setUpgradeNode, "SetUpgrade node"),
-        MakeHook(game::rva::ToolsScreenMode, &ToolsScreenMode, &g_toolsScreenMode, "ToolsScreen mode"),
-        MakeHook(game::rva::Localize, &Localize, &g_localize, "Localize"),
-        MakeHook(game::rva::GiveBlueprint, &GiveBlueprint, &g_giveBlueprint, "GiveBlueprint"),
-        MakeHook(game::rva::BannerShow, &BannerShow, &g_bannerShow, "BannerUI::Show"),
+        MakeHook(game::g_build->SimulatorsUpdate, &SimulatorsUpdate, &g_simulatorsUpdate, "Simulators::Update"),
+        MakeHook(game::g_build->SetUpgradeNode, &SetUpgradeNode, &g_setUpgradeNode, "SetUpgrade node"),
+        MakeHook(game::g_build->ToolsScreenMode, &ToolsScreenMode, &g_toolsScreenMode, "ToolsScreen mode"),
+        MakeHook(game::g_build->Localize, &Localize, &g_localize, "Localize"),
+        MakeHook(game::g_build->GiveBlueprint, &GiveBlueprint, &g_giveBlueprint, "GiveBlueprint"),
+        MakeHook(game::g_build->BannerShow, &BannerShow, &g_bannerShow, "BannerUI::Show"),
     };
 
     if (MH_Initialize() != MH_OK) {

@@ -11,10 +11,10 @@ An [Archipelago](https://archipelago.gg) implementation for SteamWorld Dig 2
 1. Download the latest `swd2.apworld` from the releases
 2. Double click the apworld to automatically install it (or manually move it to `custom_worlds`)
 3. In the Archipelago Launcher, open "SteamWorld Dig 2 Client"
-4. Type `/auto_patch` to make the patched copy. It finds the Steam install by itself, or give it the game's folder: `/auto_patch <directory>`. Run it again whenever you update the apworld
+4. Type `/auto_patch` to make the patched copy. It finds the Steam or GOG install by itself, or give it the game's folder: `/auto_patch <directory>`. Run it again whenever you update the apworld
 5. Type `/launch` to start the patched copy, connect to your room, then start a New Game
 
-**Saves:** the patched copy shares its save slots with the normal game. Never open an Archipelago save in the normal game and never open a normal save in the Archipelago copy. The unpatched game removes the save's Archipelago data, and in the patched copy a normal save gets nothing from what it finds. If it happens, close the game and restore `savegame_00N.dat.backup` (in `Documents\My Games\SteamWorld Dig 2\<a number>`) before playing on. Play each slot on a save of its own.
+**Saves:** The patched copy shares its save slots with the normal game. Never open an Archipelago save in the normal game and never open a normal save in the Archipelago copy. The unpatched game removes the save's Archipelago data, and in the patched copy a normal save gets nothing from what it finds. If it happens, close the game and restore `savegame_00N.dat.backup` (in `Documents\My Games\SteamWorld Dig 2\<a number>` for Steam, `Documents\My Games\SteamWorld Dig 2` for GOG) before playing on. Play each slot on a save of its own.
 
 ## Troubleshooting
 
