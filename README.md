@@ -16,6 +16,19 @@ An [Archipelago](https://archipelago.gg) implementation for SteamWorld Dig 2
 
 **Saves:** The patched copy shares its save slots with the normal game. Never open an Archipelago save in the normal game and never open a normal save in the Archipelago copy. The unpatched game removes the save's Archipelago data, and in the patched copy a normal save gets nothing from what it finds. If it happens, close the game and restore `savegame_00N.dat.backup` (in `Documents\My Games\SteamWorld Dig 2\<a number>` for Steam, `Documents\My Games\SteamWorld Dig 2` for GOG) before playing on. Play each slot on a save of its own.
 
+### Linux
+
+> Linux support is untested. If you do try it, please open an issue with how it went and attach `swd2ap_bridge.log` from the patched copy's folder
+
+1. Get the Windows version
+    - **Steam**: In the game's Properties -> Compatibility, check `Force the use of a specific Steam Play compatibility tool`
+    - **GOG**: Install the Windows version
+2. Do steps 1-4 of the Setup
+3. In Steam, add the patched copy's `Dig2.exe` as a Non-Steam game. In its Properties:
+    - Compatibility: check `Force the use of a specific Steam Play compatibility tool`
+    - Launch Options: `WINEDLLOVERRIDES="version=n,b" %command%`
+4. Start it from Steam
+
 ## Troubleshooting
 
 - You get the "version.dll is missing or can't be read" error

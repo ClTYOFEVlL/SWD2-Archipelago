@@ -61,6 +61,15 @@ def _steam_roots() -> list[pathlib.Path]:
             pass
 
     roots += [pathlib.Path(r"C:\Program Files (x86)\Steam"), pathlib.Path(r"C:\Program Files\Steam")]
+
+    # Linux install paths
+    home = pathlib.Path.home()
+    roots += [
+        home / ".local/share/Steam",
+        home / ".steam/steam",
+        home / ".var/app/com.valvesoftware.Steam/.local/share/Steam",
+    ]
+
     return roots
 
 

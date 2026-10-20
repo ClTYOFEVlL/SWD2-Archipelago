@@ -1,6 +1,7 @@
 """The SteamWorld Dig 2 Client: between the Archipelago server and the bridge in the game"""
 import asyncio
 import pathlib
+import sys
 
 import Utils
 from CommonClient import (
@@ -47,6 +48,10 @@ class SWD2CommandProcessor(ClientCommandProcessor):
         problem = game_copy.copy_problem()
         if problem:
             self.output(f"Can't start the game: {problem}. Run /auto_patch first.")
+            return False
+
+        if sys.platform != "win32":
+            self.output(f"Start the copy in {game_copy.copy_dir()} from Steam or Wine (README)")
             return False
 
         game_copy.launch()
@@ -296,6 +301,8 @@ class SWD2Context(CommonContext):
         source = pathlib.Path(game_folder) if game_folder else game_copy.find_install()
         if source is None:
             logger.info("No Steam or GOG install of SteamWorld Dig 2 was found: give its folder, /auto_patch <folder>.")
+            if sys.platform != "win32":
+                logger.info("On Linux it must be the Windows version (README)")
             return
 
         # The copy runs in a thread, so its messages go back to the client's loop
