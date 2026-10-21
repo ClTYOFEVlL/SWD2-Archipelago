@@ -90,7 +90,8 @@ def quests(text: str) -> bytes:
     exit_temple = quest["quest_exit_temple"].find("UnlockedBy")
     if exit_temple.text != "quest_release_fen":
         raise ValueError(f"quests.xml: quest_exit_temple follows {exit_temple.text}")
-    exit_temple.text = "quest_get_run_boots"
+    
+    exit_temple.text = "quest_enter_temple"
 
     return _xml(root)
 
