@@ -5,6 +5,8 @@ from Options import (
     DeathLink,
     DefaultOnToggle,
     NamedRange,
+    OptionCounter,
+    OptionError,
     OptionGroup,
     PerGameCommonOptions,
     Range,
@@ -101,6 +103,27 @@ class CogAmount(Range):
     default = 84
 
 
+class FillerWeights(OptionCounter):
+    """
+    Weights of various filler items.
+    Setting one to 0 will disable it. 
+    """
+    display_name = "Filler Weights"
+    min = 0
+    default = {
+        "Small Money Bundle": 50,
+        "Medium Money Bundle": 35,
+        "Large Money Bundle": 15,
+    }
+    valid_keys = default.keys()
+
+    def verify_values(self) -> None:
+        super().verify_values()
+
+        if sum(self.value.values()) == 0:
+            raise OptionError(f"For option {self.display_name}: at least one weight must be above 0.")
+
+
 @dataclass
 class SWD2Options(PerGameCommonOptions):
     death_link: DeathLink
@@ -112,6 +135,7 @@ class SWD2Options(PerGameCommonOptions):
     teleporter_locations: TeleporterLocations
     hell_cave_locations: HellCaveLocations
     cog_amount: CogAmount
+    filler_weights: FillerWeights
     start_inventory_from_pool: StartInventoryPool
 
 
@@ -119,5 +143,5 @@ OPTION_GROUPS = [
     OptionGroup("Logic", [LogicDifficulty, Tricks]),
     OptionGroup("Shops", [ShopPricePercent, ShowShopItems]),
     OptionGroup("Locations", [TeleporterLocations, HellCaveLocations]),
-    OptionGroup("Items", [SprintHydraulics, CogAmount]),
+    OptionGroup("Items", [SprintHydraulics, CogAmount, FillerWeights]),
 ]

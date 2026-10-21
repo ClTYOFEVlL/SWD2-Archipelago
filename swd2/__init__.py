@@ -128,8 +128,9 @@ class SWD2World(World):
         return items.create_item(self, name)
 
     def get_filler_item_name(self) -> str:
-        names = list(items.FILLER_WEIGHTS)
-        weights = list(items.FILLER_WEIGHTS.values())
+        weights = self.options.filler_weights.value
+        names = list(weights)
+        weights = list(weights.values())
         return self.random.choices(names, weights=weights)[0]
 
     def rule_from_text(self, text: str) -> Rule:
@@ -158,7 +159,7 @@ class SWD2World(World):
         prices_by_location = {str(self.location_name_to_id[name]): price for name, price in prices.items()}
         dollars_by_bundle = {
             str(self.item_name_to_id[name]): items.money_bundle(self, name)
-            for name in items.FILLER_WEIGHTS
+            for name in items.MONEY_BUNDLES
         }
 
         return {

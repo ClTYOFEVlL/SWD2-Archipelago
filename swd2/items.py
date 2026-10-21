@@ -25,7 +25,7 @@ ITEM_NAME_GROUPS = {
     "Artifacts": {item.name for item in ITEMS if item.group == "artifact"},
     "Money Bundles": {item.name for item in ITEMS if item.group == "money"},
 }
-FILLER_WEIGHTS = {item.name: item.weight for item in ITEMS if item.group == "money"}
+MONEY_BUNDLES = [item.name for item in ITEMS if item.group == "money"]
 CLASSIFICATIONS = {
     "progression": ItemClassification.progression,
     "useful": ItemClassification.useful,

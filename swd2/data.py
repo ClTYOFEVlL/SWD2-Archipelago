@@ -28,7 +28,6 @@ class ItemData:
     logic: str | None  # its name in the rules, or None if no rule asks for it
     classification: str  # progression, useful or filler, for the copies no rule asks for
     grant: Grant
-    weight: int = 0  # money bundles: how often each one is picked as filler
 
 
 @dataclass(frozen=True)

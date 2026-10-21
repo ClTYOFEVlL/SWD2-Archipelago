@@ -8,6 +8,7 @@ from test.general import setup_multiworld
 
 from .. import SWD2World
 from ..locations import LOCATION_NAME_TO_ID
+from ..options import FillerWeights
 from .bases import SWD2TestBase
 
 COMBINATIONS = list(itertools.product(
@@ -74,3 +75,20 @@ class TestCogReduction(SWD2TestBase):
         options = {"teleporter_locations": False, "exclude_locations": list(LOCATION_NAME_TO_ID)}
         with self.assertRaises(OptionError):
             setup_multiworld(SWD2World, options=options)
+
+
+class TestFillerWeights(SWD2TestBase):
+    # Few cogs so most of the pool is filler
+    options = {
+        "cog_amount": 4,
+        "filler_weights": {"Small Money Bundle": 0, "Large Money Bundle": 1},
+    }
+
+    def test_only_weighted_bundles(self):
+        bundles = {item.name for item in self.multiworld.itempool if item.name.endswith("Money Bundle")}
+        self.assertEqual(bundles, {"Large Money Bundle"})
+
+    def test_all_zero_fails(self):
+        weights = FillerWeights.from_any({"Small Money Bundle": 0})
+        with self.assertRaises(OptionError):
+            weights.verify_values()

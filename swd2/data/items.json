@@ -870,7 +870,6 @@
    "count": 0,
    "logic": null,
    "class": "filler",
-   "weight": 50,
    "grant": {
     "kind": "money",
     "vanilla": 100
@@ -883,7 +882,6 @@
    "count": 0,
    "logic": null,
    "class": "filler",
-   "weight": 35,
    "grant": {
     "kind": "money",
     "vanilla": 250
@@ -896,7 +894,6 @@
    "count": 0,
    "logic": null,
    "class": "filler",
-   "weight": 15,
    "grant": {
     "kind": "money",
     "vanilla": 500
