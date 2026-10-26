@@ -82,7 +82,7 @@
    "area": "02-archaea"
   },
   {
-   "name": "Archaea - Hub Entrance",
+   "name": "Archaea - Oasis Entrance",
    "area": "02-archaea"
   },
   {
@@ -170,7 +170,7 @@
    "area": "04-yarrow"
   },
   {
-   "name": "Yarrow - Hub Tube Ledge",
+   "name": "Yarrow - Oasis Tube Ledge",
    "area": "04-yarrow"
   },
   {
@@ -509,7 +509,7 @@
   ],
   [
    "Archaea - Below the Cave-in",
-   "Archaea - Hub Entrance"
+   "Archaea - Oasis Entrance"
   ],
   [
    "Archaea - Below the Cave-in",
@@ -549,7 +549,7 @@
   ],
   [
    "Archaea - Dirt",
-   "Archaea - Hub Entrance"
+   "Archaea - Oasis Entrance"
   ],
   [
    "Archaea - Dirt",
@@ -581,7 +581,7 @@
   ],
   [
    "Archaea - Entrance",
-   "Archaea - Hub Entrance"
+   "Archaea - Oasis Entrance"
   ],
   [
    "Archaea - Entrance",
@@ -612,23 +612,23 @@
    "Patch Wall Grotto"
   ],
   [
-   "Archaea - Hub Entrance",
+   "Archaea - Oasis Entrance",
    "Archaea - Deep Shaft"
   ],
   [
-   "Archaea - Hub Entrance",
+   "Archaea - Oasis Entrance",
    "Archaea - Spike Maze"
   ],
   [
-   "Archaea - Hub Entrance",
+   "Archaea - Oasis Entrance",
    "Archaea - Vectron Entrance"
   ],
   [
-   "Archaea - Hub Entrance",
+   "Archaea - Oasis Entrance",
    "Fire Temple - Golem Altar"
   ],
   [
-   "Archaea - Hub Entrance",
+   "Archaea - Oasis Entrance",
    "The Oasis"
   ],
   [
@@ -641,7 +641,7 @@
   ],
   [
    "Archaea - Stripes",
-   "Archaea - Hub Entrance"
+   "Archaea - Oasis Entrance"
   ],
   [
    "Archaea - Stripes",
@@ -949,7 +949,7 @@
   ],
   [
    "Fire Temple - Golem Altar",
-   "Archaea - Hub Entrance"
+   "Archaea - Oasis Entrance"
   ],
   [
    "Fire Temple - Golem Altar",
@@ -1249,7 +1249,7 @@
   ],
   [
    "Sludge River Bend - West",
-   "Yarrow - Hub Tube Ledge"
+   "Yarrow - Oasis Tube Ledge"
   ],
   [
    "Spikes & Conveyors",
@@ -1385,7 +1385,7 @@
   ],
   [
    "The Oasis",
-   "Archaea - Hub Entrance"
+   "Archaea - Oasis Entrance"
   ],
   [
    "The Oasis",
@@ -1501,11 +1501,11 @@
   ],
   [
    "Yarrow - Archaea Door",
-   "Yarrow - Hub Tube Ledge"
+   "Yarrow - Main Shaft"
   ],
   [
    "Yarrow - Archaea Door",
-   "Yarrow - Main Shaft"
+   "Yarrow - Oasis Tube Ledge"
   ],
   [
    "Yarrow - Archaea Door",
@@ -1526,26 +1526,6 @@
   [
    "Yarrow - Below Lock 2",
    "Yarrow - Main Shaft"
-  ],
-  [
-   "Yarrow - Hub Tube Ledge",
-   "Sludge River Bend - West"
-  ],
-  [
-   "Yarrow - Hub Tube Ledge",
-   "Yarrow - Archaea Door"
-  ],
-  [
-   "Yarrow - Hub Tube Ledge",
-   "Yarrow - Main Shaft"
-  ],
-  [
-   "Yarrow - Hub Tube Ledge",
-   "Yarrow - Temple Ledge"
-  ],
-  [
-   "Yarrow - Hub Tube Ledge",
-   "Yarrow - Top"
   ],
   [
    "Yarrow - Main Shaft",
@@ -1585,7 +1565,7 @@
   ],
   [
    "Yarrow - Main Shaft",
-   "Yarrow - Hub Tube Ledge"
+   "Yarrow - Oasis Tube Ledge"
   ],
   [
    "Yarrow - Main Shaft",
@@ -1593,6 +1573,26 @@
   ],
   [
    "Yarrow - Main Shaft",
+   "Yarrow - Top"
+  ],
+  [
+   "Yarrow - Oasis Tube Ledge",
+   "Sludge River Bend - West"
+  ],
+  [
+   "Yarrow - Oasis Tube Ledge",
+   "Yarrow - Archaea Door"
+  ],
+  [
+   "Yarrow - Oasis Tube Ledge",
+   "Yarrow - Main Shaft"
+  ],
+  [
+   "Yarrow - Oasis Tube Ledge",
+   "Yarrow - Temple Ledge"
+  ],
+  [
+   "Yarrow - Oasis Tube Ledge",
    "Yarrow - Top"
   ],
   [
@@ -1605,11 +1605,11 @@
   ],
   [
    "Yarrow - Temple Ledge",
-   "Yarrow - Hub Tube Ledge"
+   "Yarrow - Main Shaft"
   ],
   [
    "Yarrow - Temple Ledge",
-   "Yarrow - Main Shaft"
+   "Yarrow - Oasis Tube Ledge"
   ],
   [
    "Yarrow - Temple Ledge",
@@ -1625,11 +1625,11 @@
   ],
   [
    "Yarrow - Top",
-   "Yarrow - Hub Tube Ledge"
+   "Yarrow - Main Shaft"
   ],
   [
    "Yarrow - Top",
-   "Yarrow - Main Shaft"
+   "Yarrow - Oasis Tube Ledge"
   ],
   [
    "Yarrow - Top",
@@ -1709,7 +1709,7 @@
    "tricks_normal": "Lamp×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
    "tricks_easy": "Lamp×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
   },
-  "Archaea - Hub Entrance": {
+  "Archaea - Oasis Entrance": {
    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
@@ -2533,14 +2533,6 @@
    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))"
   },
-  "Yarrow - Hub Tube Ledge": {
-   "base_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))"
-  },
   "Yarrow - Main Shaft": {
    "base_hard": "Jet×1 & (Sprint | Hook)",
    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
@@ -2548,6 +2540,14 @@
    "tricks_hard": "Jet×1 & (Sprint | Hook)",
    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+  },
+  "Yarrow - Oasis Tube Ledge": {
+   "base_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
+   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
+   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
+   "tricks_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
+   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
+   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))"
   },
   "Yarrow - Temple Ledge": {
    "base_hard": "(Sprint & Jet×1) | Hook",
@@ -2751,7 +2751,7 @@
   },
   {
    "id": 14,
-   "name": "Archaea - After Hub Area: Cog Container",
+   "name": "Archaea - After Oasis Area: Cog Container",
    "type": "cog",
    "region": "Archaea - Deep Shaft",
    "rules": {
@@ -2793,9 +2793,9 @@
   },
   {
    "id": 17,
-   "name": "Archaea - Hub Entrance: Cog Container",
+   "name": "Archaea - Oasis Entrance: Cog Container",
    "type": "cog",
-   "region": "Archaea - Hub Entrance",
+   "region": "Archaea - Oasis Entrance",
    "rules": {
     "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
     "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
@@ -4607,7 +4607,7 @@
   },
   {
    "id": 505,
-   "name": "Archaea - After Hub Area: Teleporter",
+   "name": "Archaea - After Oasis Area: Teleporter",
    "type": "teleporter",
    "region": "Archaea - Deep Shaft",
    "rules": {
@@ -5363,7 +5363,7 @@
   },
   {
    "id": 719,
-   "name": "Archaea - After Hub Area: Secret Area",
+   "name": "Archaea - After Oasis Area: Secret Area",
    "type": "secret_area",
    "region": "Archaea - Deep Shaft",
    "rules": {
@@ -5447,9 +5447,9 @@
   },
   {
    "id": 725,
-   "name": "Archaea - Hub Entrance: Secret Area 1",
+   "name": "Archaea - Oasis Entrance: Secret Area 1",
    "type": "secret_area",
-   "region": "Archaea - Hub Entrance",
+   "region": "Archaea - Oasis Entrance",
    "rules": {
     "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
     "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
@@ -5461,9 +5461,9 @@
   },
   {
    "id": 726,
-   "name": "Archaea - Hub Entrance: Secret Area 2",
+   "name": "Archaea - Oasis Entrance: Secret Area 2",
    "type": "secret_area",
-   "region": "Archaea - Hub Entrance",
+   "region": "Archaea - Oasis Entrance",
    "rules": {
     "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
     "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
@@ -7248,7 +7248,7 @@
    }
   },
   {
-   "region": "Archaea - Hub Entrance",
+   "region": "Archaea - Oasis Entrance",
    "base": 303,
    "rules": {
     "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",

@@ -133,7 +133,7 @@
   },
   {
    "type": "cog",
-   "name": "Archaea - After Hub Area: Cog Container",
+   "name": "Archaea - After Oasis Area: Cog Container",
    "file": "Patchsets/Archaea/archaea_patch_after_hub_area.le",
    "area": "arch_patch_after_hub_area",
    "layer": "Foreground",
@@ -163,7 +163,7 @@
   },
   {
    "type": "cog",
-   "name": "Archaea - Hub Entrance: Cog Container",
+   "name": "Archaea - Oasis Entrance: Cog Container",
    "file": "Patchsets/Archaea/archaea_patch_hub_entrance.le",
    "area": "arch_hub_entrance",
    "layer": "Foreground",
@@ -1517,7 +1517,7 @@
   },
   {
    "type": "teleporter",
-   "name": "Archaea - After Hub Area: Teleporter",
+   "name": "Archaea - After Oasis Area: Teleporter",
    "file": "Patchsets/Archaea/archaea_patch_after_hub_area.le",
    "area": "arch_patch_after_hub_area",
    "layer": "Foreground",
@@ -2057,7 +2057,7 @@
   },
   {
    "type": "secret_area",
-   "name": "Archaea - After Hub Area: Secret Area",
+   "name": "Archaea - After Oasis Area: Secret Area",
    "file": "Patchsets/Archaea/archaea_patch_after_hub_area.le",
    "area": "arch_patch_after_hub_area",
    "layer": "Foreground",
@@ -2117,7 +2117,7 @@
   },
   {
    "type": "secret_area",
-   "name": "Archaea - Hub Entrance: Secret Area 1",
+   "name": "Archaea - Oasis Entrance: Secret Area 1",
    "file": "Patchsets/Archaea/archaea_patch_hub_entrance.le",
    "area": "arch_hub_entrance",
    "layer": "Foreground",
@@ -2127,7 +2127,7 @@
   },
   {
    "type": "secret_area",
-   "name": "Archaea - Hub Entrance: Secret Area 2",
+   "name": "Archaea - Oasis Entrance: Secret Area 2",
    "file": "Patchsets/Archaea/archaea_patch_hub_entrance.le",
    "area": "arch_hub_entrance",
    "layer": "Foreground",
