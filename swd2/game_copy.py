@@ -147,6 +147,16 @@ def check_source(source: pathlib.Path) -> str:
     return build
 
 
+def copy_game(source: pathlib.Path, target: pathlib.Path) -> None:
+    # only copy the files needed
+    target.mkdir(parents=True)
+    shutil.copytree(source / "Bundle", target / "Bundle")
+
+    for path in source.iterdir():
+        if path.name == EXE or path.suffix.lower() == ".dll":
+            shutil.copy2(path, target)
+
+
 def make_patched_copy(source: pathlib.Path, log=print) -> pathlib.Path:
     build = check_source(source)
     dll = _bundled_dll()
@@ -163,7 +173,7 @@ def make_patched_copy(source: pathlib.Path, log=print) -> pathlib.Path:
 
     log(f"copying the {build} version from {source} to {target}")
     try:
-        shutil.copytree(source, target)
+        copy_game(source, target)
         patcher.install(target, log=log)
         (target / DLL).write_bytes(dll)
 
