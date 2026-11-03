@@ -9,7 +9,7 @@ from worlds.LauncherComponents import Component, Type, components, launch as lau
 from . import items, locations, notation, regions, rules
 from .data import BASE_ID, ItemData
 from .money import MONEY, money_events, needed_money, shop_prices
-from .options import OPTION_GROUPS, SWD2Options
+from .options import OPTION_GROUPS, TRAP_WEIGHTS, SWD2Options
 
 
 def launch_client(*args: str) -> None:
@@ -177,6 +177,12 @@ class SWD2World(World):
             "shop_prices": prices_by_location,
             "money_bundles": dollars_by_bundle,
             "death_link": bool(self.options.death_link),
+            "trap_link": bool(self.options.trap_link),
+            "trap_weights": {name: getattr(self.options, option).value for name, option in TRAP_WEIGHTS.items()},
+            "trap_seconds": {
+                "gravity": self.options.gravity_trap_duration.value,
+                "freeze": self.options.freeze_trap_duration.value,
+            },
         }
 
     @staticmethod

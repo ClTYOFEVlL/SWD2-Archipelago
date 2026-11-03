@@ -11,7 +11,7 @@ Rules = dict[str, str]  # variant -> rule
 
 @dataclass(frozen=True)
 class Grant:
-    kind: str  # upgrade, blueprint, artifact, cog, money, main or progressive
+    kind: str  # upgrade, blueprint, artifact, cog, money, main, progressive or trap
     upgrade: str = ""
     first_tier: int = 0  # upgrades: the tier the first copy sets, with each later copy one more
     collectible: str = ""
@@ -19,16 +19,17 @@ class Grant:
     vanilla: int = 0  # money bundles: their dollars at vanilla prices
     progressive: str = ""  # main items: the progressive item whose first copy they replace
     items: tuple[str, ...] = ()  # progressive items: the items their copies give in order
+    trap: str = ""  # traps: the bridge's name for it
 
 
 @dataclass(frozen=True)
 class ItemData:
     id: int
     name: str
-    group: str  # tool, blueprint, artifact, cog or money
+    group: str  # tool, blueprint, artifact, cog, money, device or trap
     count: int  # copies in the pool
     logic: str | None  # its name in the rules, or None if no rule asks for it
-    classification: str  # progression, useful or filler, for the copies no rule asks for
+    classification: str  # progression, useful, filler or trap, for the copies no rule asks for
     grant: Grant
     option: str = ""  # main and progressive items: the tool option that puts them in the pool
     choice: str = ""  # and the choice of it that does

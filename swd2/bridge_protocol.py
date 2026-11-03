@@ -4,6 +4,7 @@ from collections import Counter
 
 from .data import BASE_ID, ITEMS, LOCATIONS, ItemData
 from . import texts
+from .patcher.definitions import CUTSCENE_COUNT
 from .patcher.flags import GOAL_FLAG, shop_flag, waiting_icon
 
 PORT = 23850  # the bridge listens on 127.0.0.1 only
@@ -58,9 +59,11 @@ def disconnect_message() -> dict:
     return {"type": "disconnect"}
 
 
-def grants(item_ids: list[int], money: dict[int, int], tool_items: list[ItemData]) -> list[dict]:
+def grants(
+    item_ids: list[int], money: dict[int, int], tool_items: list[ItemData], trap_seconds: dict[str, int]
+) -> list[dict]:
     """How the bridge gives each received item. `money` holds each money bundle's dollars by item id, `tool_items`
-    the main and progressive items of the seed's tool options."""
+    the main and progressive items of the seed's tool options, `trap_seconds` how long the traps that last a while do."""
     main_items = {item.grant.progressive: item.name for item in tool_items if item.grant.kind == "main"}
     copies = Counter()
     result = []
@@ -74,8 +77,11 @@ def grants(item_ids: list[int], money: dict[int, int], tool_items: list[ItemData
         copies[item.name] += 1
         grant = item.grant
 
+        if grant.kind == "trap":
+            result.append({"kind": "trap", "trap": grant.trap, "amount": _trap_amount(grant.trap, trap_seconds)})
+
         # The main item sets the tier of every progressive copy received so far
-        if grant.kind == "main":
+        elif grant.kind == "main":
             progressive = ITEMS_BY_NAME[grant.progressive]
             result.append(_grant(progressive, copies[progressive.name] + 1, 0))
 
@@ -97,6 +103,15 @@ def grants(item_ids: list[int], money: dict[int, int], tool_items: list[ItemData
             result.append(_grant(item, copies[item.name], money.get(item_id, 0)))
 
     return result
+
+
+def _trap_amount(trap: str, trap_seconds: dict[str, int]) -> int:
+    return CUTSCENE_COUNT if trap == "cutscene" else trap_seconds.get(trap, 0)
+
+
+def linked_trap_message(item_name: str, trap_seconds: dict[str, int]) -> dict:
+    trap = ITEMS_BY_NAME[item_name].grant.trap
+    return {"type": "trap", "trap": trap, "amount": _trap_amount(trap, trap_seconds)}
 
 
 def _grant(item: ItemData, copy: int, dollars: int) -> dict:

@@ -1046,6 +1046,66 @@
     "upgrade": "ap_device_destruction",
     "first_tier": 1
    }
+  },
+  {
+   "id": 501,
+   "name": "Leaky Tank Trap",
+   "group": "trap",
+   "count": 0,
+   "logic": null,
+   "class": "trap",
+   "grant": {
+    "kind": "trap",
+    "trap": "leaky_tank"
+   }
+  },
+  {
+   "id": 502,
+   "name": "Darkness Trap",
+   "group": "trap",
+   "count": 0,
+   "logic": null,
+   "class": "trap",
+   "grant": {
+    "kind": "trap",
+    "trap": "darkness"
+   }
+  },
+  {
+   "id": 503,
+   "name": "Gravity Trap",
+   "group": "trap",
+   "count": 0,
+   "logic": null,
+   "class": "trap",
+   "grant": {
+    "kind": "trap",
+    "trap": "gravity"
+   }
+  },
+  {
+   "id": 504,
+   "name": "Freeze Trap",
+   "group": "trap",
+   "count": 0,
+   "logic": null,
+   "class": "trap",
+   "grant": {
+    "kind": "trap",
+    "trap": "freeze"
+   }
+  },
+  {
+   "id": 505,
+   "name": "Cutscene Trap",
+   "group": "trap",
+   "count": 0,
+   "logic": null,
+   "class": "trap",
+   "grant": {
+    "kind": "trap",
+    "trap": "cutscene"
+   }
   }
  ],
  "mods": {

@@ -101,6 +101,15 @@ void __fastcall SelfDestruct(void* menu, void*, int button)
     g_selfDestruct(menu, button);
 }
 
+// A Freeze Trap blocks only the player's input: the game's own freeze would put the world on hold as a cutscene does
+typedef int(__stdcall* PlayerInputBlockedFn)(void* playerSimulator);
+PlayerInputBlockedFn g_playerInputBlocked;
+
+int __stdcall PlayerInputBlocked(void* playerSimulator)
+{
+    return bridge::PlayerFrozen() || g_playerInputBlocked(playerSimulator);
+}
+
 struct Hook {
     uintptr_t offset;
     void* detour;
@@ -126,6 +135,7 @@ bool Install(std::string& why)
         MakeHook(game::g_build->GiveBlueprint, &GiveBlueprint, &g_giveBlueprint, "GiveBlueprint"),
         MakeHook(game::g_build->BannerShow, &BannerShow, &g_bannerShow, "BannerUI::Show"),
         MakeHook(game::g_build->SelfDestruct, &SelfDestruct, &g_selfDestruct, "Self-Destruct"),
+        MakeHook(game::g_build->PlayerInputBlocked, &PlayerInputBlocked, &g_playerInputBlocked, "PlayerInputBlocked"),
     };
 
     if (MH_Initialize() != MH_OK) {

@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 
 from ..data import LocationData
 from . import flags
+from .cutscenes import CUTSCENES
 
 UPGRADES = "Definitions/upgrades.xml"
 OUTSETS = "Definitions/outsets.xml"
@@ -13,6 +14,9 @@ OBJECTS = "Definitions/entities.objects.xml"
 PICKUPS = "Definitions/entities.pickups.xml"
 TEXTITEMS = "Definitions/textitems.xml"
 DAMAGE_TYPES = "Definitions/damage_types.xml"
+CONVERSATIONS = "Definitions/conversations.xml"
+
+CUTSCENE_COUNT = len(CUTSCENES)
 
 COG_CONTAINER = "ap_cog_container"  # a cog container whose drop gives nothing
 PICKUP = "ap_pickup"  # a cog pickup with 0 cogs, so it gives nothing
@@ -53,6 +57,22 @@ TOOL_ROW_GATES = {
 
 def _xml(root: ET.Element) -> bytes:
     return ET.tostring(root, encoding="utf-8", xml_declaration=True)
+
+
+def cutscene_line(number: int, line: int) -> str:
+    return f"ap_cutscene_{number}_{line}"
+
+
+def conversations(text: str) -> bytes:
+    """Adds the Cutscene Trap's conversations."""
+    root = ET.fromstring(text)
+    for number, lines in enumerate(CUTSCENES, 1):
+        conversation = ET.SubElement(root, "Conversation", {"Name": f"ap_cutscene_{number}"})
+        for line in range(1, len(lines) + 1):
+            name = cutscene_line(number, line)
+            ET.SubElement(conversation, "Speak", {"Speaker": "player", "Text": name, "Id": name})
+
+    return _xml(root)
 
 
 def upgrades(text: str, locations: list[LocationData]) -> bytes:

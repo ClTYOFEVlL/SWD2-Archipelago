@@ -89,7 +89,7 @@ class TestGrants(unittest.TestCase):
     def test_progressive_copies_wait_for_the_main_item(self):
         received = ids("Progressive Pressure Bomb", "Progressive Pressure Bomb", "Pressure Bomb",
                        "Progressive Pressure Bomb")
-        self.assertEqual(grants(received, {}, self.main_bomb), [
+        self.assertEqual(grants(received, {}, self.main_bomb, {}), [
             {"kind": "none", "icon": "Icons/AP/waiting_pressurebomb_2"},
             {"kind": "none", "icon": "Icons/AP/waiting_pressurebomb_3"},
             {"kind": "upgrade", "upgrade": "pressurebomb", "tier": 3},
@@ -100,7 +100,7 @@ class TestGrants(unittest.TestCase):
         received = ids("Progressive Hook Shot", "Progressive Grenade Launcher", "Progressive Hook Shot",
                        "Progressive Grenade Launcher")
         tool_items = tool_option_items({"hook_items": 0, "grenade_items": 0})
-        self.assertEqual(grants(received, {}, tool_items), [
+        self.assertEqual(grants(received, {}, tool_items, {}), [
             {"kind": "upgrade", "upgrade": "hook", "tier": 1},
             {"kind": "blueprint", "upgrade": "pressurebomb.launcher"},
             {"kind": "blueprint", "upgrade": "hook.long_hook"},
@@ -109,7 +109,7 @@ class TestGrants(unittest.TestCase):
 
     def test_progressive_mobility(self):
         tool_items = tool_option_items({"progressive_mobility": 1})
-        self.assertEqual(grants(ids(*["Progressive Mobility"] * 5), {}, tool_items), [
+        self.assertEqual(grants(ids(*["Progressive Mobility"] * 5), {}, tool_items, {}), [
             {"kind": "upgrade", "upgrade": "hook", "tier": 1},
             {"kind": "blueprint", "upgrade": "hook.long_hook"},
             {"kind": "upgrade", "upgrade": "steampack", "tier": 1},
@@ -118,7 +118,7 @@ class TestGrants(unittest.TestCase):
         ])
 
     def test_default_items(self):
-        result = grants(ids("Progressive Pressure Bomb", "Hook Shot"), {}, [])
+        result = grants(ids("Progressive Pressure Bomb", "Hook Shot"), {}, [], {})
         self.assertEqual(result, [
             {"kind": "upgrade", "upgrade": "pressurebomb", "tier": 1},
             {"kind": "upgrade", "upgrade": "hook", "tier": 1},

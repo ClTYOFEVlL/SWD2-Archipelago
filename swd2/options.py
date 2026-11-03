@@ -243,6 +243,101 @@ class FillerWeights(OptionCounter):
             raise OptionError(f"For option {self.display_name}: at least one weight must be above 0.")
 
 
+class TrapLink(Toggle):
+    """
+    Whether your received traps are linked to other players.
+    A linked trap becomes the closest of your traps, unless its weight below is 0.
+    """
+    display_name = "Trap Link"
+
+
+class TrapFillPercentage(NamedRange):
+    """
+    Replaces this percentage of filler with traps.
+    """
+    display_name = "Trap Fill Percentage"
+    range_start = 0
+    range_end = 100
+    default = 0
+    special_range_names = {
+        "disabled": 0,
+        "light": 10,
+        "normal": 25,
+        "extreme": 50,
+    }
+
+
+class TrapWeight(Range):
+    range_start = 0
+    range_end = 100
+    default = 50
+
+
+class LeakyTankTrapWeight(TrapWeight):
+    """
+    How often a trap is a Leaky Tank Trap, which empties your water tank.
+    """
+    display_name = "Leaky Tank Trap Weight"
+
+
+class DarknessTrapWeight(TrapWeight):
+    """
+    How often a trap is a Darkness Trap, which empties your lamp.
+    """
+    display_name = "Darkness Trap Weight"
+
+
+class GravityTrapWeight(TrapWeight):
+    """
+    How often a trap is a Gravity Trap, which increases your gravity.
+    """
+    display_name = "Gravity Trap Weight"
+
+
+class FreezeTrapWeight(TrapWeight):
+    """
+    How often a trap is a Freeze Trap, which stops you from moving.
+    """
+    display_name = "Freeze Trap Weight"
+
+
+class CutsceneTrapWeight(TrapWeight):
+    """
+    How often a trap is a Cutscene Trap, which makes Dorothy talk to herself.
+    """
+    display_name = "Cutscene Trap Weight"
+
+
+class GravityTrapDuration(Range):
+    """
+    How many seconds a Gravity Trap lasts.
+    """
+    display_name = "Gravity Trap Duration"
+    range_start = 1
+    range_end = 60
+    default = 15
+
+
+class FreezeTrapDuration(Range):
+    """
+    How many seconds a Freeze Trap lasts.
+    """
+    display_name = "Freeze Trap Duration"
+    range_start = 1
+    range_end = 10
+    default = 2
+
+
+# Trap item -> its weight option
+TRAP_WEIGHTS = {
+    "Leaky Tank Trap": "leaky_tank_trap_weight",
+    "Darkness Trap": "darkness_trap_weight",
+    "Gravity Trap": "gravity_trap_weight",
+    "Freeze Trap": "freeze_trap_weight",
+    "Cutscene Trap": "cutscene_trap_weight",
+}
+
+
 @dataclass
 class SWD2Options(PerGameCommonOptions):
     death_link: DeathLink
@@ -264,6 +359,15 @@ class SWD2Options(PerGameCommonOptions):
     secret_areas: SecretAreas
     cog_amount: CogAmount
     filler_weights: FillerWeights
+    trap_link: TrapLink
+    trap_fill_percentage: TrapFillPercentage
+    leaky_tank_trap_weight: LeakyTankTrapWeight
+    darkness_trap_weight: DarknessTrapWeight
+    gravity_trap_weight: GravityTrapWeight
+    freeze_trap_weight: FreezeTrapWeight
+    cutscene_trap_weight: CutsceneTrapWeight
+    gravity_trap_duration: GravityTrapDuration
+    freeze_trap_duration: FreezeTrapDuration
     start_inventory_from_pool: StartInventoryPool
 
 
@@ -274,4 +378,15 @@ OPTION_GROUPS = [
     OptionGroup("Locations", [TeleporterLocations, HellCaveLocations, OrbContainers, SecretAreas]),
     OptionGroup("Items", [SprintHydraulics, CogAmount, FillerWeights]),
     OptionGroup("Tool Items", [PressureBombItems, JackhammerItems, JetEngineItems, HookItems, GrenadeItems, ProgressiveMobility]),
+    OptionGroup("Traps", [
+        TrapLink,
+        TrapFillPercentage,
+        LeakyTankTrapWeight,
+        DarknessTrapWeight,
+        GravityTrapWeight,
+        FreezeTrapWeight,
+        CutsceneTrapWeight,
+        GravityTrapDuration,
+        FreezeTrapDuration,
+    ]),
 ]

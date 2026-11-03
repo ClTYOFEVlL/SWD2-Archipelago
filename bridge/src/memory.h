@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 
+uint8_t ReadU8(uintptr_t address);
 uint32_t ReadU32(uintptr_t address);
 float ReadF32(uintptr_t address);
 double ReadF64(uintptr_t address);

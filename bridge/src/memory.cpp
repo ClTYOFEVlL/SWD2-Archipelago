@@ -13,6 +13,15 @@ uint32_t ReadU32(uintptr_t address)
     }
 }
 
+uint8_t ReadU8(uintptr_t address)
+{
+    __try {
+        return *reinterpret_cast<const uint8_t*>(address);
+    } __except (EXCEPTION_EXECUTE_HANDLER) {
+        return 0;
+    }
+}
+
 float ReadF32(uintptr_t address)
 {
     uint32_t bits = ReadU32(address);

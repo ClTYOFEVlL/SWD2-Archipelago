@@ -4,6 +4,7 @@
 #include <cstring>
 #include <deque>
 #include <map>
+#include <random>
 #include <set>
 #include <string>
 #include <vector>
@@ -25,6 +26,11 @@ const char kApLogo[] = "Icons/AP/ap_logo_atlas";  // the atlas entry the patch a
 const char kCogIcon[] = "Icons/Currency/cogs_big";
 const char kMoneyIcon[] = "Icons/Currency/money";
 const double kBannerSeconds = 4.0;  // how long the game shows a banner, so one at a time
+
+// The traps, in game seconds
+const double kTrapGap = 2.5;  // from the start of one to the start of the next, of any kind
+const float kGravityScale = 2.0f;
+const char kCutscenePrefix[] = "ap_cutscene_";  // the patch's conversations, numbered from 1
 
 // What the player sees when the save starts or stops playing its slot
 const char kConnectedHeader[] = "Connected to Archipelago.";
@@ -55,14 +61,35 @@ struct Save {
 };
 
 struct Item {
-    std::string kind;  // upgrade, blueprint, artifact, cog or money
-    std::string id;  // the upgrade, blueprint or collectible id
+    std::string kind;  // upgrade, blueprint, artifact, cog, money or trap
+    std::string id;  // the upgrade, blueprint, collectible or trap id
     int amount = 0;  // the tier to reach for an upgrade, or how many cogs or dollars
     std::string header, text, icon;
 };
 
 struct Banner {
     std::string header, text, icon;
+};
+
+struct Trap {
+    std::string id;
+    int amount = 0;  // how many seconds it lasts, or for the Cutscene Trap how many conversations there are
+};
+
+// A trap that lasts a while. Another of its kind starts it over
+struct TimedTrap {
+    bool on = false;
+    double start = 0, end = 0;
+
+    void Start(double now, double seconds)
+    {
+        on = true;
+        start = now;
+        end = now + seconds;
+    }
+
+    // Game time goes back when a save rolls back
+    bool Over(double now) const { return on && (now >= end || now < start); }
 };
 
 // From the client
@@ -90,6 +117,10 @@ std::map<std::string, int> g_reportedLists;
 
 bool g_wasDead = false;
 bool g_quietDeath = false;  // the next death is a Self-Destruct or a DeathLink one, which isn't sent
+
+std::deque<Trap> g_traps;  // received and waiting to go off. Not saved: a rollback never brings one back
+TimedTrap g_gravity, g_freeze;
+double g_trapStart = -1e9;
 
 uintptr_t g_profile = 0;
 double g_lastGameTime = -1;
@@ -136,7 +167,7 @@ void OnItems(const json& message)
 
         Item item;
         item.kind = grant.at("kind").get<std::string>();
-        item.id = grant.value("upgrade", grant.value("collectible", ""));
+        item.id = grant.value("upgrade", grant.value("collectible", grant.value("trap", "")));
         item.amount = grant.value("tier", grant.value("amount", 0));
         item.header = entry.at("header").get<std::string>();
         item.text = entry.at("text").get<std::string>();
@@ -164,6 +195,12 @@ void OnBanner(const json& message)
     std::string icon = message.value("icon", "");
     g_banners.push_back({message.at("header").get<std::string>(), message.at("text").get<std::string>(),
                          icon.empty() ? kApLogo : icon});
+}
+
+// Another player's trap, which never counts as an item
+void OnLinkedTrap(const json& message)
+{
+    g_traps.push_back({message.at("trap").get<std::string>(), message.at("amount").get<int>()});
 }
 
 void HandleMessages()
@@ -202,6 +239,8 @@ void HandleMessages()
                 OnPrices(message);
             else if (type == "banner")
                 OnBanner(message);
+            else if (type == "trap")
+                OnLinkedTrap(message);
             else if (type == "kill")
                 g_kill = true;
             else
@@ -276,6 +315,9 @@ bool Give(const game::Frame& frame, const Item& item, bool silent)
         game::AddCogs(frame, item.amount, silent);
     } else if (item.kind == "money") {
         game::AddMoney(frame, item.amount, silent);
+    } else if (item.kind == "trap") {
+        if (!silent)
+            g_traps.push_back({item.id, item.amount});
     } else {
         Log("item of unknown kind '%s': skipped", item.kind.c_str());
     }
@@ -413,6 +455,76 @@ void HandleDeaths(const game::Frame& frame, bool ours, bool kill)
     }
 }
 
+void EndTraps(const game::Frame& frame, double now)
+{
+    if (g_gravity.Over(now)) {
+        game::SetGravityScale(1.0f);
+        g_gravity.on = false;
+        Log("trap over: gravity");
+    }
+
+    if (g_freeze.Over(now)) {
+        game::HideCutsceneBars(frame, false);
+        g_freeze.on = false;
+        Log("trap over: freeze");
+    }
+}
+
+// A random conversation, never the same one twice in a row
+std::string NextCutscene(int count)
+{
+    static std::mt19937 random{std::random_device{}()};
+    static int last = 0;
+
+    int number = last;
+    while (number == last && count > 1)
+        number = std::uniform_int_distribution<int>(1, count)(random);
+
+    last = number;
+    return kCutscenePrefix + std::to_string(number);
+}
+
+// Returns false if the trap must wait
+bool StartTrap(const game::Frame& frame, const Trap& next, double now)
+{
+    const std::string& trap = next.id;
+    if (trap == "cutscene" && !game::PlayerOnGround(frame)) return false;
+
+    if (trap == "leaky_tank") {
+        game::EmptyWaterTank(frame.profile);
+    } else if (trap == "darkness") {
+        game::EmptyLamp(frame.profile);
+    } else if (trap == "gravity") {
+        game::SetGravityScale(kGravityScale);
+        g_gravity.Start(now, next.amount);
+    } else if (trap == "freeze") {
+        game::HideCutsceneBars(frame, true);
+        g_freeze.Start(now, next.amount);
+    } else if (trap == "cutscene") {
+        game::StartConversation(frame, NextCutscene(next.amount).c_str());
+    } else {
+        Log("unknown trap '%s': skipped", trap.c_str());
+    }
+
+    g_trapStart = now;
+    Log("trap: %s", trap.c_str());
+    return true;
+}
+
+// They can overlap, but never start while the player can't do anything about it
+void RunTraps(const game::Frame& frame, double now)
+{
+    // A level load makes a new ScriptSimulator
+    if (g_freeze.on)
+        game::HideCutsceneBars(frame, true);
+
+    if (g_traps.empty() || !game::PlayerHasControl(frame)) return;
+    if (now - g_trapStart < kTrapGap && now >= g_trapStart) return;
+
+    if (StartTrap(frame, g_traps.front(), now))
+        g_traps.pop_front();
+}
+
 }  // namespace
 
 void OnFrameStart(uintptr_t simulators)
@@ -432,6 +544,10 @@ void OnFrameStart(uintptr_t simulators)
         texts::SetProfile(frame.profile);
         g_saveReported = false;
         g_wasOurs = false;
+        g_traps.clear();
+        g_gravity.on = false;
+        g_freeze.on = false;
+        game::SetGravityScale(1.0f);
     }
 
     // Game time stands still while the game is paused or unfocused
@@ -454,6 +570,9 @@ void OnFrameStart(uintptr_t simulators)
     ShowConnection(ours);
     HandleDeaths(frame, ours, kill);
 
+    if (running)
+        EndTraps(frame, now);
+
     // Nothing changes while the game is paused or unfocused, or while the player is dead: the game ignores most
     // changes then, and the save is about to roll back
     if (!running || !game::PlayerAlive(frame)) return;
@@ -466,6 +585,9 @@ void OnFrameStart(uintptr_t simulators)
         Bind(frame);
     else if (ours && save.items < static_cast<int>(g_items.size()) && game::TierIn(g_table, kIntroDoneFlag) > 0)
         GrantNext(frame, save.items);
+
+    if (ours)
+        RunTraps(frame, now);
 
     if (!g_banners.empty() && (now - g_lastBanner >= kBannerSeconds || now < g_lastBanner)) {
         const Banner& banner = g_banners.front();
@@ -489,6 +611,11 @@ bool MuteGameBanners()
 void OnSelfDestruct()
 {
     g_quietDeath = true;
+}
+
+bool PlayerFrozen()
+{
+    return g_freeze.on;
 }
 
 }  // namespace bridge

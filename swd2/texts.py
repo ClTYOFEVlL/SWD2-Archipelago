@@ -1,4 +1,5 @@
-from .patcher.definitions import DOOM_TEXT
+from .patcher.cutscenes import CUTSCENES
+from .patcher.definitions import DOOM_TEXT, cutscene_line
 from .patcher.flags import TOOLS, shop_flag
 
 LOGO = "{image ap_logo_atlas}"
@@ -65,7 +66,6 @@ CONVERSATION_LINES = {
     "conversation_p7vtak_text": CARTOGRAPHER_REWARD,
 }
 
-
 def shop_texts(tool: str, slot_count: int) -> dict[str, str]:
     chain = shop_flag(tool)
     tool_name = TOOL_NAMES[tool]
@@ -88,6 +88,10 @@ def shop_texts(tool: str, slot_count: int) -> dict[str, str]:
 def static_texts(slot_counts: dict[str, int]) -> dict[str, str]:
     texts = dict(CONVERSATION_LINES)
     texts.update(OBJECTIVE_LINES)
+
+    for number, lines in enumerate(CUTSCENES, 1):
+        for line, text in enumerate(lines, 1):
+            texts[cutscene_line(number, line)] = text
 
     for tool in TOOLS:
         texts.update(shop_texts(tool, slot_counts[tool]))

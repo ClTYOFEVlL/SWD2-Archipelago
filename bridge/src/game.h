@@ -34,9 +34,12 @@ struct Build {
     uintptr_t DeathEventInit;
     uintptr_t DeathEventSend;  // to its listeners, which start the death
     uintptr_t SelfDestruct;  // the pause menu's Self-Destruct, once its confirmation is answered
+    uintptr_t PlayerInputBlocked;  // what everything the player does asks first
+    uintptr_t ConversationNode;  // the Conversation script node
 
     // Data in the exe
     uintptr_t DeathThreshold;  // a float, the player is dead below it
+    uintptr_t Constants;  // a pointer to constants.xml in memory
     uintptr_t UpgradeDefs;  // a vector of 8-byte entries, the definition pointer first
     uintptr_t PriceListDefs;  // the same, for price lists
     uintptr_t EntityTableIndex;
@@ -65,6 +68,7 @@ struct Frame {
     uintptr_t playerSim = 0;
     uintptr_t pickupSim = 0;
     uintptr_t healthSim = 0;
+    uintptr_t scriptSim = 0;
 
     bool Valid() const;
 };
@@ -78,6 +82,17 @@ bool PlayerAlive(const Frame& frame);
 bool PlayerDead(const Frame& frame);
 
 void KillPlayer(const Frame& frame);
+
+// False during a cutscene or a conversation and while a menu is open
+bool PlayerHasControl(const Frame& frame);
+bool PlayerOnGround(const Frame& frame);
+
+// What the traps do
+void EmptyWaterTank(uintptr_t profile);
+void EmptyLamp(uintptr_t profile);
+void SetGravityScale(float scale);  // 1 is normal
+void HideCutsceneBars(const Frame& frame, bool hide);  // the game shows them whenever the player's input is blocked
+void StartConversation(const Frame& frame, const char* id);
 
 // Stands still while the game is paused or its window unfocused
 double GameTime(uintptr_t profile);

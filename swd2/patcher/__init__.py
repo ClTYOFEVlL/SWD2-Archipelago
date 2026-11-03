@@ -24,6 +24,7 @@ def build(game_dir: str | pathlib.Path) -> tuple[dict[str, bytes], dict[str, byt
             definitions.PICKUPS: definitions.pickups(files.text(definitions.PICKUPS)),
             definitions.TEXTITEMS: definitions.textitems(files.text(definitions.TEXTITEMS)),
             definitions.DAMAGE_TYPES: definitions.damage_types(files.text(definitions.DAMAGE_TYPES)),
+            definitions.CONVERSATIONS: definitions.conversations(files.text(definitions.CONVERSATIONS)),
         }
 
         replaced = {}

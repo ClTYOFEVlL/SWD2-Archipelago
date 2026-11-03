@@ -2,6 +2,7 @@
 import asyncio
 import pathlib
 import sys
+import time
 
 import Utils
 from CommonClient import (
@@ -19,10 +20,11 @@ from NetUtils import ClientStatus, NetworkItem
 from . import bridge_protocol as protocol, game_copy
 from .bridge_connection import BridgeConnection
 from .data import BASE_ID, LOCATIONS
-from .items import GAME, tool_option_items
+from .items import GAME, ITEM_NAME_GROUPS, TRAP_LINK_NAMES, tool_option_items
 
 SHOWN_STORE = "swd2_items_shown"  # persistent storage: "<seed name>:<slot>" -> how many items the game has shown
 HIDDEN_NAME = "Archipelago Item"  # an item on offer, when the seed hides shop items
+TRAP_LINK = "TrapLink"  # the tag and the bounce of the players with Trap Link
 
 # The locations whose item the game names before you get it. Shop slots and the Cartographer's rewards are hidden
 # when the seed hides shop items, and podiums name theirs in the banner once taken
@@ -133,6 +135,8 @@ class SWD2Context(CommonContext):
                 death_link = self.slot_data.get("death_link", False)
                 Utils.async_start(self.update_death_link(death_link), name="DeathLink")
 
+            self.update_trap_link()
+
             if self.game_ready:
                 self.send_slot()
 
@@ -145,6 +149,10 @@ class SWD2Context(CommonContext):
         elif cmd == "LocationInfo":
             if self.game_ready:
                 self.bridge.send(protocol.texts_message(self.names_on_offer()))
+
+        elif cmd == "Bounced":
+            if TRAP_LINK in args.get("tags", []) and TRAP_LINK in self.tags:
+                self.on_trap_link(args["data"])
 
     def on_print_json(self, args: dict):
         """Shows a banner in game for each item you find for another player. Your own come as received items."""
@@ -172,6 +180,40 @@ class SWD2Context(CommonContext):
 
         if self.game_ready:
             self.bridge.send(protocol.kill_message())
+
+    def update_trap_link(self):
+        if self.slot_data.get("trap_link", False):
+            self.tags.add(TRAP_LINK)
+        else:
+            self.tags.discard(TRAP_LINK)
+
+        Utils.async_start(self.send_msgs([{"cmd": "ConnectUpdate", "tags": self.tags}]), name="Trap Link")
+
+    def on_trap_link(self, data: dict):
+        """A trap another player got becomes the closest of ours, unless the slot turned that one off."""
+        source = data.get("source")
+        name = TRAP_LINK_NAMES.get(data.get("trap_name"))
+        if source == self.player_names[self.slot] or not self.slot_data["trap_weights"].get(name):
+            return
+
+        if self.game_ready and self.save_is_ours():
+            self.bridge.send(protocol.linked_trap_message(name, self.slot_data["trap_seconds"]))
+            self.bridge.send(protocol.banner_message(f"{source} linked {data['trap_name']}", f"({name})"))
+
+    def link_traps(self, start: int, end: int):
+        """Sends other players the traps among the received items the game just gave. Linked traps aren't among them,
+        so they don't come back."""
+        names = [self.item_names.lookup_in_game(item.item) for item in self.items_received[start:end]]
+        traps = [name for name in names if name in ITEM_NAME_GROUPS["Traps"]]
+        if TRAP_LINK not in self.tags or not traps:
+            return
+
+        source = self.player_names[self.slot]
+        bounces = [
+            {"cmd": "Bounce", "tags": [TRAP_LINK], "data": {"time": time.time(), "source": source, "trap_name": name}}
+            for name in traps
+        ]
+        Utils.async_start(self.send_msgs(bounces), name="Trap Link")
 
     async def scout_items_on_offer(self):
         show = self.slot_data["options"]["show_shop_items"]
@@ -212,7 +254,8 @@ class SWD2Context(CommonContext):
     def send_items(self, start: int):
         money = {int(item): dollars for item, dollars in self.slot_data["money_bundles"].items()}
         tool_items = tool_option_items(self.slot_data["options"])
-        grants = protocol.grants([item.item for item in self.items_received], money, tool_items)
+        trap_seconds = self.slot_data.get("trap_seconds", {})
+        grants = protocol.grants([item.item for item in self.items_received], money, tool_items, trap_seconds)
         banners = [
             protocol.item_banner(
                 self.player_names[item.player],
@@ -282,6 +325,7 @@ class SWD2Context(CommonContext):
         elif report["state"] == "bound" and report["seed"] != self.seed_id:
             self.tell("This save belongs to another seed or slot.", "Load this slot's save or start a New Game.")
         elif report["state"] == "bound" and report["items"] > self.shown:
+            self.link_traps(self.shown, report["items"])
             self.shown = report["items"]
             Utils.persistent_store(SHOWN_STORE, self.shown_key, self.shown)
 

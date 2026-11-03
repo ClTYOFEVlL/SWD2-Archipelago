@@ -15,4 +15,7 @@ bool MuteGameBanners();
 // The player chose to Self-Destruct, a death DeathLink doesn't send
 void OnSelfDestruct();
 
+// True during a Freeze Trap
+bool PlayerFrozen();
+
 }  // namespace bridge

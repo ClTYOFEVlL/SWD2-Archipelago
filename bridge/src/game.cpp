@@ -42,8 +42,11 @@ const Build kSteam = {
     .DeathEventInit = 0x165410,
     .DeathEventSend = 0x167180,
     .SelfDestruct = 0x166490,
+    .PlayerInputBlocked = 0x22E760,
+    .ConversationNode = 0x251DF0,
 
     .DeathThreshold = 0x537268,
+    .Constants = 0x61A550,
     .UpgradeDefs = 0x622948,
     .PriceListDefs = 0x622150,
     .EntityTableIndex = 0x619860,
@@ -80,8 +83,11 @@ const Build kGog = {
     .DeathEventInit = 0x165220,
     .DeathEventSend = 0x166F80,
     .SelfDestruct = 0x166290,
+    .PlayerInputBlocked = 0x22E2B0,
+    .ConversationNode = 0x251860,
 
     .DeathThreshold = 0x534DF8,
+    .Constants = 0x614BD0,
     .UpgradeDefs = 0x61CFB0,
     .PriceListDefs = 0x61C7B8,
     .EntityTableIndex = 0x613EE0,
@@ -99,11 +105,13 @@ const Build* const kBuilds[] = {&kSteam, &kGog};
 const uintptr_t kSimulatorsGame = 0xC;  // points at an object with the Game at +4
 const uintptr_t kSimulatorsPlayer = 0x20;  // the PlayerSimulator
 const uintptr_t kSimulatorsHealth = 0x48;  // the HealthSimulator
+const uintptr_t kSimulatorsScript = 0x68;  // the ScriptSimulator
 const uintptr_t kSimulatorsPickup = 0x6C;  // the PickupSimulator
 
 // The Game object
 const uintptr_t kGameEntities = 0x36C;  // the entity system
 const uintptr_t kGamePlayerId = 0x260;  // the player's entity id
+const uintptr_t kGameMenus = 0x2B4;  // the open menus and conversations: 8-byte shared pointers, begin then end
 const uintptr_t kGameProfile = 0x3CC;  // the profile, the save in memory
 const uintptr_t kGameBanners = 0x40C;  // the BannerUI
 
@@ -114,6 +122,8 @@ const uintptr_t kProfileGameTime = 0x10;  // a double
 const uintptr_t kProfileTeleporters = 0xB8;  // the unlocked ones: a vector of game strings, begin then end
 const uintptr_t kProfileUpgrades = 0x168;  // the upgrade table: buckets, then the bucket count, then the size
 const uintptr_t kProfileCartographerPaid = 0x1E0;
+const uintptr_t kProfileLamp = 0x238;  // the seconds of light left, a float
+const uintptr_t kProfileWater = 0x244;  // a float
 
 // Definitions, loaded at startup
 const uintptr_t kDefinitionId = 4;  // a definition's id string
@@ -132,13 +142,32 @@ const uintptr_t kNodeEntity = 8;
 const uintptr_t kEntityId = 4;
 const uintptr_t kEntityPosition = 0x30;
 
+const uintptr_t kPlayerMovement = 8;  // the player component's Movement
+const uintptr_t kMovementOnGround = 0x1F;
 const uintptr_t kPlayerHealth = 0x14;  // the player component's Health
+const uintptr_t kPlayerInCutscene = 0x2C;
 const uintptr_t kHealthPoints = 0x10;  // a float
 
 // The event that starts the player's death
 const size_t kDeathEventSize = 0x68;
 const uintptr_t kDeathEventSelfDestruct = 0;  // a bool
 const uintptr_t kDeathEventKiller = 4;  // an entity id
+
+// The ScriptSimulator
+const uintptr_t kScriptInputFrozen = 0x48;  // FreezePlayerInput's flag
+const uintptr_t kScriptNoBars = 0x4A;
+const uintptr_t kScriptCutscene = 0x4D;
+
+const uintptr_t kMenuClosed = 4;  // an open menu's flag, set when it's on its way out
+
+// The script node the bridge runs itself reads its properties from +0xC0 on, so a blank buffer stands in for one
+const size_t kNodeSize = 0xD0;
+const uintptr_t kNodeProperties = 0xC0;
+const uintptr_t kConversationId = kNodeProperties;
+
+const uintptr_t kConstantsGravityY = 0x40;  // a float
+
+const float kNearlyEmpty = 0.001f;  // the lamp's own update takes it from here to empty, with its sound
 
 // Each function's first bytes, the same in both builds, up to its first absolute address (those get relocated)
 struct Prologue {
@@ -177,6 +206,10 @@ bool ProloguesMatch(const Build& build, std::string& why)
         {build.DeathEventSend, "DeathEvent send", {0x55, 0x8B, 0xEC, 0x6A, 0xFF, 0x68}, 6},
         {build.SelfDestruct, "Self-Destruct",
          {0x55, 0x8B, 0xEC, 0x83, 0xE4, 0xF8, 0x83, 0xEC, 0x6C, 0x83, 0x7D, 0x08, 0x00, 0x53, 0x56, 0x57}, 16},
+        {build.PlayerInputBlocked, "PlayerInputBlocked",
+         {0x55, 0x8B, 0xEC, 0x53, 0x8B, 0x5D, 0x08, 0x8B, 0x43, 0x14, 0x56, 0x57, 0x05, 0xB4, 0x02, 0x00, 0x00}, 17},
+        {build.ConversationNode, "Conversation node",
+         {0x55, 0x8B, 0xEC, 0x56, 0x8B, 0x71, 0x24, 0x83, 0x7E, 0x64, 0x00, 0x57}, 12},
     };
 
     for (const Prologue& prologue : prologues) {
@@ -200,6 +233,7 @@ typedef void(__stdcall* GiveCollectibleFn)(uintptr_t pickupSim, uintptr_t defini
 typedef void(__stdcall* BannerShowFn)(uintptr_t bannerUI, const char* key, const char* headerId, const char* headerArg,
                                       const char* textId, const char* textArg, const char* icon);
 typedef void(__stdcall* SetHealthFn)(uintptr_t healthSim, uint32_t entity, float health);
+typedef int(__thiscall* ScriptNodeFn)(uintptr_t scriptSim, uint8_t* node);
 
 // A game function at an offset, as a pointer of the right type
 template <typename T>
@@ -280,7 +314,7 @@ bool PlayerPosition(const Frame& frame, float pos[2])
 
 // FindPlayerComponent takes the entity system in eax and the entity id on the stack, and pops it (ret 4). It returns
 // 0 when the player doesn't exist or is being destroyed
-bool PlayerHealth(const Frame& frame, float& health)
+uint32_t PlayerComponent(const Frame& frame)
 {
     void* fn = reinterpret_cast<void*>(g_base + g_build->FindPlayerComponent);
     uint32_t entities = frame.game + kGameEntities;
@@ -294,6 +328,12 @@ bool PlayerHealth(const Frame& frame, float& health)
         mov component, eax
     }
 
+    return component;
+}
+
+bool PlayerHealth(const Frame& frame, float& health)
+{
+    uint32_t component = PlayerComponent(frame);
     if (!component) return false;
 
     health = ReadF32(ReadU32(component + kPlayerHealth) + kHealthPoints);
@@ -338,13 +378,15 @@ Frame FrameOf(uintptr_t simulators)
     frame.playerSim = ReadU32(simulators + kSimulatorsPlayer);
     frame.pickupSim = ReadU32(simulators + kSimulatorsPickup);
     frame.healthSim = ReadU32(simulators + kSimulatorsHealth);
+    frame.scriptSim = ReadU32(simulators + kSimulatorsScript);
     frame.profile = frame.game ? ReadU32(frame.game + kGameProfile) : 0;
     return frame;
 }
 
 bool Frame::Valid() const
 {
-    return game && profile && playerSim && pickupSim && healthSim && ReadU32(playerSim + kPlayerSimGame) == game;
+    return game && profile && playerSim && pickupSim && healthSim && scriptSim &&
+           ReadU32(playerSim + kPlayerSimGame) == game;
 }
 
 const char* Intern(const char* s)
@@ -390,6 +432,61 @@ void KillPlayer(const Frame& frame)
         call send
         pop esi
     }
+}
+
+bool PlayerHasControl(const Frame& frame)
+{
+    uint32_t component = PlayerComponent(frame);
+    if (!component || ReadU8(component + kPlayerInCutscene)) return false;
+    if (ReadU8(frame.scriptSim + kScriptInputFrozen) || ReadU8(frame.scriptSim + kScriptCutscene)) return false;
+
+    uintptr_t begin = ReadU32(frame.game + kGameMenus);
+    uintptr_t end = ReadU32(frame.game + kGameMenus + 4);
+    for (uintptr_t at = begin; at < end && at < begin + 8 * 64; at += 8)
+        if (!ReadU8(ReadU32(at) + kMenuClosed))
+            return false;
+
+    return true;
+}
+
+bool PlayerOnGround(const Frame& frame)
+{
+    uint32_t component = PlayerComponent(frame);
+    return component && ReadU8(ReadU32(component + kPlayerMovement) + kMovementOnGround);
+}
+
+void EmptyWaterTank(uintptr_t profile)
+{
+    *reinterpret_cast<float*>(profile + kProfileWater) = 0.0f;
+}
+
+void EmptyLamp(uintptr_t profile)
+{
+    float& light = *reinterpret_cast<float*>(profile + kProfileLamp);
+    if (light > kNearlyEmpty)
+        light = kNearlyEmpty;
+}
+
+// The world's gravity, which every body falls by, times its own scale
+void SetGravityScale(float scale)
+{
+    float* gravity = reinterpret_cast<float*>(ReadU32(g_base + g_build->Constants) + kConstantsGravityY);
+    static const float normal = *gravity;
+    *gravity = normal * scale;
+}
+
+// A scene's own freeze decides for itself
+void HideCutsceneBars(const Frame& frame, bool hide)
+{
+    if (!ReadU8(frame.scriptSim + kScriptInputFrozen))
+        *reinterpret_cast<uint8_t*>(frame.scriptSim + kScriptNoBars) = hide ? 1 : 0;
+}
+
+void StartConversation(const Frame& frame, const char* id)
+{
+    uint8_t node[kNodeSize] = {};
+    *reinterpret_cast<const char**>(node + kConversationId) = Intern(id);
+    Fn<ScriptNodeFn>(g_build->ConversationNode)(frame.scriptSim, node);
 }
 
 double GameTime(uintptr_t profile)

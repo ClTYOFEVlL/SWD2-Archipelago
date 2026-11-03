@@ -6,7 +6,7 @@ from Options import OptionError
 
 from .data import BASE_ID, ITEMS, ItemData
 from .money import scaled_price
-from .options import SWD2Options
+from .options import TRAP_WEIGHTS, SWD2Options
 
 if TYPE_CHECKING:
     from . import SWD2World
@@ -27,12 +27,30 @@ ITEM_NAME_GROUPS = {
     "Artifacts": {item.name for item in ITEMS if item.group == "artifact"},
     "Money Bundles": {item.name for item in ITEMS if item.group == "money"},
     "Devices": {item.name for item in ITEMS if item.group == "device"},
+    "Traps": {item.name for item in ITEMS if item.group == "trap"},
 }
 MONEY_BUNDLES = [item.name for item in ITEMS if item.group == "money"]
+# A trap another game links -> ours.
+TRAP_LINK_NAMES = {
+    "Leaky Tank Trap": "Leaky Tank Trap",
+    "Darkness Trap": "Darkness Trap",
+    "Gravity Trap": "Gravity Trap",
+    "Freeze Trap": "Freeze Trap",
+    "Frozen Trap": "Freeze Trap",
+    "Ice Trap": "Freeze Trap",
+    "Paralysis Trap": "Freeze Trap",
+    "Paralyze Trap": "Freeze Trap",
+    "Stun Trap": "Freeze Trap",
+    "Stunned Trap": "Freeze Trap",
+    "Cutscene Trap": "Cutscene Trap",
+    "Exposition Trap": "Cutscene Trap",
+    "Literature Trap": "Cutscene Trap",
+}
 CLASSIFICATIONS = {
     "progression": ItemClassification.progression,
     "useful": ItemClassification.useful,
     "filler": ItemClassification.filler,
+    "trap": ItemClassification.trap,
 }
 
 
@@ -78,7 +96,7 @@ def precollect(world: "SWD2World") -> None:
 
 
 def core_counts(world: "SWD2World") -> dict[str, int]:
-    counts = {item.name: item.count for item in ITEMS if item.group not in ("cog", "money")}
+    counts = {item.name: item.count for item in ITEMS if item.group not in ("cog", "money", "trap")}
 
     # Easy starts with one of the lamps
     if world.options.logic_difficulty == world.options.logic_difficulty.option_easy:
@@ -136,6 +154,16 @@ def progression_in_pool(world: "SWD2World", name: str) -> int:
     return world.progression_copies.get(name, 0) - owned
 
 
+def trap_names(world: "SWD2World", money_slots: int) -> list[str]:
+    """The traps that take the place of filler, by the trap options."""
+    weights = {name: getattr(world.options, option).value for name, option in TRAP_WEIGHTS.items()}
+    if not any(weights.values()):
+        return []
+
+    count = money_slots * world.options.trap_fill_percentage.value // 100
+    return world.random.choices(list(weights), weights=list(weights.values()), k=count)
+
+
 def create_pool(world: "SWD2World", slots: int) -> list[SWD2Item]:
     pool = []
     for name, count in core_counts(world).items():
@@ -147,5 +175,6 @@ def create_pool(world: "SWD2World", slots: int) -> list[SWD2Item]:
     needed = progression_in_pool(world, COG)
     pool += [create_item(world, COG, progression=i < needed) for i in range(cogs)]
 
+    pool += [create_item(world, name) for name in trap_names(world, slots - len(pool))]
     pool += [create_item(world, world.get_filler_item_name()) for _ in range(slots - len(pool))]
     return pool
