@@ -11,7 +11,8 @@ from ..items import ITEM_TABLE, tool_option_items
 from ..notation import atom_items
 from .bases import SWD2TestBase
 
-TOOL_OPTIONS = ("pressure_bomb_items", "jackhammer_items", "jet_engine_items", "hook_items", "grenade_items")
+TOOL_OPTIONS = ("pressure_bomb_items", "jackhammer_items", "jet_engine_items", "hook_items", "grenade_items",
+                "progressive_mobility")
 
 
 def ids(*names: str) -> list[int]:
@@ -65,6 +66,23 @@ class TestAllChanged(SWD2TestBase):
         self.assertEqual(tool_option_items(options), self.world.tool_items)
 
 
+class TestProgressiveMobility(SWD2TestBase):
+    # It takes the place of the Hook's and the Jet Engine's options, whatever they say
+    options = {"progressive_mobility": True, "hook_items": "progressive", "jet_engine_items": "main_item"}
+
+    def test_pool_and_rules(self):
+        self.assertEqual([item.name for item in self.world.tool_items], ["Progressive Mobility"])
+
+        names = [item.name for item in self.multiworld.itempool]
+        self.assertEqual(names.count("Progressive Mobility"), 5)
+        replaced = ("Hook Shot", "Long-Range Grappler", "Progressive Jet Engine", "Jet Engine", "Progressive Hook Shot")
+        for name in replaced:
+            self.assertNotIn(name, names)
+
+        self.assertEqual(atom_items("Grappler", 1, self.world.tool_items), [("Progressive Mobility", 2)])
+        self.assertEqual(atom_items("Jet", 2, self.world.tool_items), [("Progressive Mobility", 4)])
+
+
 class TestGrants(unittest.TestCase):
     main_bomb = tool_option_items({"pressure_bomb_items": 1})
 
@@ -89,6 +107,16 @@ class TestGrants(unittest.TestCase):
             {"kind": "blueprint", "upgrade": "pressurebomb.launcher_triple"},
         ])
 
+    def test_progressive_mobility(self):
+        tool_items = tool_option_items({"progressive_mobility": 1})
+        self.assertEqual(grants(ids(*["Progressive Mobility"] * 5), {}, tool_items), [
+            {"kind": "upgrade", "upgrade": "hook", "tier": 1},
+            {"kind": "blueprint", "upgrade": "hook.long_hook"},
+            {"kind": "upgrade", "upgrade": "steampack", "tier": 1},
+            {"kind": "upgrade", "upgrade": "steampack", "tier": 2},
+            {"kind": "upgrade", "upgrade": "steampack", "tier": 3},
+        ])
+
     def test_default_items(self):
         result = grants(ids("Progressive Pressure Bomb", "Hook Shot"), {}, [])
         self.assertEqual(result, [
@@ -104,8 +132,8 @@ class TestCombinations(unittest.TestCase):
 
         tools = itertools.product(("progressive", "main_item"), repeat=3)
         pairs = itertools.product(("progressive", "individual"), repeat=2)
-        for number, values in enumerate(itertools.product(tools, pairs)):
-            options = dict(zip(TOOL_OPTIONS, values[0] + values[1]))
+        for number, (tool_values, pair_values, mobility) in enumerate(itertools.product(tools, pairs, (False, True))):
+            options = dict(zip(TOOL_OPTIONS, tool_values + pair_values + (mobility,)))
 
             with self.subTest(**options):
                 try:

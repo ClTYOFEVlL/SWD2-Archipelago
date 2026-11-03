@@ -142,7 +142,8 @@
     "kind": "main",
     "progressive": "Progressive Pressure Bomb"
    },
-   "option": "pressure_bomb_items"
+   "option": "pressure_bomb_items",
+   "choice": "main_item"
   },
   {
    "id": 12,
@@ -155,7 +156,8 @@
     "kind": "main",
     "progressive": "Progressive Jackhammer"
    },
-   "option": "jackhammer_items"
+   "option": "jackhammer_items",
+   "choice": "main_item"
   },
   {
    "id": 13,
@@ -168,7 +170,8 @@
     "kind": "main",
     "progressive": "Progressive Jet Engine"
    },
-   "option": "jet_engine_items"
+   "option": "jet_engine_items",
+   "choice": "main_item"
   },
   {
    "id": 14,
@@ -184,7 +187,8 @@
      "Long-Range Grappler"
     ]
    },
-   "option": "hook_items"
+   "option": "hook_items",
+   "choice": "progressive"
   },
   {
    "id": 15,
@@ -200,7 +204,28 @@
      "ThreeForce Grenade"
     ]
    },
-   "option": "grenade_items"
+   "option": "grenade_items",
+   "choice": "progressive"
+  },
+  {
+   "id": 16,
+   "name": "Progressive Mobility",
+   "group": "tool",
+   "count": 0,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "progressive",
+    "items": [
+     "Hook Shot",
+     "Long-Range Grappler",
+     "Progressive Jet Engine",
+     "Progressive Jet Engine",
+     "Progressive Jet Engine"
+    ]
+   },
+   "option": "progressive_mobility",
+   "choice": "true"
   },
   {
    "id": 101,

@@ -44,6 +44,7 @@ SLOT_OPTIONS = (
     "jet_engine_items",
     "hook_items",
     "grenade_items",
+    "progressive_mobility",
 )
 
 

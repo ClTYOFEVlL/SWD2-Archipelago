@@ -84,9 +84,10 @@ def grants(item_ids: list[int], money: dict[int, int], tool_items: list[ItemData
                 tier = grant.first_tier + copies[item.name]
                 result.append({"kind": "none", "icon": waiting_icon(grant.upgrade, tier)})
 
+        # The n-th copy gives the n-th item named, as the copy of it that this is
         elif grant.kind == "progressive":
-            copy = min(copies[item.name], len(grant.items))
-            result.append(_grant(ITEMS_BY_NAME[grant.items[copy - 1]], 1, 0))
+            given = grant.items[:copies[item.name]]
+            result.append(_grant(ITEMS_BY_NAME[given[-1]], given.count(given[-1]), 0))
 
         else:
             result.append(_grant(item, copies[item.name], money.get(item_id, 0)))

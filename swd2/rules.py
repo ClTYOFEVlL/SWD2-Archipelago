@@ -65,13 +65,13 @@ def copies_needed_by_any_variant() -> dict[str, int]:
     rules += [event.rules for event in LOGIC.events]
     rules += [row.rules for row in LOGIC.money]
 
-    # Without the tool options items, then with all of them
-    tool_items = [item for item in ITEMS if item.option]
+    # Without the tool options items, then with each of them
+    tool_item_sets = [[]] + [[item] for item in ITEMS if item.option]
 
     counts = {}
     for variants in rules:
         for text in variants.values():
-            notation.needed_counts(notation.parse(text), counts, [])
-            notation.needed_counts(notation.parse(text), counts, tool_items)
+            for tool_items in tool_item_sets:
+                notation.needed_counts(notation.parse(text), counts, tool_items)
 
     return counts

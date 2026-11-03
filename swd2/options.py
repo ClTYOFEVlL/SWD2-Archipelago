@@ -147,6 +147,15 @@ class GrenadeItems(PairItems):
     default = PairItems.option_individual
 
 
+class ProgressiveMobility(Toggle):
+    """
+    Gives the Hook Shot, the Long-Range Grappler and the 3 Jet Engine items as one progressive item.
+
+    Hook Items and Jet Engine Items options are ignored when this is enabled.
+    """
+    display_name = "Progressive Mobility"
+
+
 class TeleporterLocations(DefaultOnToggle):
     """
     Unlocking each of the 25 teleporters (all but El Machino's) is a location. Fast travel still unlocks as usual.
@@ -207,6 +216,7 @@ class SWD2Options(PerGameCommonOptions):
     jet_engine_items: JetEngineItems
     hook_items: HookItems
     grenade_items: GrenadeItems
+    progressive_mobility: ProgressiveMobility
     teleporter_locations: TeleporterLocations
     hell_cave_locations: HellCaveLocations
     cog_amount: CogAmount
@@ -219,5 +229,5 @@ OPTION_GROUPS = [
     OptionGroup("Shops", [ShopPricePercent, ShowShopItems]),
     OptionGroup("Locations", [TeleporterLocations, HellCaveLocations]),
     OptionGroup("Items", [SprintHydraulics, CogAmount, FillerWeights]),
-    OptionGroup("Tool Items", [PressureBombItems, JackhammerItems, JetEngineItems, HookItems, GrenadeItems]),
+    OptionGroup("Tool Items", [PressureBombItems, JackhammerItems, JetEngineItems, HookItems, GrenadeItems, ProgressiveMobility]),
 ]

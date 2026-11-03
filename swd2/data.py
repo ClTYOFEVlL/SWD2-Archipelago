@@ -31,6 +31,7 @@ class ItemData:
     classification: str  # progression, useful or filler, for the copies no rule asks for
     grant: Grant
     option: str = ""  # main and progressive items: the tool option that puts them in the pool
+    choice: str = ""  # and the choice of it that does
 
 
 @dataclass(frozen=True)

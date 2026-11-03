@@ -125,8 +125,10 @@ def seed_items(item: str, copies: int, tool_items: list[ItemData]) -> list[tuple
                 return [(tool_item.name, 1)]
             return [(tool_item.name, 1), (item, copies - 1)]
 
+        # Its copies give the items in order, so the n-th copy of an item is where it's named the n-th time
         if grant.kind == "progressive" and item in grant.items:
-            return [(tool_item.name, grant.items.index(item) + 1)]
+            places = [place for place, name in enumerate(grant.items, 1) if name == item]
+            return [(tool_item.name, places[copies - 1])]
 
     return [(item, copies)]
 

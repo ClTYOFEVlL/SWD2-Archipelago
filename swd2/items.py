@@ -6,7 +6,7 @@ from Options import OptionError
 
 from .data import BASE_ID, ITEMS, ItemData
 from .money import scaled_price
-from .options import PairItems, ToolItems
+from .options import SWD2Options
 
 if TYPE_CHECKING:
     from . import SWD2World
@@ -56,11 +56,12 @@ def tool_option_items(options: Mapping[str, int]) -> list[ItemData]:
     """The main and progressive items that a seed's tool options put in the pool, from the options values."""
     chosen = []
     for item in ITEMS:
-        value = options.get(item.option)
-        if item.grant.kind == "main" and value == ToolItems.option_main_item:
+        if item.option and options.get(item.option) == SWD2Options.type_hints[item.option].options[item.choice]:
             chosen.append(item)
-        if item.grant.kind == "progressive" and value == PairItems.option_progressive:
-            chosen.append(item)
+
+    # Progressive Mobility takes the place of the Hook's and the Jet Engine's options
+    if options.get("progressive_mobility"):
+        chosen = [item for item in chosen if item.option not in ("hook_items", "jet_engine_items")]
 
     return chosen
 
