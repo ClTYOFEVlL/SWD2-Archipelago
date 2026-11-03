@@ -19,6 +19,20 @@ PICKUP = "ap_pickup"  # a cog pickup with 0 cogs, so it gives nothing
 
 CARTOGRAPHER_REWARDS = 8
 
+# The Reactor door's quest and its objectives, each now waiting for a Device item: objective -> item.
+# The first three are vanilla's, the last one is added
+REACTOR_QUEST = "quest_destroy_the_last_generators"
+REACTOR_OBJECTIVES = {
+    "obj_guidance_generator": "Device of Devastation",
+    "obj_yarrow_generator": "Device of Disaster",
+    "obj_firetemple_generator_2": "Device of Destruction",
+    "obj_firetemple_generator_1": "Device of Doom",
+}
+DOOM_OBJECTIVE = "obj_firetemple_generator_1"
+DOOM_LEVEL = "firetemple_cave_generator"
+DOOM_TEXT = "quest_destroy_the_last_generators_objective_doom"  # its line in the quest log (texts.py)
+ALL_GENERATORS_QUEST = "quest_destroy_all_generators"
+
 # Their skip-ahead would complete the Fen quests from an early item
 NO_SKIP_AHEAD = (
     "quest_sell_resources",
@@ -93,7 +107,41 @@ def quests(text: str) -> bytes:
     
     exit_temple.text = "quest_enter_temple"
 
+    all_generators(quest[ALL_GENERATORS_QUEST], quest[REACTOR_QUEST])
+    reactor_door(quest[REACTOR_QUEST])
+
     return _xml(root)
+
+
+def all_generators(quest: ET.Element, door: ET.Element) -> None:
+    """The invisible quest for breaking all four generators follows what the door's quest follows. After the door's
+    quest, completing it would force-complete that quest and open the door without the Device items."""
+    unlocked_by = quest.find("UnlockedBy")
+    if unlocked_by.text != door.get("Name"):
+        raise ValueError(f"quests.xml: {quest.get('Name')} follows {unlocked_by.text}")
+
+    unlocked_by.text = door.find("UnlockedBy").text
+
+
+def reactor_door(quest: ET.Element) -> None:
+    """The door's quest waits for the four Device items instead of three destroyed generators. Destroying one still
+    completes its own quest, as in vanilla."""
+    objectives = quest.findall("Objective")
+    if [objective.get("Name") for objective in objectives] != list(REACTOR_OBJECTIVES)[:3]:
+        raise ValueError(f"quests.xml: {REACTOR_QUEST} has other objectives than expected")
+
+    # Doom's objective goes after the others, and its map pointer with the others
+    doom = ET.Element("Objective", {"Name": DOOM_OBJECTIVE, "Description": DOOM_TEXT})
+    quest.insert(list(quest).index(objectives[-1]) + 1, doom)
+    pointers = quest.findall("Pointer")
+    pointer = ET.Element("Pointer", {"Objective": DOOM_OBJECTIVE, "Level": DOOM_LEVEL, "Definition": "maps_only"})
+    quest.insert(list(quest).index(pointers[-1]) + 1, pointer)
+
+    for objective in objectives + [doom]:
+        name = objective.get("Name")
+        objective.set("Type", "upgrade_tier")
+        objective.set("Target", flags.DEVICE_FLAGS[REACTOR_OBJECTIVES[name]])
+        objective.set("Count", "1")
 
 
 def collectors(text: str, locations: list[LocationData]) -> bytes:

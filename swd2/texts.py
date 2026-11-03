@@ -1,3 +1,4 @@
+from .patcher.definitions import DOOM_TEXT
 from .patcher.flags import TOOLS, shop_flag
 
 LOGO = "{image ap_logo_atlas}"
@@ -44,6 +45,13 @@ CARTOGRAPHER_FLAG_DESC = "Cartographer reward {n}"
 LOCATION_FLAG_NAME = "%ITEM%"
 LOCATION_FLAG_DESC = f"{LOGO} An Archipelago check."
 
+OBJECTIVE_LINES = {
+    "quest_destroy_the_last_generators_objective_guidance": "Devastation %3%",
+    "quest_destroy_the_last_generators_objective_yarrow": "Disaster %3%",
+    "quest_destroy_the_last_generators_objective_fire": "Destruction %3%",
+    DOOM_TEXT: "Doom %3%",
+}
+
 CONVERSATION_LINES = {
     "conversation_yx06g0_text": CARSON_OFFER,
     "conversation_0qym9q_text": CARSON_RETURN,
@@ -79,6 +87,7 @@ def shop_texts(tool: str, slot_count: int) -> dict[str, str]:
 
 def static_texts(slot_counts: dict[str, int]) -> dict[str, str]:
     texts = dict(CONVERSATION_LINES)
+    texts.update(OBJECTIVE_LINES)
 
     for tool in TOOLS:
         texts.update(shop_texts(tool, slot_counts[tool]))

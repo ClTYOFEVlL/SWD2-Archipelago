@@ -15,6 +15,14 @@ GOAL_FLAG = "ap_goal"
 TEMPLE_LAMP_FLAG = "ap_temple_lamp"  # what the Temple's lamp-breaking node sets instead of the lamp (levels.py)
 VENDOR_REWARD_FLAG = "ap_vendor_reward"  # what Clifford's sale gives instead of his blueprint (levels.py)
 
+# What each Device item sets, and the Reactor door's quest counts instead of the destroyed generators (definitions.py)
+DEVICE_FLAGS = {
+    "Device of Doom": "ap_device_doom",
+    "Device of Devastation": "ap_device_devastation",
+    "Device of Disaster": "ap_device_disaster",
+    "Device of Destruction": "ap_device_destruction",
+}
+
 
 def shop_flag(tool: str) -> str:
     return f"ap_shop_{tool}"
@@ -71,6 +79,7 @@ def shop_upgrade(tool: str, prices: list[int]) -> str:
 
 def all_definitions(upgrades_xml: str, locations: list[LocationData]) -> str:
     definitions = [flag_upgrade(location.flag) for location in locations if location.flag]
+    definitions += [flag_upgrade(flag, icon=False) for flag in DEVICE_FLAGS.values()]
 
     definitions.append(flag_upgrade(GOAL_FLAG, icon=False))
     definitions.append(flag_upgrade(TEMPLE_LAMP_FLAG, icon=False))

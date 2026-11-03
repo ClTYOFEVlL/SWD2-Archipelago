@@ -171,7 +171,7 @@ def patch_location(level: script.Level, location: LocationData) -> None:
         entity.find("Definition").text = PICKUP
         entity.remove(script.get_prop(entity, "EditorPickup"))
 
-    elif location.type not in ("superorb", "cryptium"):
+    elif location.type not in ("superorb", "cryptium", "generator"):
         raise ValueError(f"unknown location type {location.type}")
 
     level.watch("OnDestroyed", location.entity, level.set_upgrade(flag), f"AP_On_{flag}")

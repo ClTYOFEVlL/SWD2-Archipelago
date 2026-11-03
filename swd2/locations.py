@@ -10,7 +10,7 @@ if TYPE_CHECKING:
     from . import SWD2World
 
 # Secret areas, super orb containers and Cryptium are in the table but aren't locations yet
-LOCATION_TYPES = ("cog", "artifact", "podium", "yonker", "cartographer", "teleporter") + SHOP_TYPES
+LOCATION_TYPES = ("cog", "artifact", "podium", "yonker", "cartographer", "teleporter", "generator") + SHOP_TYPES
 EL_MACHINO_TELEPORTER = "elmachino_teleporter_01"  # unlocks by itself, so it isn't a location
 
 SPRINT_PODIUM = "Temple of Guidance - Upper: Podium (Sprint Hydraulics)"
@@ -38,6 +38,7 @@ _GROUPS = {
     "Trader Carson": "carson",
     "Clifford": "clifford",
     "Teleporters": "teleporter",
+    "Generators": "generator",
 }
 LOCATION_NAME_GROUPS = {
     group: {location.name for location in ALL_LOCATIONS if location.type == kind}

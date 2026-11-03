@@ -994,6 +994,58 @@
     "kind": "money",
     "vanilla": 500
    }
+  },
+  {
+   "id": 451,
+   "name": "Device of Doom",
+   "group": "device",
+   "count": 1,
+   "logic": "Doom",
+   "class": "progression",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "ap_device_doom",
+    "first_tier": 1
+   }
+  },
+  {
+   "id": 452,
+   "name": "Device of Devastation",
+   "group": "device",
+   "count": 1,
+   "logic": "Devastation",
+   "class": "progression",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "ap_device_devastation",
+    "first_tier": 1
+   }
+  },
+  {
+   "id": 453,
+   "name": "Device of Disaster",
+   "group": "device",
+   "count": 1,
+   "logic": "Disaster",
+   "class": "progression",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "ap_device_disaster",
+    "first_tier": 1
+   }
+  },
+  {
+   "id": 454,
+   "name": "Device of Destruction",
+   "group": "device",
+   "count": 1,
+   "logic": "Destruction",
+   "class": "progression",
+   "grant": {
+    "kind": "upgrade",
+    "upgrade": "ap_device_destruction",
+    "first_tier": 1
+   }
   }
  ],
  "mods": {

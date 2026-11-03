@@ -1876,6 +1876,46 @@
    "flag": "ap_loc_655"
   },
   {
+   "type": "generator",
+   "name": "Device of Devastation: Generator",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_generator.le",
+   "area": "cave_generator",
+   "layer": "Foreground",
+   "entity": "32584052",
+   "id": 681,
+   "flag": "ap_loc_681"
+  },
+  {
+   "type": "generator",
+   "name": "Device of Disaster: Generator",
+   "file": "Patchsets/Yarrow/yarrow_cave_generator.le",
+   "area": "cave_generator",
+   "layer": "Foreground",
+   "entity": "32584196",
+   "id": 682,
+   "flag": "ap_loc_682"
+  },
+  {
+   "type": "generator",
+   "name": "Device of Destruction: Generator",
+   "file": "Patchsets/FireTemple/firetemple_cave_generator2.le",
+   "area": "cave_generator2",
+   "layer": "Foreground",
+   "entity": "32583336",
+   "id": 683,
+   "flag": "ap_loc_683"
+  },
+  {
+   "type": "generator",
+   "name": "Device of Doom: Generator",
+   "file": "Patchsets/FireTemple/firetemple_cave_generator.le",
+   "area": "cave_generator1",
+   "layer": "Foreground",
+   "entity": "32584137",
+   "id": 684,
+   "flag": "ap_loc_684"
+  },
+  {
    "type": "secret_area",
    "name": "Chamber of Arrows: Secret Area",
    "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_arrowtraps.le",

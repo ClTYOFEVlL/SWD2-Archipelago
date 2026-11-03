@@ -17,6 +17,7 @@ COG = "Upgrade Cog"
 LAMP = "Progressive Lamp"
 SPRINT = "Sprint Hydraulics"
 SIGIL = "Sigillum Caelum et Infernum"
+DOOM = "Device of Doom"  # the generator the vanilla Reactor door doesn't need
 
 ITEM_TABLE = {item.name: item for item in ITEMS}
 ITEM_NAME_TO_ID = {item.name: BASE_ID + item.id for item in ITEMS}
@@ -25,6 +26,7 @@ ITEM_NAME_GROUPS = {
     "Blueprints": {item.name for item in ITEMS if item.group == "blueprint"},
     "Artifacts": {item.name for item in ITEMS if item.group == "artifact"},
     "Money Bundles": {item.name for item in ITEMS if item.group == "money"},
+    "Devices": {item.name for item in ITEMS if item.group == "device"},
 }
 MONEY_BUNDLES = [item.name for item in ITEMS if item.group == "money"]
 CLASSIFICATIONS = {
@@ -70,6 +72,10 @@ def precollect(world: "SWD2World") -> None:
     if world.options.logic_difficulty == world.options.logic_difficulty.option_easy:
         world.multiworld.push_precollected(create_item(world, LAMP))
 
+    # The Reactor door's Doom objective is done from the start
+    if world.options.generators_required == world.options.generators_required.option_vanilla:
+        world.multiworld.push_precollected(create_item(world, DOOM))
+
 
 def core_counts(world: "SWD2World") -> dict[str, int]:
     counts = {item.name: item.count for item in ITEMS if item.group not in ("cog", "money")}
@@ -77,6 +83,9 @@ def core_counts(world: "SWD2World") -> dict[str, int]:
     # Easy starts with one of the lamps
     if world.options.logic_difficulty == world.options.logic_difficulty.option_easy:
         counts[LAMP] -= 1
+
+    if world.options.generators_required == world.options.generators_required.option_vanilla:
+        counts[DOOM] -= 1
 
     # A main item takes the place of the first progressive copy, a progressive item of the items it stands for
     for item in world.tool_items:

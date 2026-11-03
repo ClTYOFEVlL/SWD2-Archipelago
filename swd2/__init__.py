@@ -45,6 +45,7 @@ SLOT_OPTIONS = (
     "hook_items",
     "grenade_items",
     "progressive_mobility",
+    "generators_required",
 )
 
 

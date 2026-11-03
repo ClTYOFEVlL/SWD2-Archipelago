@@ -2402,12 +2402,12 @@
    "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
   },
   "The Reactor": {
-   "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-   "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+   "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
+   "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
   },
   "The Sun Armory": {
    "base_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
@@ -4969,12 +4969,12 @@
    "type": "superorb",
    "region": "The Reactor",
    "rules": {
-    "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
+    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {
@@ -4983,12 +4983,12 @@
    "type": "superorb",
    "region": "The Reactor",
    "rules": {
-    "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
+    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {
@@ -4997,12 +4997,12 @@
    "type": "superorb",
    "region": "The Reactor",
    "rules": {
-    "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
+    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {
@@ -5011,12 +5011,68 @@
    "type": "superorb",
    "region": "The Reactor",
    "rules": {
-    "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
+    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+   }
+  },
+  {
+   "id": 681,
+   "name": "Device of Devastation: Generator",
+   "type": "generator",
+   "region": "Device of Devastation",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "base_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "tricks_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)"
+   }
+  },
+  {
+   "id": 682,
+   "name": "Device of Disaster: Generator",
+   "type": "generator",
+   "region": "Device of Disaster",
+   "rules": {
+    "base_hard": "(Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)))",
+    "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
+   }
+  },
+  {
+   "id": 683,
+   "name": "Device of Destruction: Generator",
+   "type": "generator",
+   "region": "Device of Destruction",
+   "rules": {
+    "base_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 684,
+   "name": "Device of Doom: Generator",
+   "type": "generator",
+   "region": "Device of Doom",
+   "rules": {
+    "base_hard": "Axe & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Axe & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Axe & Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "Axe & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Axe & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Axe & Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
    }
   },
   {
@@ -6748,63 +6804,15 @@
  },
  "events": [
   {
-   "name": "Device of Doom",
-   "region": "Device of Doom",
-   "rules": {
-    "base_hard": "Axe & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Axe & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Axe & Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Axe & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Axe & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Axe & Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
-   }
-  },
-  {
-   "name": "Device of Devastation",
-   "region": "Device of Devastation",
-   "rules": {
-    "base_hard": "(Sprint & Jet×1) | Hook",
-    "base_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
-    "base_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)",
-    "tricks_hard": "(Sprint & Jet×1) | Hook",
-    "tricks_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
-    "tricks_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)"
-   }
-  },
-  {
-   "name": "Device of Disaster",
-   "region": "Device of Disaster",
-   "rules": {
-    "base_hard": "(Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2))",
-    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
-    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
-    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
-   }
-  },
-  {
-   "name": "Device of Destruction",
-   "region": "Device of Destruction",
-   "rules": {
-    "base_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
-   }
-  },
-  {
    "name": "Rosie",
    "region": "The Reactor",
    "rules": {
-    "base_hard": "(Hook & ((Launcher & ((Sprint & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1))))",
-    "base_normal": "Armor×2 & Pickaxe×2 & ((Hook & ((Launcher & ((Sprint & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "base_easy": "Armor×4 & Pickaxe×4 & Tank×1 & ((Hook & ((Launcher & ((Sprint & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "tricks_hard": "(Hook & ((Launcher & ((Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1))))",
-    "tricks_normal": "Armor×2 & Pickaxe×2 & ((Hook & ((Launcher & ((Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "tricks_easy": "Armor×4 & Pickaxe×4 & Tank×1 & ((Hook & ((Launcher & ((Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))"
+    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Armor×2 & Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×4 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
+    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Armor×2 & Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×4 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {

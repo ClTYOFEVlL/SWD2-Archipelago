@@ -156,6 +156,21 @@ class ProgressiveMobility(Toggle):
     display_name = "Progressive Mobility"
 
 
+class GeneratorsRequired(Choice):
+    """
+    Which generators the Reactor door needs.
+    Each generator has a Device item, which counts as that generator destroyed.
+
+    All - All four Devices.
+
+    Vanilla - The three the vanilla door needs: Devastation, Disaster and Destruction. You start with the Device of Doom.
+    """
+    display_name = "Generators Required"
+    option_all = 0
+    option_vanilla = 1
+    default = option_all
+
+
 class TeleporterLocations(DefaultOnToggle):
     """
     Unlocking each of the 25 teleporters (all but El Machino's) is a location. Fast travel still unlocks as usual.
@@ -217,6 +232,7 @@ class SWD2Options(PerGameCommonOptions):
     hook_items: HookItems
     grenade_items: GrenadeItems
     progressive_mobility: ProgressiveMobility
+    generators_required: GeneratorsRequired
     teleporter_locations: TeleporterLocations
     hell_cave_locations: HellCaveLocations
     cog_amount: CogAmount
@@ -225,6 +241,7 @@ class SWD2Options(PerGameCommonOptions):
 
 
 OPTION_GROUPS = [
+    OptionGroup("Goal", [GeneratorsRequired]),
     OptionGroup("Logic", [LogicDifficulty, Tricks]),
     OptionGroup("Shops", [ShopPricePercent, ShowShopItems]),
     OptionGroup("Locations", [TeleporterLocations, HellCaveLocations]),
