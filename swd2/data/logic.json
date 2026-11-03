@@ -1173,18 +1173,10 @@
   ],
   [
    "Mysterious Cave - Entrance",
-   "Mysterious Cave - Shaft Top"
+   "Mysterious Cave - Hall"
   ],
   [
    "Mysterious Cave - Entrance",
-   "Vectron"
-  ],
-  [
-   "Mysterious Cave - Hall",
-   "Mysterious Cave - Entrance"
-  ],
-  [
-   "Mysterious Cave - Hall",
    "Mysterious Cave - Shaft Top"
   ],
   [
@@ -1422,10 +1414,6 @@
   [
    "Trilobite Bluff",
    "Archaea - Stripes"
-  ],
-  [
-   "Vectron",
-   "Mysterious Cave - Hall"
   ],
   [
    "West Desert - Cliffs",
@@ -2150,12 +2138,12 @@
    "tricks_easy": "Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
   },
   "Mysterious Cave - Hall": {
-   "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   "base_hard": "(Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+   "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+   "base_easy": "Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+   "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+   "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+   "tricks_easy": "Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))"
   },
   "Mysterious Cave - Shaft Top": {
    "base_hard": "Jet×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
@@ -2452,14 +2440,6 @@
    "tricks_hard": "(Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook",
    "tricks_normal": "Pickaxe×1 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)",
    "tricks_easy": "Pickaxe×2 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)"
-  },
-  "Vectron": {
-   "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
   },
   "West Desert - Cliffs": {
    "base_hard": "(Sprint & Jet×1) | Hook",
@@ -4309,12 +4289,12 @@
    "type": "podium",
    "region": "Mysterious Cave - Hall",
    "rules": {
-    "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "base_easy": "Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "tricks_easy": "Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))"
    }
   },
   {
@@ -5037,76 +5017,6 @@
     "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
-   }
-  },
-  {
-   "id": 651,
-   "name": "Vectron - Descent: Cryptium No. 5-1 16.17.4.8",
-   "type": "cryptium",
-   "region": "Vectron",
-   "rules": {
-    "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
-   }
-  },
-  {
-   "id": 652,
-   "name": "Vectron - Drop: Cryptium No. 5-4 12.18.2.1",
-   "type": "cryptium",
-   "region": "Vectron",
-   "rules": {
-    "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
-   }
-  },
-  {
-   "id": 653,
-   "name": "Vectron - Drop: Cryptium No. 5-5 6.19.11.13",
-   "type": "cryptium",
-   "region": "Vectron",
-   "rules": {
-    "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
-   }
-  },
-  {
-   "id": 654,
-   "name": "Vectron - Stairs: Cryptium No. 5-3 7.3.14.5",
-   "type": "cryptium",
-   "region": "Vectron",
-   "rules": {
-    "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
-   }
-  },
-  {
-   "id": 655,
-   "name": "Vectron - Switch: Cryptium No. 5-2 10.15.9",
-   "type": "cryptium",
-   "region": "Vectron",
-   "rules": {
-    "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
    }
   },
   {
@@ -7737,18 +7647,6 @@
     "tricks_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
     "tricks_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
     "tricks_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))"
-   }
-  },
-  {
-   "region": "Vectron",
-   "base": 250,
-   "rules": {
-    "base_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×1 & Pickaxe×4 & Device of Doom & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
    }
   }
  ]

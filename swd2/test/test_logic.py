@@ -9,8 +9,6 @@ from .bases import SWD2TestBase
 
 YONKER_WEST = "West Desert - Intro: Zebulon Yonker's blueprint"
 JET_2 = "El Machino: Workbench Jet Engine 2"
-JET_PODIUM = "Mysterious Cave: Podium (Jet Engine)"
-JET = "Progressive Jet Engine"
 
 
 class TestNormal(SWD2TestBase):
@@ -57,22 +55,6 @@ class TestEasy(SWD2TestBase):
 
         lamps = sum(1 for item in self.multiworld.itempool if item.name == "Progressive Lamp")
         self.assertEqual(lamps, 6)
-
-
-class TestJetPodium(SWD2TestBase):
-    options = {"logic_difficulty": "hard", "tricks": True}
-
-    def test_jet_locked_on_its_podium(self):
-        """The Mysterious Cave's podium keeps its Jet Engine since only the Jet gets you out"""
-        location = self.multiworld.get_location(JET_PODIUM, self.player)
-        self.assertTrue(location.locked)
-        self.assertEqual(location.item.name, JET)
-
-        pool = [item for item in self.multiworld.itempool if item.name == JET]
-        self.assertEqual(len(pool), 2)
-
-        progression = sum(1 for item in pool + [location.item] if item.advancement)
-        self.assertEqual(progression, self.world.progression_copies[JET])
 
 
 class TestStartInventory(SWD2TestBase):

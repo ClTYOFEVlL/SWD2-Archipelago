@@ -14,7 +14,6 @@ LOCATION_TYPES = ("cog", "artifact", "podium", "yonker", "cartographer", "telepo
 EL_MACHINO_TELEPORTER = "elmachino_teleporter_01"  # unlocks by itself, so it isn't a location
 
 SPRINT_PODIUM = "Temple of Guidance - Upper: Podium (Sprint Hydraulics)"
-JET_PODIUM = "Mysterious Cave: Podium (Jet Engine)"
 
 
 def _is_location(location: LocationData) -> bool:

@@ -14,7 +14,6 @@ GAME = "SteamWorld Dig 2"
 COG = "Upgrade Cog"
 LAMP = "Progressive Lamp"
 SPRINT = "Sprint Hydraulics"
-JET = "Progressive Jet Engine"
 SIGIL = "Sigillum Caelum et Infernum"
 
 ITEM_TABLE = {item.name: item for item in ITEMS}

@@ -109,9 +109,7 @@ class SWD2World(World):
 
     def locked_items(self) -> dict[str, str]:
         """The podiums that keep their vanilla item, as location -> item. Their copies leave the pool."""
-        # Vectron's exit saves you in the Mysterious Cave and only the Jet Engine gets you out
-        locked = {locations.JET_PODIUM: items.JET}
-
+        locked = {}
         if self.options.sprint_hydraulics == self.options.sprint_hydraulics.option_vanilla:
             locked[locations.SPRINT_PODIUM] = items.SPRINT
 

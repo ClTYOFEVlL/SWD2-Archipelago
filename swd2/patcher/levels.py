@@ -58,37 +58,42 @@ def hook_gate(level: script.Level) -> None:
 
 
 def vectron(level: script.Level) -> None:
-    """Vectron's teleporter works after the first trip. It switches on whenever the cave loads, its checks also pass
-    once the helper quest is done, and each load after the first trip gives Fen and the Map back. The trip takes
-    them, and the vanilla game only gives them back in the exit scene of the first return."""
-    # And(intro done, NOT entered, helper active): drop "NOT entered"
-    script.drop_connection(level.node(32584767), 32584769)
+    """Vectron is skipped as SWD2Randomizer does. Teleporter is disabled, and a snake stone leads into the Hall
+    Arriving in the cave counts as the trip for the story."""
+    # The intro scene that switches the teleporter on, and its use, both check quest_vectron_helper IfActive
+    for check in (32608340, 32608341):
+        script.set_prop(level.node(check, "CheckQuestState"), "IfActive", "False", expect="True")
 
-    # The use checks: quest_vectron_helper IfActive, and obj_outro_conv IfUncompleted
-    helper = level.node(32608341, "CheckQuestState")
-    script.set_prop(helper, "IfCompleted", "True", expect="False")
-    outro = level.node(32584758, "CheckObjectiveState")
-    script.set_prop(outro, "IfCompleted", "True", expect="False")
+    # A vertical snake piece instead of the chain's end cap at (31,5): its open end faces the room below
+    tiles = level.layers["Foreground"]
+    mappings = tiles.find("TileMappings")
+    vertical = script.sub(mappings, "Mapping")
+    vertical.set("Name", "snake_vertical_01")
+    vertical.set("FlipX", "False")
+    vertical.set("FlipY", "False")
+    vertical.set("Rotation", "False")
 
-    # On every load after the first trip: Fen, the Map and the teleporter
+    row = tiles.find("Tiles")[33]
+    cells = row.text.split(" ")
+    if cells[40] != "2":
+        raise ValueError(f"{level.path}: tile (40,33) is {cells[40]}, expected the snake cap 2")
+    cells[40] = str(len(mappings) - 1)
+    row.text = " ".join(cells)
+
+    # The exit scene completed quest_enter_vectron
     enter = level.node(32584773, "OnEnterLevel")
-    returned = level.add_node("CheckQuestState", "AP_ReturnCheck", [
-        ("QuestName", "String", "quest_vectron_helper"),
+    active = level.add_node("CheckQuestState", "AP_VectronCheck", [
+        ("QuestName", "String", "quest_enter_vectron"),
         ("IfLocked", "Boolean", "False"),
         ("IfUnlocked", "Boolean", "False"),
-        ("IfActive", "Boolean", "False"),
+        ("IfActive", "Boolean", "True"),
         ("IfReadyToComplete", "Boolean", "False"),
-        ("IfCompleted", "Boolean", "True"),
+        ("IfCompleted", "Boolean", "False"),
     ])
-    fen = level.set_upgrade("buddy", name="AP_ReturnFen")
-    minimap = level.set_upgrade("minimap", name="AP_ReturnMap")
-    teleporter_on = level.add_node("EnableEntity", "AP_ReturnTeleporter", [("Enable", "Boolean", "True")])
-    script.bind(teleporter_on, 32586922)  # vectron_teleporter
+    complete = level.add_node("CompleteQuest", "AP_VectronDone", [("QuestName", "String", "quest_enter_vectron")])
 
-    script.connect(enter, returned)
-    script.connect(returned, fen)
-    script.connect(fen, minimap)
-    script.connect(minimap, teleporter_on)
+    script.connect(enter, active)
+    script.connect(active, complete)
 
 
 def goal(level: script.Level) -> None:
