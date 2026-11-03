@@ -3421,11 +3421,11 @@
    "type": "cog",
    "region": "Fire Temple - Hub",
    "rules": {
-    "base_hard": "Armor×1 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "base_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "base_hard": "(Sprint & Armor×1 & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Armor×1 & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
     "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "tricks_hard": "Armor×1 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "tricks_hard": "(Sprint & Armor×1 & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Armor×1 & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
     "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))"
    }
   },
@@ -5977,11 +5977,11 @@
    "type": "secret_area",
    "region": "Fire Temple - Hub",
    "rules": {
-    "base_hard": "Armor×1 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "base_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "base_hard": "(Sprint & Armor×1 & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Armor×1 & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
     "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "tricks_hard": "Armor×1 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
-    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "tricks_hard": "(Sprint & Armor×1 & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Armor×1 & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
     "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))"
    }
   },
