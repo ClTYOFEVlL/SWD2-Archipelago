@@ -9,8 +9,12 @@ from .money import SHOP_TYPES
 if TYPE_CHECKING:
     from . import SWD2World
 
-# Secret areas and super orb containers are in the table but aren't locations yet
-LOCATION_TYPES = ("cog", "artifact", "podium", "yonker", "cartographer", "teleporter", "generator") + SHOP_TYPES
+# The orb_containers option's kinds and their types in the table
+ORB_TYPES = {"Health": "healthorb", "Light": "lightorb", "Mixed": "mixedorb", "Super": "superorb"}
+
+# Secret areas are in the table but aren't locations yet
+LOCATION_TYPES = ("cog", "artifact", "podium", "yonker", "cartographer", "teleporter", "generator", *SHOP_TYPES,
+                  *ORB_TYPES.values())
 EL_MACHINO_TELEPORTER = "elmachino_teleporter_01"  # unlocks by itself, so it isn't a location
 
 SPRINT_PODIUM = "Temple of Guidance - Upper: Podium (Sprint Hydraulics)"
@@ -39,6 +43,10 @@ _GROUPS = {
     "Clifford": "clifford",
     "Teleporters": "teleporter",
     "Generators": "generator",
+    "Health Orb Containers": "healthorb",
+    "Light Orb Containers": "lightorb",
+    "Mixed Orb Containers": "mixedorb",
+    "Super Orb Containers": "superorb",
 }
 LOCATION_NAME_GROUPS = {
     group: {location.name for location in ALL_LOCATIONS if location.type == kind}
@@ -59,11 +67,14 @@ def in_trials(location: LocationData) -> bool:
 
 def active_locations(world: "SWD2World") -> list[LocationData]:
     active = []
+    orb_types = {ORB_TYPES[kind] for kind in world.options.orb_containers.value}
 
     for location in ALL_LOCATIONS:
         if location.type == "teleporter" and not world.options.teleporter_locations:
             continue
         if in_trials(location) and not world.options.hell_cave_locations:
+            continue
+        if location.type in ORB_TYPES.values() and location.type not in orb_types:
             continue
 
         active.append(location)

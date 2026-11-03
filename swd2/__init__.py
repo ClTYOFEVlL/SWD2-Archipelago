@@ -38,6 +38,7 @@ SLOT_OPTIONS = (
     "sprint_hydraulics",
     "teleporter_locations",
     "hell_cave_locations",
+    "orb_containers",
     "cog_amount",
     "pressure_bomb_items",
     "jackhammer_items",

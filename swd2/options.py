@@ -8,6 +8,7 @@ from Options import (
     OptionCounter,
     OptionError,
     OptionGroup,
+    OptionSet,
     PerGameCommonOptions,
     Range,
     StartInventoryPool,
@@ -186,6 +187,19 @@ class HellCaveLocations(Toggle):
     display_name = "Hell Cave Locations"
 
 
+class OrbContainers(OptionSet):
+    """
+    Adds the chosen kinds of orb containers as locations.
+    
+    Health (23 Locations)
+    Light (34 Locations)
+    Mixed (23 Locations)
+    Super (5 Locations)
+    """
+    display_name = "Orb Containers"
+    valid_keys = {"Health", "Light", "Mixed", "Super"}
+
+
 class CogAmount(Range):
     """
     How many Upgrade Cogs are in the pool. Logic never asks for more than 4.
@@ -235,6 +249,7 @@ class SWD2Options(PerGameCommonOptions):
     generators_required: GeneratorsRequired
     teleporter_locations: TeleporterLocations
     hell_cave_locations: HellCaveLocations
+    orb_containers: OrbContainers
     cog_amount: CogAmount
     filler_weights: FillerWeights
     start_inventory_from_pool: StartInventoryPool
@@ -244,7 +259,7 @@ OPTION_GROUPS = [
     OptionGroup("Goal", [GeneratorsRequired]),
     OptionGroup("Logic", [LogicDifficulty, Tricks]),
     OptionGroup("Shops", [ShopPricePercent, ShowShopItems]),
-    OptionGroup("Locations", [TeleporterLocations, HellCaveLocations]),
+    OptionGroup("Locations", [TeleporterLocations, HellCaveLocations, OrbContainers]),
     OptionGroup("Items", [SprintHydraulics, CogAmount, FillerWeights]),
     OptionGroup("Tool Items", [PressureBombItems, JackhammerItems, JetEngineItems, HookItems, GrenadeItems, ProgressiveMobility]),
 ]

@@ -92,3 +92,28 @@ class TestFillerWeights(SWD2TestBase):
         weights = FillerWeights.from_any({"Small Money Bundle": 0})
         with self.assertRaises(OptionError):
             weights.verify_values()
+
+
+class TestOrbContainers(SWD2TestBase):
+    options = {"orb_containers": ["Health", "Light", "Mixed", "Super"]}
+
+    def test_every_orb_container_is_a_location(self):
+        groups = self.world.location_name_groups
+        for group, count in (("Health Orb Containers", 23), ("Light Orb Containers", 34), ("Mixed Orb Containers", 23),
+                             ("Super Orb Containers", 5)):
+            with self.subTest(group):
+                self.assertEqual(len(groups[group]), count)
+                for name in groups[group]:
+                    self.multiworld.get_location(name, self.player)
+
+    def test_none_in_the_reactor(self):
+        self.assertFalse([name for name in self.world.location_names_in_world if name.startswith("The Reactor")])
+
+
+class TestOneOrbKind(SWD2TestBase):
+    options = {"orb_containers": ["Super"]}
+
+    def test_only_that_kind(self):
+        names = set(self.world.location_names_in_world)
+        self.assertTrue(self.world.location_name_groups["Super Orb Containers"] <= names)
+        self.assertFalse(self.world.location_name_groups["Health Orb Containers"] & names)

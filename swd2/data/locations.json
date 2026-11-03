@@ -1786,46 +1786,6 @@
    "flag": "ap_loc_605"
   },
   {
-   "type": "superorb",
-   "name": "The Reactor: Super Orb Container 1",
-   "file": "Patchsets/TheHub/the_hub_cave_boss.le",
-   "area": "cave_boss",
-   "layer": "Foreground",
-   "entity": "32586820",
-   "id": 606,
-   "flag": "ap_loc_606"
-  },
-  {
-   "type": "superorb",
-   "name": "The Reactor: Super Orb Container 2",
-   "file": "Patchsets/TheHub/the_hub_cave_boss.le",
-   "area": "cave_boss",
-   "layer": "Foreground",
-   "entity": "32586821",
-   "id": 607,
-   "flag": "ap_loc_607"
-  },
-  {
-   "type": "superorb",
-   "name": "The Reactor: Super Orb Container 3",
-   "file": "Patchsets/TheHub/the_hub_cave_boss.le",
-   "area": "cave_boss",
-   "layer": "Foreground",
-   "entity": "32586822",
-   "id": 608,
-   "flag": "ap_loc_608"
-  },
-  {
-   "type": "superorb",
-   "name": "The Reactor: Super Orb Container 4",
-   "file": "Patchsets/TheHub/the_hub_cave_boss.le",
-   "area": "cave_boss",
-   "layer": "Foreground",
-   "entity": "32586823",
-   "id": 609,
-   "flag": "ap_loc_609"
-  },
-  {
    "type": "generator",
    "name": "Device of Devastation: Generator",
    "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_generator.le",
@@ -3614,6 +3574,806 @@
    "count": 1,
    "price": 500,
    "id": 961
+  },
+  {
+   "type": "mixedorb",
+   "name": "Chamber of Arrows: Mixed Orb Container",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_arrowtraps.le",
+   "area": "cave_arrowtraps",
+   "layer": "Foreground",
+   "entity": "32608354",
+   "id": 1001,
+   "flag": "ap_loc_1001"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Chamber of Secrets: Mixed Orb Container",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_maze.le",
+   "area": "cave_maze",
+   "layer": "Foreground",
+   "entity": "32587124",
+   "id": 1002,
+   "flag": "ap_loc_1002"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Tick Boom Room: Mixed Orb Container",
+   "file": "Patchsets/Archaea/archaea_cave_fallblock_puzzle.le",
+   "area": "cave_fallblock_puzzle",
+   "layer": "Foreground",
+   "entity": "32569680",
+   "id": 1003,
+   "flag": "ap_loc_1003"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Bushwhack Beehive: Mixed Orb Container",
+   "file": "Patchsets/Yarrow/yarrow_cave_bats.le",
+   "area": "cave_bats",
+   "layer": "Foreground",
+   "entity": "32598543",
+   "id": 1004,
+   "flag": "ap_loc_1004"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Hodge-Podge Hang: Mixed Orb Container",
+   "file": "Patchsets/Yarrow/yarrow_cave_cliffhanger.le",
+   "area": "cave_cliffhanger",
+   "layer": "Foreground",
+   "entity": "32608340",
+   "id": 1005,
+   "flag": "ap_loc_1005"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Leaky Lodge: Mixed Orb Container 1",
+   "file": "Patchsets/Yarrow/yarrow_cave_gauntlet.le",
+   "area": "cave_gauntlet",
+   "layer": "Foreground",
+   "entity": "32608338",
+   "id": 1006,
+   "flag": "ap_loc_1006"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Leaky Lodge: Mixed Orb Container 2",
+   "file": "Patchsets/Yarrow/yarrow_cave_gauntlet.le",
+   "area": "cave_gauntlet",
+   "layer": "Foreground",
+   "entity": "32598817",
+   "id": 1007,
+   "flag": "ap_loc_1007"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Leaky Lodge: Mixed Orb Container 3",
+   "file": "Patchsets/Yarrow/yarrow_cave_gauntlet.le",
+   "area": "cave_gauntlet",
+   "layer": "Foreground",
+   "entity": "32603464",
+   "id": 1008,
+   "flag": "ap_loc_1008"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Mushi Mushi Snuggery: Mixed Orb Container 1",
+   "file": "Patchsets/Yarrow/yarrow_cave_mushimushiroom.le",
+   "area": "cave_mushimushiroom",
+   "layer": "Foreground",
+   "entity": "32608342",
+   "id": 1009,
+   "flag": "ap_loc_1009"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Mushi Mushi Snuggery: Mixed Orb Container 2",
+   "file": "Patchsets/Yarrow/yarrow_cave_mushimushiroom.le",
+   "area": "cave_mushimushiroom",
+   "layer": "Foreground",
+   "entity": "32608343",
+   "id": 1010,
+   "flag": "ap_loc_1010"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Swim Swam Sway: Mixed Orb Container",
+   "file": "Patchsets/Yarrow/yarrow_cave_water.le",
+   "area": "cave_water",
+   "layer": "Foreground",
+   "entity": "32608345",
+   "id": 1011,
+   "flag": "ap_loc_1011"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Combuster's Station: Mixed Orb Container 1",
+   "file": "Patchsets/FireTemple/firetemple_cave_flamer.le",
+   "area": "cave_flamer",
+   "layer": "Foreground",
+   "entity": "32608370",
+   "id": 1012,
+   "flag": "ap_loc_1012"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Combuster's Station: Mixed Orb Container 2",
+   "file": "Patchsets/FireTemple/firetemple_cave_flamer.le",
+   "area": "cave_flamer",
+   "layer": "Foreground",
+   "entity": "32580840",
+   "id": 1013,
+   "flag": "ap_loc_1013"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Demon's Crib: Mixed Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_lavachase.le",
+   "area": "cave_lavachase",
+   "layer": "Foreground",
+   "entity": "32584836",
+   "id": 1014,
+   "flag": "ap_loc_1014"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Floor Is Lava: Mixed Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_floor_is_lava.le",
+   "area": "floor_is_lava",
+   "layer": "Foreground",
+   "entity": "32603108",
+   "id": 1015,
+   "flag": "ap_loc_1015"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Lava Shooters: Mixed Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_lava_shooters.le",
+   "area": "cave_lava_shooters",
+   "layer": "Foreground",
+   "entity": "32586076",
+   "id": 1016,
+   "flag": "ap_loc_1016"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Roasted Romp: Mixed Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_crusher.le",
+   "area": "cave_crusher",
+   "layer": "Foreground",
+   "entity": "32608372",
+   "id": 1017,
+   "flag": "ap_loc_1017"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Spikes & Conveyors: Mixed Orb Container 1",
+   "file": "Patchsets/FireTemple/firetemple_cave_spikeconveyor.le",
+   "area": "cave_spikeconveyor",
+   "layer": "Foreground",
+   "entity": "32608365",
+   "id": 1018,
+   "flag": "ap_loc_1018"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Spikes & Conveyors: Mixed Orb Container 2",
+   "file": "Patchsets/FireTemple/firetemple_cave_spikeconveyor.le",
+   "area": "cave_spikeconveyor",
+   "layer": "Foreground",
+   "entity": "32586982",
+   "id": 1019,
+   "flag": "ap_loc_1019"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Temple of the Destroyer - Bottom Conveyors: Mixed Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_patch_bottom_conveyors.le",
+   "area": "firetemple_bottom_conveyors",
+   "layer": "Foreground",
+   "entity": "32583335",
+   "id": 1020,
+   "flag": "ap_loc_1020"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Sludge River Bend: Mixed Orb Container 1",
+   "file": "Patchsets/TheHub/the_hub_cave_hubtube.le",
+   "area": "cave_hubtube",
+   "layer": "Foreground",
+   "entity": "32587616",
+   "id": 1021,
+   "flag": "ap_loc_1021"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Sludge River Bend: Mixed Orb Container 2",
+   "file": "Patchsets/TheHub/the_hub_cave_hubtube.le",
+   "area": "cave_hubtube",
+   "layer": "Foreground",
+   "entity": "32587962",
+   "id": 1022,
+   "flag": "ap_loc_1022"
+  },
+  {
+   "type": "mixedorb",
+   "name": "Sludge River Bend: Mixed Orb Container 3",
+   "file": "Patchsets/TheHub/the_hub_cave_hubtube.le",
+   "area": "cave_hubtube",
+   "layer": "Foreground",
+   "entity": "32587597",
+   "id": 1023,
+   "flag": "ap_loc_1023"
+  },
+  {
+   "type": "healthorb",
+   "name": "Chamber of Arrows: Health Orb Container 1",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_arrowtraps.le",
+   "area": "cave_arrowtraps",
+   "layer": "Foreground",
+   "entity": "32582534",
+   "id": 1101,
+   "flag": "ap_loc_1101"
+  },
+  {
+   "type": "healthorb",
+   "name": "Chamber of Arrows: Health Orb Container 2",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_arrowtraps.le",
+   "area": "cave_arrowtraps",
+   "layer": "Foreground",
+   "entity": "32582533",
+   "id": 1102,
+   "flag": "ap_loc_1102"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 1",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32572768",
+   "id": 1103,
+   "flag": "ap_loc_1103"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 2",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32572769",
+   "id": 1104,
+   "flag": "ap_loc_1104"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 3",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32569509",
+   "id": 1105,
+   "flag": "ap_loc_1105"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 4",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32569510",
+   "id": 1106,
+   "flag": "ap_loc_1106"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 5",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32569494",
+   "id": 1107,
+   "flag": "ap_loc_1107"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 6",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32569493",
+   "id": 1108,
+   "flag": "ap_loc_1108"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 7",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32572040",
+   "id": 1109,
+   "flag": "ap_loc_1109"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 8",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32572008",
+   "id": 1110,
+   "flag": "ap_loc_1110"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 9",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32599553",
+   "id": 1111,
+   "flag": "ap_loc_1111"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of Guidance - Upper: Health Orb Container 10",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance.le",
+   "area": "temple_of_guidance",
+   "layer": "Foreground",
+   "entity": "32571632",
+   "id": 1112,
+   "flag": "ap_loc_1112"
+  },
+  {
+   "type": "healthorb",
+   "name": "Combuster's Station: Health Orb Container 1",
+   "file": "Patchsets/FireTemple/firetemple_cave_flamer.le",
+   "area": "cave_flamer",
+   "layer": "Foreground",
+   "entity": "32581828",
+   "id": 1113,
+   "flag": "ap_loc_1113"
+  },
+  {
+   "type": "healthorb",
+   "name": "Combuster's Station: Health Orb Container 2",
+   "file": "Patchsets/FireTemple/firetemple_cave_flamer.le",
+   "area": "cave_flamer",
+   "layer": "Foreground",
+   "entity": "32580957",
+   "id": 1114,
+   "flag": "ap_loc_1114"
+  },
+  {
+   "type": "healthorb",
+   "name": "Combuster's Station: Health Orb Container 3",
+   "file": "Patchsets/FireTemple/firetemple_cave_flamer.le",
+   "area": "cave_flamer",
+   "layer": "Foreground",
+   "entity": "32581827",
+   "id": 1115,
+   "flag": "ap_loc_1115"
+  },
+  {
+   "type": "healthorb",
+   "name": "Combuster's Station: Health Orb Container 4",
+   "file": "Patchsets/FireTemple/firetemple_cave_flamer.le",
+   "area": "cave_flamer",
+   "layer": "Foreground",
+   "entity": "32580838",
+   "id": 1116,
+   "flag": "ap_loc_1116"
+  },
+  {
+   "type": "healthorb",
+   "name": "Combuster's Station: Health Orb Container 5",
+   "file": "Patchsets/FireTemple/firetemple_cave_flamer.le",
+   "area": "cave_flamer",
+   "layer": "Foreground",
+   "entity": "32580839",
+   "id": 1117,
+   "flag": "ap_loc_1117"
+  },
+  {
+   "type": "healthorb",
+   "name": "Demon's Crib: Health Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_lavachase.le",
+   "area": "cave_lavachase",
+   "layer": "Foreground",
+   "entity": "32569072",
+   "id": 1118,
+   "flag": "ap_loc_1118"
+  },
+  {
+   "type": "healthorb",
+   "name": "Grim Hollow: Health Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_golem.le",
+   "area": "cave_golem",
+   "layer": "Foreground",
+   "entity": "32588302",
+   "id": 1119,
+   "flag": "ap_loc_1119"
+  },
+  {
+   "type": "healthorb",
+   "name": "Lava Shooters: Health Orb Container 1",
+   "file": "Patchsets/FireTemple/firetemple_cave_lava_shooters.le",
+   "area": "cave_lava_shooters",
+   "layer": "Background",
+   "entity": "32586074",
+   "id": 1120,
+   "flag": "ap_loc_1120"
+  },
+  {
+   "type": "healthorb",
+   "name": "Lava Shooters: Health Orb Container 2",
+   "file": "Patchsets/FireTemple/firetemple_cave_lava_shooters.le",
+   "area": "cave_lava_shooters",
+   "layer": "Background",
+   "entity": "32586073",
+   "id": 1121,
+   "flag": "ap_loc_1121"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of the Destroyer - Part 2 Entrance: Health Orb Container 1",
+   "file": "Patchsets/FireTemple/firetemple2_patch_entrance.le",
+   "area": "firetemple2_entrance",
+   "layer": "Foreground",
+   "entity": "32588882",
+   "id": 1122,
+   "flag": "ap_loc_1122"
+  },
+  {
+   "type": "healthorb",
+   "name": "Temple of the Destroyer - Part 2 Entrance: Health Orb Container 2",
+   "file": "Patchsets/FireTemple/firetemple2_patch_entrance.le",
+   "area": "firetemple2_entrance",
+   "layer": "Foreground",
+   "entity": "32584498",
+   "id": 1123,
+   "flag": "ap_loc_1123"
+  },
+  {
+   "type": "lightorb",
+   "name": "Chamber of Arrows: Light Orb Container",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_arrowtraps.le",
+   "area": "cave_arrowtraps",
+   "layer": "Foreground",
+   "entity": "32586187",
+   "id": 1201,
+   "flag": "ap_loc_1201"
+  },
+  {
+   "type": "lightorb",
+   "name": "Chamber of Secrets: Light Orb Container 1",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_maze.le",
+   "area": "cave_maze",
+   "layer": "Foreground",
+   "entity": "32608358",
+   "id": 1202,
+   "flag": "ap_loc_1202"
+  },
+  {
+   "type": "lightorb",
+   "name": "Chamber of Secrets: Light Orb Container 2",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_maze.le",
+   "area": "cave_maze",
+   "layer": "Foreground",
+   "entity": "32580584",
+   "id": 1203,
+   "flag": "ap_loc_1203"
+  },
+  {
+   "type": "lightorb",
+   "name": "Chamber of Wheels: Light Orb Container 1",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_pushthecarts.le",
+   "area": "cave_pushthecarts",
+   "layer": "Foreground",
+   "entity": "32608353",
+   "id": 1204,
+   "flag": "ap_loc_1204"
+  },
+  {
+   "type": "lightorb",
+   "name": "Chamber of Wheels: Light Orb Container 2",
+   "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_pushthecarts.le",
+   "area": "cave_pushthecarts",
+   "layer": "Foreground",
+   "entity": "32608352",
+   "id": 1205,
+   "flag": "ap_loc_1205"
+  },
+  {
+   "type": "lightorb",
+   "name": "Tenacious Trollies: Light Orb Container",
+   "file": "Patchsets/WestDesert/west_desert_cave_cart_puzzle.le",
+   "area": "cave_cart_puzzle",
+   "layer": "Foreground",
+   "entity": "32608351",
+   "id": 1206,
+   "flag": "ap_loc_1206"
+  },
+  {
+   "type": "lightorb",
+   "name": "Burster's Station: Light Orb Container",
+   "file": "Patchsets/Archaea/archaea_cave_pressurebomb.le",
+   "area": "cave_pressurebomb",
+   "layer": "Foreground",
+   "entity": "32579723",
+   "id": 1207,
+   "flag": "ap_loc_1207"
+  },
+  {
+   "type": "lightorb",
+   "name": "Cave-in Catacomb: Light Orb Container",
+   "file": "Patchsets/Archaea/archaea_cave_snakestone_blocks.le",
+   "area": "cave_snakestone_blocks",
+   "layer": "Foreground",
+   "entity": "32577811",
+   "id": 1208,
+   "flag": "ap_loc_1208"
+  },
+  {
+   "type": "lightorb",
+   "name": "Mason's Station: Light Orb Container",
+   "file": "Patchsets/Archaea/archaea_cave_jackhammer.le",
+   "area": "cave_jackhammer",
+   "layer": "Foreground",
+   "entity": "32579385",
+   "id": 1209,
+   "flag": "ap_loc_1209"
+  },
+  {
+   "type": "lightorb",
+   "name": "Mysterious Cave: Light Orb Container",
+   "file": "Patchsets/Archaea/archaea_cave_vectron_entrance.le",
+   "area": "cave_vectron_entrance",
+   "layer": "Foreground",
+   "entity": "32592332",
+   "id": 1210,
+   "flag": "ap_loc_1210"
+  },
+  {
+   "type": "lightorb",
+   "name": "Patch Wall Grotto: Light Orb Container",
+   "file": "Patchsets/Archaea/archaea_cave_unclimbable.le",
+   "area": "cave_unclimbable",
+   "layer": "Foreground",
+   "entity": "32587512",
+   "id": 1211,
+   "flag": "ap_loc_1211"
+  },
+  {
+   "type": "lightorb",
+   "name": "Rupture Rock Hollow: Light Orb Container 1",
+   "file": "Patchsets/Archaea/archaea_cave_snakestone.le",
+   "area": "cave_snakestone",
+   "layer": "Foreground",
+   "entity": "32608375",
+   "id": 1212,
+   "flag": "ap_loc_1212"
+  },
+  {
+   "type": "lightorb",
+   "name": "Rupture Rock Hollow: Light Orb Container 2",
+   "file": "Patchsets/Archaea/archaea_cave_snakestone.le",
+   "area": "cave_snakestone",
+   "layer": "Foreground",
+   "entity": "32569689",
+   "id": 1213,
+   "flag": "ap_loc_1213"
+  },
+  {
+   "type": "lightorb",
+   "name": "Rupture Rock Hollow: Light Orb Container 3",
+   "file": "Patchsets/Archaea/archaea_cave_snakestone.le",
+   "area": "cave_snakestone",
+   "layer": "Foreground",
+   "entity": "32575391",
+   "id": 1214,
+   "flag": "ap_loc_1214"
+  },
+  {
+   "type": "lightorb",
+   "name": "Trilobite Bluff: Light Orb Container",
+   "file": "Patchsets/Archaea/archaea_cave_trilobite_puzzle.le",
+   "area": "cave_trilobite_puzzle",
+   "layer": "Foreground",
+   "entity": "32577578",
+   "id": 1215,
+   "flag": "ap_loc_1215"
+  },
+  {
+   "type": "lightorb",
+   "name": "Aeronaut's Station: Light Orb Container",
+   "file": "Patchsets/Yarrow/yarrow_cave_steampack_slayer.le",
+   "area": "cave_steampack_slayer",
+   "layer": "Foreground",
+   "entity": "32588031",
+   "id": 1216,
+   "flag": "ap_loc_1216"
+  },
+  {
+   "type": "lightorb",
+   "name": "Hodge-Podge Hang: Light Orb Container",
+   "file": "Patchsets/Yarrow/yarrow_cave_cliffhanger.le",
+   "area": "cave_cliffhanger",
+   "layer": "Foreground",
+   "entity": "32598543",
+   "id": 1217,
+   "flag": "ap_loc_1217"
+  },
+  {
+   "type": "lightorb",
+   "name": "Leaky Lodge: Light Orb Container",
+   "file": "Patchsets/Yarrow/yarrow_cave_gauntlet.le",
+   "area": "cave_gauntlet",
+   "layer": "Foreground",
+   "entity": "32608337",
+   "id": 1218,
+   "flag": "ap_loc_1218"
+  },
+  {
+   "type": "lightorb",
+   "name": "Lime Loop: Light Orb Container",
+   "file": "Patchsets/Yarrow/yarrow_cave_run.le",
+   "area": "cave_run",
+   "layer": "Foreground",
+   "entity": "32597409",
+   "id": 1219,
+   "flag": "ap_loc_1219"
+  },
+  {
+   "type": "lightorb",
+   "name": "Swim Swam Sway: Light Orb Container",
+   "file": "Patchsets/Yarrow/yarrow_cave_water.le",
+   "area": "cave_water",
+   "layer": "Foreground",
+   "entity": "32608348",
+   "id": 1220,
+   "flag": "ap_loc_1220"
+  },
+  {
+   "type": "lightorb",
+   "name": "Floor Is Lava: Light Orb Container 1",
+   "file": "Patchsets/FireTemple/firetemple_cave_floor_is_lava.le",
+   "area": "floor_is_lava",
+   "layer": "Foreground",
+   "entity": "32603110",
+   "id": 1221,
+   "flag": "ap_loc_1221"
+  },
+  {
+   "type": "lightorb",
+   "name": "Floor Is Lava: Light Orb Container 2",
+   "file": "Patchsets/FireTemple/firetemple_cave_floor_is_lava.le",
+   "area": "floor_is_lava",
+   "layer": "Foreground",
+   "entity": "32603109",
+   "id": 1222,
+   "flag": "ap_loc_1222"
+  },
+  {
+   "type": "lightorb",
+   "name": "Grim Hollow: Light Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_golem.le",
+   "area": "cave_golem",
+   "layer": "Foreground",
+   "entity": "32588303",
+   "id": 1223,
+   "flag": "ap_loc_1223"
+  },
+  {
+   "type": "lightorb",
+   "name": "Infernal Crates: Light Orb Container 1",
+   "file": "Patchsets/FireTemple/firetemple_cave_boxes.le",
+   "area": "cave_boxes",
+   "layer": "Foreground",
+   "entity": "32597492",
+   "id": 1224,
+   "flag": "ap_loc_1224"
+  },
+  {
+   "type": "lightorb",
+   "name": "Infernal Crates: Light Orb Container 2",
+   "file": "Patchsets/FireTemple/firetemple_cave_boxes.le",
+   "area": "cave_boxes",
+   "layer": "Foreground",
+   "entity": "32592956",
+   "id": 1225,
+   "flag": "ap_loc_1225"
+  },
+  {
+   "type": "lightorb",
+   "name": "Lava Shooters: Light Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_lava_shooters.le",
+   "area": "cave_lava_shooters",
+   "layer": "Foreground",
+   "entity": "32608366",
+   "id": 1226,
+   "flag": "ap_loc_1226"
+  },
+  {
+   "type": "lightorb",
+   "name": "Mine Cart Madness: Light Orb Container 1",
+   "file": "Patchsets/FireTemple/firetemple_cave_hell_carts.le",
+   "area": "cave_hell_carts",
+   "layer": "Foreground",
+   "entity": "32592317",
+   "id": 1227,
+   "flag": "ap_loc_1227"
+  },
+  {
+   "type": "lightorb",
+   "name": "Mine Cart Madness: Light Orb Container 2",
+   "file": "Patchsets/FireTemple/firetemple_cave_hell_carts.le",
+   "area": "cave_hell_carts",
+   "layer": "Foreground",
+   "entity": "32592318",
+   "id": 1228,
+   "flag": "ap_loc_1228"
+  },
+  {
+   "type": "lightorb",
+   "name": "Mine Cart Madness: Light Orb Container 3",
+   "file": "Patchsets/FireTemple/firetemple_cave_hell_carts.le",
+   "area": "cave_hell_carts",
+   "layer": "Foreground",
+   "entity": "32608367",
+   "id": 1229,
+   "flag": "ap_loc_1229"
+  },
+  {
+   "type": "lightorb",
+   "name": "Roasted Romp: Light Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_crusher.le",
+   "area": "cave_crusher",
+   "layer": "Foreground",
+   "entity": "32608373",
+   "id": 1230,
+   "flag": "ap_loc_1230"
+  },
+  {
+   "type": "lightorb",
+   "name": "Spikes & Conveyors: Light Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_spikeconveyor.le",
+   "area": "cave_spikeconveyor",
+   "layer": "Foreground",
+   "entity": "32588007",
+   "id": 1231,
+   "flag": "ap_loc_1231"
+  },
+  {
+   "type": "lightorb",
+   "name": "The Batcave: Light Orb Container",
+   "file": "Patchsets/FireTemple/firetemple_cave_firebat.le",
+   "area": "cave_firebat",
+   "layer": "Foreground",
+   "entity": "32608371",
+   "id": 1232,
+   "flag": "ap_loc_1232"
+  },
+  {
+   "type": "lightorb",
+   "name": "Rosie's Storage: Light Orb Container",
+   "file": "Patchsets/TheHub/the_hub_cave_grapplinghook.le",
+   "area": "cave_grapplinghook",
+   "layer": "Foreground",
+   "entity": "32587198",
+   "id": 1233,
+   "flag": "ap_loc_1233"
+  },
+  {
+   "type": "lightorb",
+   "name": "Sludge River Bend: Light Orb Container",
+   "file": "Patchsets/TheHub/the_hub_cave_hubtube.le",
+   "area": "cave_hubtube",
+   "layer": "Foreground",
+   "entity": "32587336",
+   "id": 1234,
+   "flag": "ap_loc_1234"
   }
  ]
 }

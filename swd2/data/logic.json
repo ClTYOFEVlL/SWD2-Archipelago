@@ -741,11 +741,11 @@
   ],
   [
    "Demon's Crib",
-   "Fire Temple - Golem Lock"
+   "Fire Temple - Brazier Top"
   ],
   [
-   "Demon's Crib - Secret Chamber",
-   "Fire Temple - Brazier Top"
+   "Demon's Crib",
+   "Fire Temple - Golem Lock"
   ],
   [
    "Device of Destruction",
@@ -1222,6 +1222,10 @@
   [
    "Sludge River Bend - East",
    "Sludge River Bend - Lower East"
+  ],
+  [
+   "Sludge River Bend - East",
+   "Sludge River Bend - Middle"
   ],
   [
    "Sludge River Bend - East",
@@ -1850,12 +1854,12 @@
    "tricks_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)"
   },
   "Demon's Crib - Secret Chamber": {
-   "base_hard": "Axe & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
-   "base_normal": "Axe & Pickaxe×2 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
-   "base_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
-   "tricks_hard": "Axe & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
-   "tricks_normal": "Axe & Pickaxe×2 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
-   "tricks_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)"
+   "base_hard": "Axe & ((Sprint & Jet×3 & AirCooling & Cogs(4)) | Hook)",
+   "base_normal": "Axe & Pickaxe×2 & ((Sprint & Jet×3 & AirCooling & Cogs(4)) | Hook)",
+   "base_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & Jet×3 & AirCooling & Cogs(4)) | Hook)",
+   "tricks_hard": "Axe & ((Sprint & Jet×3 & AirCooling & Cogs(4)) | Hook)",
+   "tricks_normal": "Axe & Pickaxe×2 & ((Sprint & Jet×3 & AirCooling & Cogs(4)) | Hook)",
+   "tricks_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & Jet×3 & AirCooling & Cogs(4)) | Hook)"
   },
   "Device of Destruction": {
    "base_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
@@ -2250,12 +2254,12 @@
    "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
   },
   "Sludge River Bend - Middle": {
-   "base_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
-   "base_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
-   "base_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
-   "tricks_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
-   "tricks_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
-   "tricks_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))"
+   "base_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+   "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+   "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Sprint & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))",
+   "tricks_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+   "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+   "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
   },
   "Sludge River Bend - West": {
    "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
@@ -4964,62 +4968,6 @@
    }
   },
   {
-   "id": 606,
-   "name": "The Reactor: Super Orb Container 1",
-   "type": "superorb",
-   "region": "The Reactor",
-   "rules": {
-    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
-   }
-  },
-  {
-   "id": 607,
-   "name": "The Reactor: Super Orb Container 2",
-   "type": "superorb",
-   "region": "The Reactor",
-   "rules": {
-    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
-   }
-  },
-  {
-   "id": 608,
-   "name": "The Reactor: Super Orb Container 3",
-   "type": "superorb",
-   "region": "The Reactor",
-   "rules": {
-    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
-   }
-  },
-  {
-   "id": 609,
-   "name": "The Reactor: Super Orb Container 4",
-   "type": "superorb",
-   "region": "The Reactor",
-   "rules": {
-    "base_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Doom & Devastation & Disaster & Destruction & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
-   }
-  },
-  {
    "id": 681,
    "name": "Device of Devastation: Generator",
    "type": "generator",
@@ -6753,6 +6701,1126 @@
     "tricks_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
     "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
     "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
+   }
+  },
+  {
+   "id": 1001,
+   "name": "Chamber of Arrows: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Chamber of Arrows - Entrance",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "base_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "tricks_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)"
+   }
+  },
+  {
+   "id": 1002,
+   "name": "Chamber of Secrets: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Chamber of Secrets",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "base_normal": "(Sprint & Jet×1 & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "base_easy": "(Sprint & Jet×1 & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "tricks_hard": "(Sprint & Jet×1 & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "tricks_normal": "(Sprint & Jet×1 & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "tricks_easy": "(Sprint & Jet×1 & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & ((Bomb×1 & Launcher) | (Bomb×4 & SkyAssailant & Cogs(3))))"
+   }
+  },
+  {
+   "id": 1003,
+   "name": "Tick Boom Room: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Tick Boom Room",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "base_normal": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Pickaxe×1 & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Pickaxe×1 & Cogs(3))))",
+    "base_easy": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Pickaxe×2 & Cogs(3)) | (Bomb×1 & Lamp×1 & Pickaxe×1))) | (Hook & ((Bomb×1 & Lamp×1 & Pickaxe×1) | (Bomb×4 & SkyAssailant & Pickaxe×2 & Cogs(3))))",
+    "tricks_hard": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "tricks_normal": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Pickaxe×1 & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Pickaxe×1 & Cogs(3))))",
+    "tricks_easy": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Pickaxe×2 & Cogs(3)) | (Bomb×1 & Lamp×1 & Pickaxe×1))) | (Hook & ((Bomb×1 & Lamp×1 & Pickaxe×1) | (Bomb×4 & SkyAssailant & Pickaxe×2 & Cogs(3))))"
+   }
+  },
+  {
+   "id": 1004,
+   "name": "Bushwhack Beehive: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Bushwhack Beehive",
+   "rules": {
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1005,
+   "name": "Hodge-Podge Hang: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Hodge-Podge Hang",
+   "rules": {
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1006,
+   "name": "Leaky Lodge: Mixed Orb Container 1",
+   "type": "mixedorb",
+   "region": "Leaky Lodge - East",
+   "rules": {
+    "base_hard": "Bomb×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×2 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×2 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×2 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×2 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1007,
+   "name": "Leaky Lodge: Mixed Orb Container 2",
+   "type": "mixedorb",
+   "region": "Leaky Lodge - East",
+   "rules": {
+    "base_hard": "Bomb×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×2 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×2 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×2 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×2 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1008,
+   "name": "Leaky Lodge: Mixed Orb Container 3",
+   "type": "mixedorb",
+   "region": "Leaky Lodge - West",
+   "rules": {
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1009,
+   "name": "Mushi Mushi Snuggery: Mixed Orb Container 1",
+   "type": "mixedorb",
+   "region": "Mushi Mushi Snuggery",
+   "rules": {
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1010,
+   "name": "Mushi Mushi Snuggery: Mixed Orb Container 2",
+   "type": "mixedorb",
+   "region": "Mushi Mushi Snuggery",
+   "rules": {
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1011,
+   "name": "Swim Swam Sway: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Swim Swam Sway",
+   "rules": {
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1012,
+   "name": "Combuster's Station: Mixed Orb Container 1",
+   "type": "mixedorb",
+   "region": "Combuster's Station",
+   "rules": {
+    "base_hard": "Axe & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Axe & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "Axe & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Axe & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1013,
+   "name": "Combuster's Station: Mixed Orb Container 2",
+   "type": "mixedorb",
+   "region": "Combuster's Station",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1014,
+   "name": "Demon's Crib: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Demon's Crib",
+   "rules": {
+    "base_hard": "Axe & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "base_normal": "Axe & Pickaxe×2 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "base_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "tricks_hard": "Axe & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "tricks_normal": "Axe & Pickaxe×2 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "tricks_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)"
+   }
+  },
+  {
+   "id": 1015,
+   "name": "Floor Is Lava: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Floor Is Lava",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "tricks_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))"
+   }
+  },
+  {
+   "id": 1016,
+   "name": "Lava Shooters: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Lava Shooters - Open Cave",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1017,
+   "name": "Roasted Romp: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Roasted Romp - East",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1018,
+   "name": "Spikes & Conveyors: Mixed Orb Container 1",
+   "type": "mixedorb",
+   "region": "Spikes & Conveyors",
+   "rules": {
+    "base_hard": "Hook & ((Bomb×3 & BusterShells & Cogs(1) & (Sprint | Grappler | Jet×1)) | (Jackhammer×1 & (Sprint | Grappler | Jet×1)))",
+    "base_normal": "Hook & Pickaxe×2 & ((Bomb×3 & BusterShells & Cogs(1) & (Sprint | Grappler | Jet×1)) | (Jackhammer×1 & (Sprint | Grappler | Jet×1)))",
+    "base_easy": "Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1) & (Sprint | Grappler | Jet×1)) | (Jackhammer×1 & (Sprint | Grappler | Jet×1)))",
+    "tricks_hard": "Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)",
+    "tricks_normal": "Hook & Pickaxe×2 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)",
+    "tricks_easy": "Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)"
+   }
+  },
+  {
+   "id": 1019,
+   "name": "Spikes & Conveyors: Mixed Orb Container 2",
+   "type": "mixedorb",
+   "region": "Spikes & Conveyors",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1020,
+   "name": "Temple of the Destroyer - Bottom Conveyors: Mixed Orb Container",
+   "type": "mixedorb",
+   "region": "Fire Temple - Conveyors",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))"
+   }
+  },
+  {
+   "id": 1021,
+   "name": "Sludge River Bend: Mixed Orb Container 1",
+   "type": "mixedorb",
+   "region": "Sludge River Bend - Middle",
+   "rules": {
+    "base_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+    "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Sprint & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))",
+    "tricks_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+    "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
+   }
+  },
+  {
+   "id": 1022,
+   "name": "Sludge River Bend: Mixed Orb Container 2",
+   "type": "mixedorb",
+   "region": "Sludge River Bend - East",
+   "rules": {
+    "base_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+    "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Sprint & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))",
+    "tricks_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+    "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
+   }
+  },
+  {
+   "id": 1023,
+   "name": "Sludge River Bend: Mixed Orb Container 3",
+   "type": "mixedorb",
+   "region": "Sludge River Bend - Lower East",
+   "rules": {
+    "base_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+    "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Sprint & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))",
+    "tricks_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+    "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
+   }
+  },
+  {
+   "id": 1101,
+   "name": "Chamber of Arrows: Health Orb Container 1",
+   "type": "healthorb",
+   "region": "Chamber of Arrows - Entrance",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "base_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "tricks_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)"
+   }
+  },
+  {
+   "id": 1102,
+   "name": "Chamber of Arrows: Health Orb Container 2",
+   "type": "healthorb",
+   "region": "Chamber of Arrows - Entrance",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "base_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "tricks_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)"
+   }
+  },
+  {
+   "id": 1103,
+   "name": "Temple of Guidance - Upper: Health Orb Container 1",
+   "type": "healthorb",
+   "region": "Temple Upper - Rooms",
+   "rules": {
+    "base_hard": "Sprint | Hook",
+    "base_normal": "Sprint | Hook",
+    "base_easy": "Sprint | Hook",
+    "tricks_hard": "Sprint | Hook",
+    "tricks_normal": "Sprint | Hook",
+    "tricks_easy": "Sprint | Hook"
+   }
+  },
+  {
+   "id": 1104,
+   "name": "Temple of Guidance - Upper: Health Orb Container 2",
+   "type": "healthorb",
+   "region": "Temple Upper - Rooms",
+   "rules": {
+    "base_hard": "Sprint | Hook",
+    "base_normal": "Sprint | Hook",
+    "base_easy": "Sprint | Hook",
+    "tricks_hard": "Sprint | Hook",
+    "tricks_normal": "Sprint | Hook",
+    "tricks_easy": "Sprint | Hook"
+   }
+  },
+  {
+   "id": 1105,
+   "name": "Temple of Guidance - Upper: Health Orb Container 3",
+   "type": "healthorb",
+   "region": "Temple Upper - Rooms",
+   "rules": {
+    "base_hard": "Sprint | Hook",
+    "base_normal": "Sprint | Hook",
+    "base_easy": "Sprint | Hook",
+    "tricks_hard": "Sprint | Hook",
+    "tricks_normal": "Sprint | Hook",
+    "tricks_easy": "Sprint | Hook"
+   }
+  },
+  {
+   "id": 1106,
+   "name": "Temple of Guidance - Upper: Health Orb Container 4",
+   "type": "healthorb",
+   "region": "Temple Upper - Rooms",
+   "rules": {
+    "base_hard": "Bomb×1 & (Sprint | Hook)",
+    "base_normal": "Bomb×1 & (Sprint | Hook)",
+    "base_easy": "Bomb×1 & (Sprint | Hook)",
+    "tricks_hard": "Bomb×1 & (Sprint | Hook)",
+    "tricks_normal": "Bomb×1 & (Sprint | Hook)",
+    "tricks_easy": "Bomb×1 & (Sprint | Hook)"
+   }
+  },
+  {
+   "id": 1107,
+   "name": "Temple of Guidance - Upper: Health Orb Container 5",
+   "type": "healthorb",
+   "region": "Temple Upper - Rooms",
+   "rules": {
+    "base_hard": "Sprint | Hook",
+    "base_normal": "Sprint | Hook",
+    "base_easy": "Sprint | Hook",
+    "tricks_hard": "Sprint | Hook",
+    "tricks_normal": "Sprint | Hook",
+    "tricks_easy": "Sprint | Hook"
+   }
+  },
+  {
+   "id": 1108,
+   "name": "Temple of Guidance - Upper: Health Orb Container 6",
+   "type": "healthorb",
+   "region": "Temple Upper - Rooms",
+   "rules": {
+    "base_hard": "Sprint | Hook",
+    "base_normal": "Sprint | Hook",
+    "base_easy": "Sprint | Hook",
+    "tricks_hard": "Sprint | Hook",
+    "tricks_normal": "Sprint | Hook",
+    "tricks_easy": "Sprint | Hook"
+   }
+  },
+  {
+   "id": 1109,
+   "name": "Temple of Guidance - Upper: Health Orb Container 7",
+   "type": "healthorb",
+   "region": "Temple Upper - Rooms",
+   "rules": {
+    "base_hard": "Sprint | Hook",
+    "base_normal": "Sprint | Hook",
+    "base_easy": "Sprint | Hook",
+    "tricks_hard": "Sprint | Hook",
+    "tricks_normal": "Sprint | Hook",
+    "tricks_easy": "Sprint | Hook"
+   }
+  },
+  {
+   "id": 1110,
+   "name": "Temple of Guidance - Upper: Health Orb Container 8",
+   "type": "healthorb",
+   "region": "Temple Upper - Sealed",
+   "rules": {
+    "base_hard": "—",
+    "base_normal": "—",
+    "base_easy": "—",
+    "tricks_hard": "—",
+    "tricks_normal": "—",
+    "tricks_easy": "—"
+   }
+  },
+  {
+   "id": 1111,
+   "name": "Temple of Guidance - Upper: Health Orb Container 9",
+   "type": "healthorb",
+   "region": "Temple Upper - Teleporter Chamber",
+   "rules": {
+    "base_hard": "Sprint | Hook",
+    "base_normal": "Sprint | Hook",
+    "base_easy": "Sprint | Hook",
+    "tricks_hard": "Sprint | Hook",
+    "tricks_normal": "Sprint | Hook",
+    "tricks_easy": "Sprint | Hook"
+   }
+  },
+  {
+   "id": 1112,
+   "name": "Temple of Guidance - Upper: Health Orb Container 10",
+   "type": "healthorb",
+   "region": "Temple Upper - Teleporter Chamber",
+   "rules": {
+    "base_hard": "Sprint | Hook",
+    "base_normal": "Sprint | Hook",
+    "base_easy": "Sprint | Hook",
+    "tricks_hard": "Sprint | Hook",
+    "tricks_normal": "Sprint | Hook",
+    "tricks_easy": "Sprint | Hook"
+   }
+  },
+  {
+   "id": 1113,
+   "name": "Combuster's Station: Health Orb Container 1",
+   "type": "healthorb",
+   "region": "Combuster's Station",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1114,
+   "name": "Combuster's Station: Health Orb Container 2",
+   "type": "healthorb",
+   "region": "Combuster's Station",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1115,
+   "name": "Combuster's Station: Health Orb Container 3",
+   "type": "healthorb",
+   "region": "Combuster's Station",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1116,
+   "name": "Combuster's Station: Health Orb Container 4",
+   "type": "healthorb",
+   "region": "Combuster's Station",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1117,
+   "name": "Combuster's Station: Health Orb Container 5",
+   "type": "healthorb",
+   "region": "Combuster's Station",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1118,
+   "name": "Demon's Crib: Health Orb Container",
+   "type": "healthorb",
+   "region": "Demon's Crib",
+   "rules": {
+    "base_hard": "Axe & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "base_normal": "Axe & Pickaxe×2 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "base_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "tricks_hard": "Axe & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "tricks_normal": "Axe & Pickaxe×2 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)",
+    "tricks_easy": "Axe & Armor×1 & Pickaxe×3 & ((Sprint & ((Lamp×1 & Fire Temple entrance gate & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))) | Jet×1)) | Hook)"
+   }
+  },
+  {
+   "id": 1119,
+   "name": "Grim Hollow: Health Orb Container",
+   "type": "healthorb",
+   "region": "Grim Hollow - Upper",
+   "rules": {
+    "base_hard": "Bomb×4 & Axe & SkyAssailant & ((Sprint & ((Jet×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Lamp×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))",
+    "base_normal": "Bomb×4 & Axe & SkyAssailant & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Lamp×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))",
+    "base_easy": "Bomb×4 & Axe & SkyAssailant & Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Lamp×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))",
+    "tricks_hard": "Bomb×4 & Axe & SkyAssailant & ((Sprint & ((Jet×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Lamp×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))",
+    "tricks_normal": "Bomb×4 & Axe & SkyAssailant & Pickaxe×2 & ((Sprint & ((Jet×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Lamp×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))",
+    "tricks_easy": "Bomb×4 & Axe & SkyAssailant & Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Lamp×1 & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))"
+   }
+  },
+  {
+   "id": 1120,
+   "name": "Lava Shooters: Health Orb Container 1",
+   "type": "healthorb",
+   "region": "Lava Shooters - Open Cave",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1121,
+   "name": "Lava Shooters: Health Orb Container 2",
+   "type": "healthorb",
+   "region": "Lava Shooters - Open Cave",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1122,
+   "name": "Temple of the Destroyer - Part 2 Entrance: Health Orb Container 1",
+   "type": "healthorb",
+   "region": "Fire Temple - Lava Sea East",
+   "rules": {
+    "base_hard": "Jet×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "Jet×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1123,
+   "name": "Temple of the Destroyer - Part 2 Entrance: Health Orb Container 2",
+   "type": "healthorb",
+   "region": "Fire Temple - Hub",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Hook & ((Bomb×3 & BusterShells & Cogs(1) & (Sprint | Grappler | Jet×1 | Armor×1)) | (Jackhammer×1 & (Sprint | Grappler | Jet×1 | Armor×1)))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "(Hook & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1) & (Sprint | Grappler | Jet×1)) | (Jackhammer×1 & (Sprint | Grappler | Jet×1)))) | (Armor×2 & Pickaxe×4 & Tank×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Sprint & Jet×1 & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1201,
+   "name": "Chamber of Arrows: Light Orb Container",
+   "type": "lightorb",
+   "region": "Chamber of Arrows - Entrance",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "base_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "Armor×1 & ((Sprint & Jet×1) | Hook)",
+    "tricks_easy": "Armor×2 & ((Sprint & Jet×1) | Hook)"
+   }
+  },
+  {
+   "id": 1202,
+   "name": "Chamber of Secrets: Light Orb Container 1",
+   "type": "lightorb",
+   "region": "Chamber of Secrets",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "(Sprint & Jet×1) | Hook",
+    "base_easy": "(Sprint & Jet×1) | Hook",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "(Sprint & Jet×1) | Hook",
+    "tricks_easy": "(Sprint & Jet×1) | Hook"
+   }
+  },
+  {
+   "id": 1203,
+   "name": "Chamber of Secrets: Light Orb Container 2",
+   "type": "lightorb",
+   "region": "Chamber of Secrets",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "(Sprint & Jet×1) | Hook",
+    "base_easy": "(Sprint & Jet×1) | Hook",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "(Sprint & Jet×1) | Hook",
+    "tricks_easy": "(Sprint & Jet×1) | Hook"
+   }
+  },
+  {
+   "id": 1204,
+   "name": "Chamber of Wheels: Light Orb Container 1",
+   "type": "lightorb",
+   "region": "Chamber of Wheels - Entrance",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "(Sprint & Jet×1) | Hook",
+    "base_easy": "(Sprint & Jet×1) | Hook",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "(Sprint & Jet×1) | Hook",
+    "tricks_easy": "(Sprint & Jet×1) | Hook"
+   }
+  },
+  {
+   "id": 1205,
+   "name": "Chamber of Wheels: Light Orb Container 2",
+   "type": "lightorb",
+   "region": "Chamber of Wheels - Entrance",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1) | Hook",
+    "base_normal": "(Sprint & Jet×1) | Hook",
+    "base_easy": "(Sprint & Jet×1) | Hook",
+    "tricks_hard": "(Sprint & Jet×1) | Hook",
+    "tricks_normal": "(Sprint & Jet×1) | Hook",
+    "tricks_easy": "(Sprint & Jet×1) | Hook"
+   }
+  },
+  {
+   "id": 1206,
+   "name": "Tenacious Trollies: Light Orb Container",
+   "type": "lightorb",
+   "region": "Tenacious Trollies",
+   "rules": {
+    "base_hard": "Bomb×1 & ((Sprint & Jet×1) | Hook)",
+    "base_normal": "Bomb×1 & ((Sprint & Jet×1) | Hook)",
+    "base_easy": "Bomb×1 & ((Sprint & Jet×1) | Hook)",
+    "tricks_hard": "Bomb×1 & ((Sprint & Jet×1) | Hook)",
+    "tricks_normal": "Bomb×1 & ((Sprint & Jet×1) | Hook)",
+    "tricks_easy": "Bomb×1 & ((Sprint & Jet×1) | Hook)"
+   }
+  },
+  {
+   "id": 1207,
+   "name": "Burster's Station: Light Orb Container",
+   "type": "lightorb",
+   "region": "Burster's Station - Entrance",
+   "rules": {
+    "base_hard": "Lamp×1 & (Sprint | Hook)",
+    "base_normal": "Lamp×1 & (Sprint | Hook)",
+    "base_easy": "Armor×1 & Lamp×1 & (Sprint | Hook)",
+    "tricks_hard": "Lamp×1 & (Sprint | Hook)",
+    "tricks_normal": "Lamp×1 & (Sprint | Hook)",
+    "tricks_easy": "Armor×1 & Lamp×1 & (Sprint | Hook)"
+   }
+  },
+  {
+   "id": 1208,
+   "name": "Cave-in Catacomb: Light Orb Container",
+   "type": "lightorb",
+   "region": "Cave-in Catacomb",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "base_normal": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Pickaxe×1 & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Pickaxe×1 & Cogs(3))))",
+    "base_easy": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Pickaxe×2 & Cogs(3)) | (Bomb×1 & Lamp×1 & Pickaxe×1))) | (Hook & ((Bomb×1 & Lamp×1 & Pickaxe×1) | (Bomb×4 & SkyAssailant & Pickaxe×2 & Cogs(3))))",
+    "tricks_hard": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Cogs(3))))",
+    "tricks_normal": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Pickaxe×1 & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Pickaxe×1 & Cogs(3))))",
+    "tricks_easy": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Pickaxe×2 & Cogs(3)) | (Bomb×1 & Lamp×1 & Pickaxe×1))) | (Hook & ((Bomb×1 & Lamp×1 & Pickaxe×1) | (Bomb×4 & SkyAssailant & Pickaxe×2 & Cogs(3))))"
+   }
+  },
+  {
+   "id": 1209,
+   "name": "Mason's Station: Light Orb Container",
+   "type": "lightorb",
+   "region": "Mason's Station - Entrance",
+   "rules": {
+    "base_hard": "(Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook",
+    "base_normal": "Pickaxe×1 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)",
+    "base_easy": "Pickaxe×2 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)",
+    "tricks_hard": "(Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook",
+    "tricks_normal": "Pickaxe×1 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)",
+    "tricks_easy": "Pickaxe×2 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)"
+   }
+  },
+  {
+   "id": 1210,
+   "name": "Mysterious Cave: Light Orb Container",
+   "type": "lightorb",
+   "region": "Mysterious Cave - Entrance",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×4 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1211,
+   "name": "Patch Wall Grotto: Light Orb Container",
+   "type": "lightorb",
+   "region": "Patch Wall Grotto",
+   "rules": {
+    "base_hard": "Lamp×1 & (Sprint | Hook)",
+    "base_normal": "Lamp×1 & (Sprint | Hook)",
+    "base_easy": "Lamp×1 & (Sprint | Hook)",
+    "tricks_hard": "Lamp×1 & (Sprint | Hook)",
+    "tricks_normal": "Lamp×1 & (Sprint | Hook)",
+    "tricks_easy": "Lamp×1 & (Sprint | Hook)"
+   }
+  },
+  {
+   "id": 1212,
+   "name": "Rupture Rock Hollow: Light Orb Container 1",
+   "type": "lightorb",
+   "region": "Rupture Rock Hollow - Hall",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1213,
+   "name": "Rupture Rock Hollow: Light Orb Container 2",
+   "type": "lightorb",
+   "region": "Rupture Rock Hollow - Hall",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1214,
+   "name": "Rupture Rock Hollow: Light Orb Container 3",
+   "type": "lightorb",
+   "region": "Rupture Rock Hollow - Start",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1215,
+   "name": "Trilobite Bluff: Light Orb Container",
+   "type": "lightorb",
+   "region": "Trilobite Bluff",
+   "rules": {
+    "base_hard": "(Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook",
+    "base_normal": "Pickaxe×1 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)",
+    "base_easy": "Pickaxe×2 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)",
+    "tricks_hard": "(Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook",
+    "tricks_normal": "Pickaxe×1 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)",
+    "tricks_easy": "Pickaxe×2 & ((Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook)"
+   }
+  },
+  {
+   "id": 1216,
+   "name": "Aeronaut's Station: Light Orb Container",
+   "type": "lightorb",
+   "region": "Aeronaut's Station - West",
+   "rules": {
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1217,
+   "name": "Hodge-Podge Hang: Light Orb Container",
+   "type": "lightorb",
+   "region": "Hodge-Podge Hang",
+   "rules": {
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1218,
+   "name": "Leaky Lodge: Light Orb Container",
+   "type": "lightorb",
+   "region": "Leaky Lodge - West",
+   "rules": {
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1219,
+   "name": "Lime Loop: Light Orb Container",
+   "type": "lightorb",
+   "region": "Lime Loop",
+   "rules": {
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1220,
+   "name": "Swim Swam Sway: Light Orb Container",
+   "type": "lightorb",
+   "region": "Swim Swam Sway",
+   "rules": {
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
+   }
+  },
+  {
+   "id": 1221,
+   "name": "Floor Is Lava: Light Orb Container 1",
+   "type": "lightorb",
+   "region": "Floor Is Lava",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "tricks_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))"
+   }
+  },
+  {
+   "id": 1222,
+   "name": "Floor Is Lava: Light Orb Container 2",
+   "type": "lightorb",
+   "region": "Floor Is Lava",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate))",
+    "base_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "tricks_hard": "(Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1 | Fire Temple entrance gate)))"
+   }
+  },
+  {
+   "id": 1223,
+   "name": "Grim Hollow: Light Orb Container",
+   "type": "lightorb",
+   "region": "Grim Hollow",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1224,
+   "name": "Infernal Crates: Light Orb Container 1",
+   "type": "lightorb",
+   "region": "Infernal Crates",
+   "rules": {
+    "base_hard": "(Sprint & ((Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & ((Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & ((Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1225,
+   "name": "Infernal Crates: Light Orb Container 2",
+   "type": "lightorb",
+   "region": "Infernal Crates",
+   "rules": {
+    "base_hard": "(Sprint & Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Sprint & Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Sprint & Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1226,
+   "name": "Lava Shooters: Light Orb Container",
+   "type": "lightorb",
+   "region": "Lava Shooters",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1227,
+   "name": "Mine Cart Madness: Light Orb Container 1",
+   "type": "lightorb",
+   "region": "Mine Cart Madness",
+   "rules": {
+    "base_hard": "(Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1228,
+   "name": "Mine Cart Madness: Light Orb Container 2",
+   "type": "lightorb",
+   "region": "Mine Cart Madness",
+   "rules": {
+    "base_hard": "(Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Sprint & ((Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1229,
+   "name": "Mine Cart Madness: Light Orb Container 3",
+   "type": "lightorb",
+   "region": "Mine Cart Madness",
+   "rules": {
+    "base_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1230,
+   "name": "Roasted Romp: Light Orb Container",
+   "type": "lightorb",
+   "region": "Roasted Romp",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1231,
+   "name": "Spikes & Conveyors: Light Orb Container",
+   "type": "lightorb",
+   "region": "Spikes & Conveyors",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   }
+  },
+  {
+   "id": 1232,
+   "name": "The Batcave: Light Orb Container",
+   "type": "lightorb",
+   "region": "The Batcave",
+   "rules": {
+    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate))",
+    "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)))",
+    "base_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)))",
+    "tricks_hard": "(Sprint & ((Jet×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)))",
+    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)))"
+   }
+  },
+  {
+   "id": 1233,
+   "name": "Rosie's Storage: Light Orb Container",
+   "type": "lightorb",
+   "region": "Rosie's Storage",
+   "rules": {
+    "base_hard": "Oasis gate & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_normal": "Pickaxe×2 & Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
+    "tricks_hard": "Oasis gate & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+   }
+  },
+  {
+   "id": 1234,
+   "name": "Sludge River Bend: Light Orb Container",
+   "type": "lightorb",
+   "region": "Sludge River Bend - West",
+   "rules": {
+    "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
    }
   }
  ],
