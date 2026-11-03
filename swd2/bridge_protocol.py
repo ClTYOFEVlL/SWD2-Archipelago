@@ -4,12 +4,13 @@ from collections import Counter
 
 from .data import BASE_ID, ITEMS, LOCATIONS, ItemData
 from . import texts
-from .patcher.flags import GOAL_FLAG, shop_flag
+from .patcher.flags import GOAL_FLAG, shop_flag, waiting_icon
 
 PORT = 23850  # the bridge listens on 127.0.0.1 only
 PROTOCOL_VERSION = 2  # the bridge names its version in its hello
 
 ITEMS_BY_ID = {BASE_ID + item.id: item for item in ITEMS}
+ITEMS_BY_NAME = {item.name: item for item in ITEMS}
 
 # Tool -> how many workbench slots it has
 WORKBENCH_SLOTS = Counter(location.area for location in LOCATIONS if location.type == "workbench")
@@ -53,22 +54,47 @@ def connect_message(seed: int) -> dict:
     return {"type": "connect", "seed": seed}
 
 
-def grants(item_ids: list[int], money: dict[int, int]) -> list[dict]:
-    """How the bridge gives each received item. `money` holds each money bundle's dollars by item id."""
+def grants(item_ids: list[int], money: dict[int, int], tool_items: list[ItemData]) -> list[dict]:
+    """How the bridge gives each received item. `money` holds each money bundle's dollars by item id, `tool_items`
+    the main and progressive items of the seed's tool options."""
+    main_items = {item.grant.progressive: item.name for item in tool_items if item.grant.kind == "main"}
     copies = Counter()
     result = []
 
     for item_id in item_ids:
-        copies[item_id] += 1
-        result.append(_grant(ITEMS_BY_ID.get(item_id), copies[item_id], money.get(item_id, 0)))
+        item = ITEMS_BY_ID.get(item_id)
+        if item is None:
+            result.append({"kind": "none"})
+            continue
+
+        copies[item.name] += 1
+        grant = item.grant
+
+        # The main item sets the tier of every progressive copy received so far
+        if grant.kind == "main":
+            progressive = ITEMS_BY_NAME[grant.progressive]
+            result.append(_grant(progressive, copies[progressive.name] + 1, 0))
+
+        # Progressive copies wait for their main item. "none" gives nothing but still shows the banner, with the
+        # greyed icon of the tier the copy will count for
+        elif item.name in main_items:
+            if copies[main_items[item.name]]:
+                result.append(_grant(item, copies[item.name] + 1, 0))
+            else:
+                tier = grant.first_tier + copies[item.name]
+                result.append({"kind": "none", "icon": waiting_icon(grant.upgrade, tier)})
+
+        elif grant.kind == "progressive":
+            copy = min(copies[item.name], len(grant.items))
+            result.append(_grant(ITEMS_BY_NAME[grant.items[copy - 1]], 1, 0))
+
+        else:
+            result.append(_grant(item, copies[item.name], money.get(item_id, 0)))
 
     return result
 
 
-def _grant(item: ItemData | None, copy: int, dollars: int) -> dict:
-    if item is None:
-        return {"kind": "none"}
-
+def _grant(item: ItemData, copy: int, dollars: int) -> dict:
     grant = item.grant
     if grant.kind == "upgrade":
         return {"kind": "upgrade", "upgrade": grant.upgrade, "tier": grant.first_tier + copy - 1}
@@ -98,7 +124,7 @@ def item_banner(finder: str, item: str, receiver: str, location: str) -> tuple[s
 
 def items_message(grant_list: list[dict], banners: list[tuple[str, str]], start: int, shown: int) -> dict:
     items = [
-        {"grant": grant, "header": header, "text": text}
+        {"grant": grant, "header": header, "text": text, "icon": grant.get("icon", "")}
         for grant, (header, text) in zip(grant_list[start:], banners[start:])
     ]
     return {"type": "items", "start": start, "shown": shown, "items": items}

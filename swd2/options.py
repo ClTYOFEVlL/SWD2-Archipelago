@@ -64,7 +64,7 @@ class ShowShopItems(DefaultOnToggle):
 
 class SprintHydraulics(Choice):
     """
-    Where the Sprint Hydraulics are. 
+    Where the Sprint Hydraulics are.
     Almost everything needs them. Until they arrive you have only the Temple's first few checks.
 
     Shuffled - Anywhere in the multiworld.
@@ -75,6 +75,76 @@ class SprintHydraulics(Choice):
     option_shuffled = 0
     option_vanilla = 1
     default = option_shuffled
+
+
+class ToolItems(Choice):
+    option_progressive = 0
+    option_main_item = 1
+
+
+class PairItems(Choice):
+    option_progressive = 0
+    option_individual = 1
+
+
+class PressureBombItems(ToolItems):
+    """
+    How the Pressure Bomb is given as items.
+
+    Progressive - Four Progressive Pressure Bombs. The first gives the Pressure Bomb at tier 1, and each one after upgrades it a tier.
+
+    Main Item - A Pressure Bomb and three Progressive Pressure Bombs. You need the Pressure Bomb to use the tool, and each Progressive Pressure Bomb upgrades it a tier.
+    """
+    display_name = "Pressure Bomb Items"
+    default = ToolItems.option_progressive
+
+
+class JackhammerItems(ToolItems):
+    """
+    How the Jackhammer is given as items.
+
+    Progressive - Four Progressive Jackhammers. The first gives the Jackhammer at tier 1, and each one after upgrades it a tier.
+
+    Main Item - A Jackhammer and three Progressive Jackhammers. You need the Jackhammer to use the tool, and each Progressive Jackhammer upgrades it a tier.
+    """
+    display_name = "Jackhammer Items"
+    default = ToolItems.option_progressive
+
+
+class JetEngineItems(ToolItems):
+    """
+    How the Jet Engine is given as items.
+
+    Progressive - Three Progressive Jet Engines. The first gives the Jet Engine at tier 1, and each one after upgrades it a tier.
+
+    Main Item - A Jet Engine and two Progressive Jet Engines. You need the Jet Engine to use the tool, and each Progressive Jet Engine upgrades it a tier.
+    """
+    display_name = "Jet Engine Items"
+    default = ToolItems.option_progressive
+
+
+class HookItems(PairItems):
+    """
+    How the Hook Shot and the Long-Range Grappler are given as items.
+
+    Progressive - Two Progressive Hook Shots. The first gives the Hook Shot, the second the Long-Range Grappler.
+
+    Individual - The Hook Shot and the Long-Range Grappler as two items. You still need the Hook Shot to use the Long-Range Grappler.
+    """
+    display_name = "Hook Items"
+    default = PairItems.option_individual
+
+
+class GrenadeItems(PairItems):
+    """
+    How the Grenade Launcher and the ThreeForce Grenade are given as items. Grenades need the Pressure Bomb either way.
+
+    Progressive - Two Progressive Grenade Launchers. The first gives the Grenade Launcher, the second the ThreeForce Grenade.
+
+    Individual - The Grenade Launcher and the ThreeForce Grenade as two items. You still need the Grenade Launcher to use the ThreeForce Grenade.
+    """
+    display_name = "Grenade Items"
+    default = PairItems.option_individual
 
 
 class TeleporterLocations(DefaultOnToggle):
@@ -132,6 +202,11 @@ class SWD2Options(PerGameCommonOptions):
     shop_price_percent: ShopPricePercent
     show_shop_items: ShowShopItems
     sprint_hydraulics: SprintHydraulics
+    pressure_bomb_items: PressureBombItems
+    jackhammer_items: JackhammerItems
+    jet_engine_items: JetEngineItems
+    hook_items: HookItems
+    grenade_items: GrenadeItems
     teleporter_locations: TeleporterLocations
     hell_cave_locations: HellCaveLocations
     cog_amount: CogAmount
@@ -144,4 +219,5 @@ OPTION_GROUPS = [
     OptionGroup("Shops", [ShopPricePercent, ShowShopItems]),
     OptionGroup("Locations", [TeleporterLocations, HellCaveLocations]),
     OptionGroup("Items", [SprintHydraulics, CogAmount, FillerWeights]),
+    OptionGroup("Tool Items", [PressureBombItems, JackhammerItems, JetEngineItems, HookItems, GrenadeItems]),
 ]

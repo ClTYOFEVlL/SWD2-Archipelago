@@ -132,6 +132,77 @@
    }
   },
   {
+   "id": 11,
+   "name": "Pressure Bomb",
+   "group": "tool",
+   "count": 0,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "main",
+    "progressive": "Progressive Pressure Bomb"
+   },
+   "option": "pressure_bomb_items"
+  },
+  {
+   "id": 12,
+   "name": "Jackhammer",
+   "group": "tool",
+   "count": 0,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "main",
+    "progressive": "Progressive Jackhammer"
+   },
+   "option": "jackhammer_items"
+  },
+  {
+   "id": 13,
+   "name": "Jet Engine",
+   "group": "tool",
+   "count": 0,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "main",
+    "progressive": "Progressive Jet Engine"
+   },
+   "option": "jet_engine_items"
+  },
+  {
+   "id": 14,
+   "name": "Progressive Hook Shot",
+   "group": "tool",
+   "count": 0,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "progressive",
+    "items": [
+     "Hook Shot",
+     "Long-Range Grappler"
+    ]
+   },
+   "option": "hook_items"
+  },
+  {
+   "id": 15,
+   "name": "Progressive Grenade Launcher",
+   "group": "tool",
+   "count": 0,
+   "logic": null,
+   "class": "useful",
+   "grant": {
+    "kind": "progressive",
+    "items": [
+     "Grenade Launcher",
+     "ThreeForce Grenade"
+    ]
+   },
+   "option": "grenade_items"
+  },
+  {
    "id": 101,
    "name": "Grenade Launcher",
    "group": "blueprint",

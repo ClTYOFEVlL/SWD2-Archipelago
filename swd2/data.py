@@ -11,12 +11,14 @@ Rules = dict[str, str]  # variant -> rule
 
 @dataclass(frozen=True)
 class Grant:
-    kind: str  # upgrade, blueprint, artifact, cog or money
+    kind: str  # upgrade, blueprint, artifact, cog, money, main or progressive
     upgrade: str = ""
     first_tier: int = 0  # upgrades: the tier the first copy sets, with each later copy one more
     collectible: str = ""
     amount: int = 0  # cogs
     vanilla: int = 0  # money bundles: their dollars at vanilla prices
+    progressive: str = ""  # main items: the progressive item whose first copy they replace
+    items: tuple[str, ...] = ()  # progressive items: the items their copies give in order
 
 
 @dataclass(frozen=True)
@@ -28,6 +30,7 @@ class ItemData:
     logic: str | None  # its name in the rules, or None if no rule asks for it
     classification: str  # progression, useful or filler, for the copies no rule asks for
     grant: Grant
+    option: str = ""  # main and progressive items: the tool option that puts them in the pool
 
 
 @dataclass(frozen=True)
@@ -110,7 +113,9 @@ def _load(name: str) -> Any:
 
 
 def _item(row: dict) -> ItemData:
-    row = dict(row, grant=Grant(**row["grant"]))
+    grant = dict(row["grant"])
+    grant["items"] = tuple(grant.get("items", ()))
+    row = dict(row, grant=Grant(**grant))
     row["classification"] = row.pop("class")  # "class" is taken in Python
     return ItemData(**row)
 

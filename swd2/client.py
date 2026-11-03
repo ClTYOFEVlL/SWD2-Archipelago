@@ -19,7 +19,7 @@ from NetUtils import ClientStatus, NetworkItem
 from . import bridge_protocol as protocol, game_copy
 from .bridge_connection import BridgeConnection
 from .data import BASE_ID, LOCATIONS
-from .items import GAME
+from .items import GAME, tool_option_items
 
 SHOWN_STORE = "swd2_items_shown"  # persistent storage: "<seed name>:<slot>" -> how many items the game has shown
 HIDDEN_NAME = "Archipelago Item"  # an item on offer, when the seed hides shop items
@@ -209,7 +209,8 @@ class SWD2Context(CommonContext):
 
     def send_items(self, start: int):
         money = {int(item): dollars for item, dollars in self.slot_data["money_bundles"].items()}
-        grants = protocol.grants([item.item for item in self.items_received], money)
+        tool_items = tool_option_items(self.slot_data["options"])
+        grants = protocol.grants([item.item for item in self.items_received], money, tool_items)
         banners = [
             protocol.item_banner(
                 self.player_names[item.player],

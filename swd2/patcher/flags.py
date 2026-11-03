@@ -20,6 +20,11 @@ def shop_flag(tool: str) -> str:
     return f"ap_shop_{tool}"
 
 
+def waiting_icon(upgrade: str, tier: int) -> str:
+    """The greyed icon of a tool's tier, shown by a progressive copy that waits for its main item (atlas.py)."""
+    return f"Icons/AP/waiting_{upgrade}_{tier}"
+
+
 def flag_upgrade(name: str, tiers: int = 1, icon: bool = True) -> str:
     tier = "\t\t<Tier>\n"
     if icon:

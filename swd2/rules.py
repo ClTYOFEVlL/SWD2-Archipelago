@@ -3,7 +3,7 @@ from typing import TYPE_CHECKING
 from rule_builder.rules import Has, HasGroup
 
 from . import notation
-from .data import LOGIC, LocationData
+from .data import ITEMS, LOGIC, LocationData
 from .locations import ALL_LOCATIONS, active_locations
 from .money import MONEY, SHOP_TYPES, money_events
 from .regions import EVENTS, GOAL
@@ -53,21 +53,25 @@ def copies_needed(world: "SWD2World") -> dict[str, int]:
 
     counts = {}
     for text in texts:
-        notation.needed_counts(notation.parse(text), counts)
+        notation.needed_counts(notation.parse(text), counts, world.tool_items)
 
     return counts
 
 
 def copies_needed_by_any_variant() -> dict[str, int]:
-    """The most copies of each item any rule of any variant asks for, for items created before generate_early."""
+    """The most copies of each item any rule of any variant and any tool options asks for, for items created before generate_early."""
     rules = [LOGIC.locations[location.name].rules for location in ALL_LOCATIONS if location.name in LOGIC.locations]
     rules += [seller.rules for seller in LOGIC.sellers.values()]
     rules += [event.rules for event in LOGIC.events]
     rules += [row.rules for row in LOGIC.money]
 
+    # Without the tool options items, then with all of them
+    tool_items = [item for item in ITEMS if item.option]
+
     counts = {}
     for variants in rules:
         for text in variants.values():
-            notation.needed_counts(notation.parse(text), counts)
+            notation.needed_counts(notation.parse(text), counts, [])
+            notation.needed_counts(notation.parse(text), counts, tool_items)
 
     return counts

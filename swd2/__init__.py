@@ -7,7 +7,7 @@ from worlds.AutoWorld import WebWorld, World
 from worlds.LauncherComponents import Component, Type, components, launch as launch_component
 
 from . import items, locations, notation, regions, rules
-from .data import BASE_ID
+from .data import BASE_ID, ItemData
 from .money import MONEY, money_events, needed_money, shop_prices
 from .options import OPTION_GROUPS, SWD2Options
 
@@ -39,6 +39,11 @@ SLOT_OPTIONS = (
     "teleporter_locations",
     "hell_cave_locations",
     "cog_amount",
+    "pressure_bomb_items",
+    "jackhammer_items",
+    "jet_engine_items",
+    "hook_items",
+    "grenade_items",
 )
 
 
@@ -69,6 +74,7 @@ class SWD2World(World):
     # Item name -> the most copies a rule asks for
     progression_copies: dict[str, int] = rules.copies_needed_by_any_variant()
 
+    tool_items: list[ItemData]  # the main and progressive items of the tool options
     location_names_in_world: list[str]
     money_amounts: dict[str, int]  # money event -> its base dollars
     needed_money: dict[str, int]  # shop slot -> the base dollars it needs in logic
@@ -78,12 +84,13 @@ class SWD2World(World):
         # Universal Tracker: the options come from the seed's slot data
         passthrough = getattr(self.multiworld, "re_gen_passthrough", {}).get(self.game)
         if passthrough:
-            for name in SLOT_OPTIONS:
-                getattr(self.options, name).value = passthrough["options"][name]
+            for name, value in passthrough["options"].items():
+                getattr(self.options, name).value = value
 
         difficulty = self.options.logic_difficulty.current_key
         logic_pass = "tricks" if self.options.tricks else "base"
         self.variant = f"{logic_pass}_{difficulty}"
+        self.tool_items = items.tool_option_items(self.options.as_dict(*SLOT_OPTIONS))
 
         self.location_names_in_world = [location.name for location in locations.active_locations(self)]
         self.progression_copies = rules.copies_needed(self)
@@ -133,7 +140,7 @@ class SWD2World(World):
 
     def rule_from_text(self, text: str) -> Rule:
         """Turns a rule from the logic table into a Rule Builder rule."""
-        return notation.to_rule(notation.parse(text), EVENT_NAMES)
+        return notation.to_rule(notation.parse(text), EVENT_NAMES, self.tool_items)
 
     # Money events add their dollars to a counter that shop slots check
     def collect(self, state: CollectionState, item: Item) -> bool:

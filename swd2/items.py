@@ -1,10 +1,12 @@
+from collections.abc import Mapping
 from typing import TYPE_CHECKING
 
 from BaseClasses import Item, ItemClassification
 from Options import OptionError
 
-from .data import BASE_ID, ITEMS
+from .data import BASE_ID, ITEMS, ItemData
 from .money import scaled_price
+from .options import PairItems, ToolItems
 
 if TYPE_CHECKING:
     from . import SWD2World
@@ -50,6 +52,19 @@ def money_bundle(world: "SWD2World", name: str) -> int:
     return scaled_price(vanilla, world.options.shop_price_percent.value)
 
 
+def tool_option_items(options: Mapping[str, int]) -> list[ItemData]:
+    """The main and progressive items that a seed's tool options put in the pool, from the options values."""
+    chosen = []
+    for item in ITEMS:
+        value = options.get(item.option)
+        if item.grant.kind == "main" and value == ToolItems.option_main_item:
+            chosen.append(item)
+        if item.grant.kind == "progressive" and value == PairItems.option_progressive:
+            chosen.append(item)
+
+    return chosen
+
+
 def precollect(world: "SWD2World") -> None:
     if world.options.logic_difficulty == world.options.logic_difficulty.option_easy:
         world.multiworld.push_precollected(create_item(world, LAMP))
@@ -61,6 +76,16 @@ def core_counts(world: "SWD2World") -> dict[str, int]:
     # Easy starts with one of the lamps
     if world.options.logic_difficulty == world.options.logic_difficulty.option_easy:
         counts[LAMP] -= 1
+
+    # A main item takes the place of the first progressive copy, a progressive item of the items it stands for
+    for item in world.tool_items:
+        if item.grant.kind == "main":
+            counts[item.name] = 1
+            counts[item.grant.progressive] -= 1
+        else:
+            counts[item.name] = len(item.grant.items)
+            for name in item.grant.items:
+                counts[name] -= 1
 
     for name in world.locked_items().values():
         counts[name] -= 1

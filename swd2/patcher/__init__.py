@@ -25,7 +25,6 @@ def build(game_dir: str | pathlib.Path) -> tuple[dict[str, bytes], dict[str, byt
             definitions.TEXTITEMS: definitions.textitems(files.text(definitions.TEXTITEMS)),
             definitions.DAMAGE_TYPES: definitions.damage_types(files.text(definitions.DAMAGE_TYPES)),
         }
-        written.update(atlas.files())
 
         replaced = {}
         for path, data in levels.patch_all(files, LOCATIONS).items():
@@ -36,7 +35,10 @@ def build(game_dir: str | pathlib.Path) -> tuple[dict[str, bytes], dict[str, byt
                 written[path] = data
 
         atlas_map = read_z((files.bundle / atlas.MAP).read_bytes())
-        replaced[atlas.MAP] = write_z(atlas.patched_map(atlas_map))
+        icons_png = (files.bundle / atlas.GAME_ICONS_PNG).read_bytes()
+        waiting_png, waiting_index = atlas.waiting_icons(icons_png, files.text(definitions.UPGRADES), atlas_map)
+        written.update(atlas.files(waiting_png, waiting_index))
+        replaced[atlas.MAP] = write_z(atlas.patched_map(atlas_map, waiting_index))
 
     return written, replaced
 
