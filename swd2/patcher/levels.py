@@ -10,6 +10,42 @@ VECTRON = "Patchsets/Archaea/archaea_cave_vectron_entrance.le"
 SAVING_RUSTY = "Patchsets/TheHub/the_hub_cave_boss_saving_rusty.le"
 TEMPLE = "Patchsets/TempleOfGuidance/temple_of_guidance.le"  # exists only as a loose .z file
 EL_MACHINO = "Patchsets/ElMachino/el_machino.le"
+INTRO = "Patchsets/WestDesert/west_desert_intro.le"
+
+
+def intro(level: script.Level) -> None:
+    """The opening cutscene is skipped."""
+    # Checkpoint -> SetPosition -> FreezePlayerInput (the cutscene) ... UnfreezePlayerInput -> Delay -> move hint
+    start = level.node(32581848, "SetPosition")
+    script.drop_connection(start, 32566045)
+    script.connect(start, level.node(32579542, "Delay"))
+
+
+def temple_exit(level: script.Level) -> None:
+    """Arriving in El Machino counts as leaving the Temple if that quest is still open, allowing the El Machino speech to play."""
+    enter = level.add_node("OnEnterLevel", "AP_TempleExitEnter", [
+        ("IfEnteredNormally", "Boolean", "True"),
+        ("IfFastTraveled", "Boolean", "True"),
+        ("IfLoadedGame", "Boolean", "True"),
+        ("IfLoadedCheckpoint", "Boolean", "True"),
+        ("IfRevived", "Boolean", "True"),
+    ])
+    still_open = level.add_node("CheckQuestState", "AP_TempleExitCheck", [
+        ("QuestName", "String", "quest_exit_temple"),
+        ("IfLocked", "Boolean", "False"),
+        ("IfUnlocked", "Boolean", "False"),
+        ("IfActive", "Boolean", "True"),
+        ("IfReadyToComplete", "Boolean", "False"),
+        ("IfCompleted", "Boolean", "False"),
+    ])
+    leave = level.add_node("ProgressQuest", "AP_TempleExit", [
+        ("QuestName", "String", "quest_exit_temple"),
+        ("ObjectiveName", "String", "obj_exit_temple"),
+        ("Increase", "Int32", "1"),
+    ])
+
+    script.connect(enter, still_open)
+    script.connect(still_open, leave)
 
 
 def hook_gate(level: script.Level) -> None:
@@ -89,7 +125,8 @@ STORY_PATCHES = {
     VECTRON: [vectron],
     SAVING_RUSTY: [goal],
     TEMPLE: [lamp],
-    EL_MACHINO: [shops],
+    EL_MACHINO: [shops, temple_exit],
+    INTRO: [intro],
 }
 
 
