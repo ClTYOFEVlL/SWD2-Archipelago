@@ -1646,12 +1646,12 @@
  ],
  "region_rules": {
   "Aeronaut's Station - East Ledge": {
-   "base_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))"
+   "base_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
   },
   "Aeronaut's Station - Sealed Room": {
    "base_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | (Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & Jet×2 & Ramjet & Bomb×1)",
@@ -1662,12 +1662,12 @@
    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | (Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & Bomb×4 & SkyAssailant & Cogs(3)))) | (Hook & Jet×2 & Ramjet & Bomb×1))"
   },
   "Aeronaut's Station - West": {
-   "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
   },
   "Archaea - Below the Cave-in": {
    "base_hard": "Bomb×1 & ((Sprint & (Jet×1 | Lamp×1)) | Hook)",
@@ -1766,20 +1766,20 @@
    "tricks_easy": "Armor×1 & Lamp×1 & (Sprint | Hook)"
   },
   "Bushwhack Beehive": {
-   "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
   },
   "Bushwhack Beehive - West Pocket": {
-   "base_hard": "Jet×1 & Bomb×4 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Bomb×4 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Bomb×4 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & Bomb×4 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Bomb×4 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Bomb×4 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "Bomb×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_normal": "Bomb×4 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_easy": "Bomb×4 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_hard": "Bomb×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_normal": "Bomb×4 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_easy": "Bomb×4 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
   },
   "Cave-in Catacomb": {
    "base_hard": "(Sprint & ((Jet×1 & Bomb×4 & SkyAssailant & Cogs(3)) | (Bomb×1 & Lamp×1))) | (Hook & ((Bomb×1 & Lamp×1) | (Bomb×4 & SkyAssailant & Cogs(3))))",
@@ -1886,12 +1886,12 @@
    "tricks_easy": "Left Button & Right Button & ((Sprint & Jet×1) | Hook)"
   },
   "Device of Disaster": {
-   "base_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))"
+   "base_hard": "(Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2))",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)))",
+   "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
   },
   "Device of Doom": {
    "base_hard": "Fire Temple hub gate & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
@@ -2046,12 +2046,12 @@
    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
   },
   "Hodge-Podge Hang": {
-   "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
   },
   "Infernal Crates": {
    "base_hard": "(Sprint & Jet×1 & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
@@ -2078,36 +2078,36 @@
    "tricks_easy": "Armor×1 & Pickaxe×3 & Tank×1 & ((Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
   },
   "Leaky Lodge - East": {
-   "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
   },
   "Leaky Lodge - West": {
-   "base_hard": "Jet×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
   },
   "Lime Loop": {
-   "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
   },
   "Lime Loop - Past the Gate": {
-   "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
   },
   "Mason's Station - Entrance": {
    "base_hard": "(Sprint & (Jet×1 | (Bomb×1 & Lamp×1))) | Hook",
@@ -2134,12 +2134,12 @@
    "tricks_easy": "Armor×2 & Pickaxe×4 & Tank×1 & ((Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
   },
   "Mushi Mushi Snuggery": {
-   "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+   "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
   },
   "Mysterious Cave - Entrance": {
    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
@@ -2225,9 +2225,9 @@
    "base_hard": "Oasis gate & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
    "base_normal": "Pickaxe×2 & Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
    "base_easy": "Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-   "tricks_hard": "Oasis gate & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_normal": "Pickaxe×2 & Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_easy": "Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+   "tricks_hard": "Oasis gate & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "tricks_normal": "Pickaxe×2 & Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "tricks_easy": "Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
   },
   "Rupture Rock Hollow - Hall": {
    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
@@ -2246,36 +2246,36 @@
    "tricks_easy": "Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
   },
   "Sludge River Bend - East": {
-   "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2 | Jackhammer×1)))) | (Sprint & Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-   "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Sprint & Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Sprint & Hook & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2 | Jackhammer×1)))) | (Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-   "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   "base_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+   "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+   "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Sprint & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))",
+   "tricks_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+   "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+   "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
   },
   "Sludge River Bend - Lower East": {
-   "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2 | Jackhammer×1)))) | (Sprint & Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-   "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Sprint & Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Sprint & Hook & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2 | Jackhammer×1)))) | (Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-   "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+   "base_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+   "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+   "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Sprint & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))",
+   "tricks_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+   "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+   "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
   },
   "Sludge River Bend - Middle": {
-   "base_hard": "Hook & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)",
-   "base_normal": "Hook & Jet×1 & Armor×1 & Pickaxe×2 & ((Ramjet & Bomb×1) | Bomb×2)",
-   "base_easy": "Hook & Jet×1 & Armor×2 & Pickaxe×4 & ((Ramjet & Bomb×1) | Bomb×2)",
-   "tricks_hard": "Hook & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)",
-   "tricks_normal": "Hook & Jet×1 & Armor×1 & Pickaxe×2 & ((Ramjet & Bomb×1) | Bomb×2)",
-   "tricks_easy": "Hook & Jet×1 & Armor×2 & Pickaxe×4 & ((Ramjet & Bomb×1) | Bomb×2)"
+   "base_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+   "base_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+   "base_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+   "tricks_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+   "tricks_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+   "tricks_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))"
   },
   "Sludge River Bend - West": {
-   "base_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))"
+   "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
   },
   "Spikes & Conveyors": {
    "base_hard": "(Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
@@ -2286,20 +2286,20 @@
    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
   },
   "Swim Swam Sway": {
-   "base_hard": "Jet×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
   },
   "Swim Swam Sway - Cog Pocket": {
-   "base_hard": "Jet×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
   },
   "Temple Lower - Cavern": {
    "base_hard": "(Sprint & Jet×1) | Hook",
@@ -2406,20 +2406,20 @@
    "tricks_easy": "Armor×1 & Pickaxe×3 & ((Sprint & ((Jet×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)) | (Lamp×1 & ((Bomb×2 & Jackhammer×1) | (Bomb×4 & BusterShells & Cogs(1)))))) | (Hook & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)) | Fire Temple entrance gate)))"
   },
   "The Oasis": {
-   "base_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-   "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "base_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))",
-   "tricks_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-   "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
+   "base_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+   "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "base_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))",
+   "tricks_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+   "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
   },
   "The Reactor": {
    "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
    "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
    "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-   "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-   "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+   "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+   "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
   },
   "The Sun Armory": {
    "base_hard": "(Hook & ((Jackhammer×1 & (Grappler | Jet×1 | (Bomb×4 & SkyAssailant & Cogs(3)))) | (BusterShells & ((Bomb×3 & Cogs(1) & (Grappler | Jet×1)) | (Bomb×4 & SkyAssailant & Cogs(4)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
@@ -2526,28 +2526,28 @@
    "tricks_easy": "Bomb×1 & Pickaxe×2 & ((Sprint & (Jet×1 | Lamp×1)) | Hook)"
   },
   "Yarrow - Below Lock 2": {
-   "base_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))"
+   "base_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
   },
   "Yarrow - Main Shaft": {
-   "base_hard": "Jet×1 & (Sprint | Hook)",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-   "tricks_hard": "Jet×1 & (Sprint | Hook)",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+   "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
   },
   "Yarrow - Oasis Tube Ledge": {
-   "base_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-   "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))"
+   "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+   "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+   "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
   },
   "Yarrow - Temple Ledge": {
    "base_hard": "(Sprint & Jet×1) | Hook",
@@ -3063,12 +3063,12 @@
    "type": "cog",
    "region": "Aeronaut's Station - East Ledge",
    "rules": {
-    "base_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))"
+    "base_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
    }
   },
   {
@@ -3077,12 +3077,12 @@
    "type": "cog",
    "region": "Bushwhack Beehive",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3091,12 +3091,12 @@
    "type": "cog",
    "region": "Hodge-Podge Hang",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3105,12 +3105,12 @@
    "type": "cog",
    "region": "Leaky Lodge - East",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3119,12 +3119,12 @@
    "type": "cog",
    "region": "Leaky Lodge - East",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3133,12 +3133,12 @@
    "type": "cog",
    "region": "Lime Loop - Past the Gate",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3147,12 +3147,12 @@
    "type": "cog",
    "region": "Mushi Mushi Snuggery",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3161,12 +3161,12 @@
    "type": "cog",
    "region": "Swim Swam Sway",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3175,12 +3175,12 @@
    "type": "cog",
    "region": "Swim Swam Sway - Cog Pocket",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3189,12 +3189,12 @@
    "type": "cog",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3203,12 +3203,12 @@
    "type": "cog",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3612,9 +3612,9 @@
     "base_hard": "Oasis gate & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Oasis gate & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+    "tricks_hard": "Oasis gate & ((Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×2 & Launcher & Armor×1) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×2 & Pickaxe×4))))"
    }
   },
   {
@@ -3623,12 +3623,12 @@
    "type": "cog",
    "region": "Sludge River Bend - Middle",
    "rules": {
-    "base_hard": "Hook & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "base_normal": "Hook & Jet×1 & Armor×1 & Pickaxe×2 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "base_easy": "Hook & Jet×1 & Armor×2 & Pickaxe×4 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_hard": "Hook & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_normal": "Hook & Jet×1 & Armor×1 & Pickaxe×2 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_easy": "Hook & Jet×1 & Armor×2 & Pickaxe×4 & ((Ramjet & Bomb×1) | Bomb×2)"
+    "base_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "base_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "base_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))"
    }
   },
   {
@@ -3637,12 +3637,12 @@
    "type": "cog",
    "region": "Sludge River Bend - West",
    "rules": {
-    "base_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "tricks_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))"
+    "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
    }
   },
   {
@@ -3917,12 +3917,12 @@
    "type": "artifact",
    "region": "Bushwhack Beehive - West Pocket",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×4 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×4 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×4 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×4 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×4 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×4 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×4 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×4 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×4 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×4 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3931,12 +3931,12 @@
    "type": "artifact",
    "region": "Hodge-Podge Hang",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3945,12 +3945,12 @@
    "type": "artifact",
    "region": "Leaky Lodge - West",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3959,12 +3959,12 @@
    "type": "artifact",
    "region": "Lime Loop - Past the Gate",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3973,12 +3973,12 @@
    "type": "artifact",
    "region": "Mushi Mushi Snuggery",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -3987,12 +3987,12 @@
    "type": "artifact",
    "region": "Swim Swam Sway",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -4015,12 +4015,12 @@
    "type": "artifact",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -4214,9 +4214,9 @@
     "base_hard": "Oasis gate & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Oasis gate & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+    "tricks_hard": "Oasis gate & ((Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×2 & Launcher & Armor×1) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×2 & Pickaxe×4))))"
    }
   },
   {
@@ -4228,9 +4228,9 @@
     "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
     "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "(Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "tricks_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
+    "tricks_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
    }
   },
   {
@@ -4382,9 +4382,9 @@
     "base_hard": "Oasis gate & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Oasis gate & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "tricks_hard": "Oasis gate & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Oasis gate & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {
@@ -4695,12 +4695,12 @@
    "type": "teleporter",
    "region": "Yarrow - Below Lock 2",
    "rules": {
-    "base_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))"
+    "base_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
    }
   },
   {
@@ -4709,12 +4709,12 @@
    "type": "teleporter",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -4723,12 +4723,12 @@
    "type": "teleporter",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -4737,12 +4737,12 @@
    "type": "teleporter",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -4751,12 +4751,12 @@
    "type": "teleporter",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -4908,9 +4908,9 @@
     "base_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
     "base_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))",
-    "tricks_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
+    "tricks_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
    }
   },
   {
@@ -4992,9 +4992,9 @@
     "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {
@@ -5006,9 +5006,9 @@
     "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {
@@ -5020,9 +5020,9 @@
     "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {
@@ -5034,9 +5034,9 @@
     "base_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))",
-    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
+    "tricks_hard": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Device of Destruction & Device of Devastation & Device of Disaster & ((Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))))"
    }
   },
   {
@@ -5689,12 +5689,12 @@
    "type": "secret_area",
    "region": "Bushwhack Beehive - West Pocket",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×4 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×4 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×4 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×4 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×4 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×4 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×4 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×4 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×4 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×4 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5703,12 +5703,12 @@
    "type": "secret_area",
    "region": "Hodge-Podge Hang",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5717,12 +5717,12 @@
    "type": "secret_area",
    "region": "Leaky Lodge - East",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5731,12 +5731,12 @@
    "type": "secret_area",
    "region": "Leaky Lodge - West",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5745,12 +5745,12 @@
    "type": "secret_area",
    "region": "Lime Loop - Past the Gate",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5759,12 +5759,12 @@
    "type": "secret_area",
    "region": "Lime Loop",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5773,12 +5773,12 @@
    "type": "secret_area",
    "region": "Mushi Mushi Snuggery",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5787,12 +5787,12 @@
    "type": "secret_area",
    "region": "Swim Swam Sway",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5801,12 +5801,12 @@
    "type": "secret_area",
    "region": "Swim Swam Sway - Cog Pocket",
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5815,12 +5815,12 @@
    "type": "secret_area",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -5829,12 +5829,12 @@
    "type": "secret_area",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -6266,9 +6266,9 @@
     "base_hard": "Oasis gate & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Oasis gate & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+    "tricks_hard": "Oasis gate & ((Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×2 & Launcher & Armor×1) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×2 & Pickaxe×4))))"
    }
   },
   {
@@ -6277,12 +6277,12 @@
    "type": "secret_area",
    "region": "Sludge River Bend - West",
    "rules": {
-    "base_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "tricks_hard": "Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))"
+    "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
    }
   },
   {
@@ -6294,9 +6294,9 @@
     "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
     "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "(Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "tricks_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
+    "tricks_hard": "(Sprint & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Sprint & ((Jet×1 & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Lamp×1 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×1 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "(Sprint & ((Jet×1 & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Armor×1 & Lamp×1 & Pickaxe×3 & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Hook & ((Armor×2 & Pickaxe×4 & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher))) | (Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))))"
    }
   },
   {
@@ -6585,12 +6585,12 @@
    "type": "secret_area_mini",
    "region": "Lime Loop",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -6599,12 +6599,12 @@
    "type": "secret_area_mini",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -6613,12 +6613,12 @@
    "type": "secret_area_mini",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -6627,12 +6627,12 @@
    "type": "secret_area_mini",
    "region": "Yarrow - Main Shaft",
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -6767,12 +6767,12 @@
    "type": "secret_area_mini",
    "region": "Sludge River Bend - Middle",
    "rules": {
-    "base_hard": "Hook & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "base_normal": "Hook & Jet×1 & Armor×1 & Pickaxe×2 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "base_easy": "Hook & Jet×1 & Armor×2 & Pickaxe×4 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_hard": "Hook & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_normal": "Hook & Jet×1 & Armor×1 & Pickaxe×2 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_easy": "Hook & Jet×1 & Armor×2 & Pickaxe×4 & ((Ramjet & Bomb×1) | Bomb×2)"
+    "base_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "base_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "base_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))"
    }
   },
   {
@@ -6781,12 +6781,12 @@
    "type": "secret_area_mini",
    "region": "Sludge River Bend - Lower East",
    "rules": {
-    "base_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2 | Jackhammer×1)))) | (Sprint & Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Sprint & Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Sprint & Hook & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "(Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2 | Jackhammer×1)))) | (Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
-    "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+    "base_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+    "base_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Sprint & Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+    "base_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Sprint & Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))",
+    "tricks_hard": "(Hook & ((Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)) | (Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher))) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1))",
+    "tricks_normal": "Pickaxe×2 & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))) | (Hook & ((Grappler & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×1))))",
+    "tricks_easy": "Armor×2 & ((Jet×1 & ((Sprint & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Pickaxe×4 & (Ramjet | Bomb×2)))))) | (Hook & ((Grappler & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Pickaxe×4))))"
    }
   }
  ],
@@ -6865,12 +6865,12 @@
    "name": "Device of Disaster",
    "region": "Device of Disaster",
    "rules": {
-    "base_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))"
+    "base_hard": "(Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & ((Bomb×2 & ((Launcher & (Sprint | Grappler)) | Jet×1)) | (Jet×1 & Ramjet & Bomb×1))) | (Sprint & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)))",
+    "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
    }
   },
   {
@@ -6889,12 +6889,12 @@
    "name": "Rosie",
    "region": "The Reactor",
    "rules": {
-    "base_hard": "Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "base_normal": "Jet×1 & Armor×2 & Pickaxe×2 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "base_easy": "Jet×1 & Armor×4 & Pickaxe×4 & Tank×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "tricks_hard": "Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "tricks_normal": "Jet×1 & Armor×2 & Pickaxe×2 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "tricks_easy": "Jet×1 & Armor×4 & Pickaxe×4 & Tank×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))"
+    "base_hard": "(Hook & ((Launcher & ((Sprint & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "base_normal": "Armor×2 & Pickaxe×2 & ((Hook & ((Launcher & ((Sprint & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "base_easy": "Armor×4 & Pickaxe×4 & Tank×1 & ((Hook & ((Launcher & ((Sprint & Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))) | (Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "tricks_hard": "(Hook & ((Launcher & ((Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "tricks_normal": "Armor×2 & Pickaxe×2 & ((Hook & ((Launcher & ((Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "tricks_easy": "Armor×4 & Pickaxe×4 & Tank×1 & ((Hook & ((Launcher & ((Grappler & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))) | (Bomb×4 & SkyAssailant & ((Jackhammer×1 & Cogs(3)) | (BusterShells & Cogs(4)))))) | (Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Jackhammer×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)))))"
    }
   },
   {
@@ -7371,120 +7371,120 @@
    "region": "Yarrow - Main Shaft",
    "base": 2028,
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
    "region": "Yarrow - Main Shaft",
    "base": 37,
    "rules": {
-    "base_hard": "Jet×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Jet×1 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+    "base_hard": "(Hook & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Launcher & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Launcher & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Launcher & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_hard": "(Hook & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Launcher & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1))",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Launcher & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & ((Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Launcher & ((Bomb×1 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))) | (Sprint & Jet×1 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
    }
   },
   {
    "region": "Yarrow - Below Lock 2",
    "base": 1211,
    "rules": {
-    "base_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_hard": "Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))"
+    "base_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_hard": "(Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Hook & Bomb×2 & Launcher))"
    }
   },
   {
    "region": "Yarrow - Below Lock 2",
    "base": 78,
    "rules": {
-    "base_hard": "Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "tricks_hard": "Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))"
+    "base_hard": "(Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))) | (Hook & Launcher & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))) | (Hook & Launcher & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))) | (Hook & Launcher & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "tricks_hard": "(Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))) | (Hook & Launcher & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1))))",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))) | (Hook & Launcher & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Jet×1 & ((Jackhammer×1 & ((Sprint & ((Ramjet & Bomb×1) | Bomb×2)) | (Hook & ((Ramjet & Bomb×1) | Bomb×2)))) | (Bomb×3 & BusterShells & Cogs(1) & (Sprint | Hook)))) | (Hook & Launcher & ((Bomb×2 & Jackhammer×1) | (Bomb×3 & BusterShells & Cogs(1)))))"
    }
   },
   {
    "region": "Swim Swam Sway",
    "base": 52,
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
    "region": "Leaky Lodge - West",
    "base": 140,
    "rules": {
-    "base_hard": "Jet×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "base_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "base_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_hard": "(Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1)",
+    "tricks_normal": "Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))",
+    "tricks_easy": "Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | (Bomb×1 & Launcher))) | (Sprint & Jet×1))"
    }
   },
   {
    "region": "Bushwhack Beehive",
    "base": 70,
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
    "region": "Aeronaut's Station - West",
    "base": 70,
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
    "region": "Hodge-Podge Hang",
    "base": 50,
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
    "region": "Mushi Mushi Snuggery",
    "base": 60,
    "rules": {
-    "base_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "base_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "base_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)",
-    "tricks_hard": "Jet×1 & Bomb×1 & (Sprint | Hook)",
-    "tricks_normal": "Jet×1 & Bomb×1 & Armor×1 & Pickaxe×2 & (Sprint | Hook)",
-    "tricks_easy": "Jet×1 & Bomb×1 & Armor×2 & Pickaxe×4 & (Sprint | Hook)"
+    "base_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "base_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_hard": "Bomb×1 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_normal": "Bomb×1 & Armor×1 & Pickaxe×2 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))",
+    "tricks_easy": "Bomb×1 & Armor×2 & Pickaxe×4 & ((Hook & (Jet×1 | Launcher)) | (Sprint & Jet×1))"
    }
   },
   {
@@ -7722,21 +7722,21 @@
     "base_hard": "Oasis gate & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
     "base_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_hard": "Oasis gate & ((Jet×1 & ((Sprint & (Ramjet | Bomb×2 | Jackhammer×1)) | (Hook & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
-    "tricks_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))"
+    "tricks_hard": "Oasis gate & ((Hook & ((Jet×1 & (Ramjet | Bomb×2)) | (Bomb×2 & Launcher) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Sprint & Jet×1 & (Ramjet | Bomb×2 | Jackhammer×1)))",
+    "tricks_normal": "Pickaxe×2 & Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & (Ramjet | Bomb×2)) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Hook & Armor×1 & (Ramjet | Bomb×2)))) | (Hook & ((Bomb×2 & Launcher & Armor×1) | (Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)))",
+    "tricks_easy": "Oasis gate & ((Jet×1 & ((Sprint & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & Armor×2 & Pickaxe×4 & (Ramjet | Bomb×2)))) | (Hook & ((Armor×1 & Pickaxe×3 & ((Bomb×3 & BusterShells & Cogs(1)) | Jackhammer×1)) | (Bomb×2 & Launcher & Armor×2 & Pickaxe×4))))"
    }
   },
   {
    "region": "Sludge River Bend - Middle",
    "base": 285,
    "rules": {
-    "base_hard": "Hook & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "base_normal": "Hook & Jet×1 & Armor×1 & Pickaxe×2 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "base_easy": "Hook & Jet×1 & Armor×2 & Pickaxe×4 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_hard": "Hook & Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_normal": "Hook & Jet×1 & Armor×1 & Pickaxe×2 & ((Ramjet & Bomb×1) | Bomb×2)",
-    "tricks_easy": "Hook & Jet×1 & Armor×2 & Pickaxe×4 & ((Ramjet & Bomb×1) | Bomb×2)"
+    "base_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "base_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "base_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_hard": "Hook & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_normal": "Hook & Armor×1 & Pickaxe×2 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))",
+    "tricks_easy": "Hook & Armor×2 & Pickaxe×4 & ((Jet×1 & ((Ramjet & Bomb×1) | Bomb×2)) | (Bomb×2 & Launcher))"
    }
   },
   {
