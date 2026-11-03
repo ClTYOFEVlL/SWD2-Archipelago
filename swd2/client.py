@@ -101,6 +101,8 @@ class SWD2Context(CommonContext):
         # The slot's data goes with the server connection: without it nothing is sent to the bridge for a slot
         super().reset_server_state()
         self.slot_data = None
+        if self.game_ready:
+            self.bridge.send(protocol.disconnect_message())
 
     @property
     def seed_id(self) -> int:

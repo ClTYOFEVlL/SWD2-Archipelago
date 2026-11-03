@@ -26,6 +26,12 @@ const char kCogIcon[] = "Icons/Currency/cogs_big";
 const char kMoneyIcon[] = "Icons/Currency/money";
 const double kBannerSeconds = 4.0;  // how long the game shows a banner, so one at a time
 
+// What the player sees when the save starts or stops playing its slot
+const char kConnectedHeader[] = "Connected to Archipelago.";
+const char kConnectedText[] = "Enjoy!";
+const char kDisconnectedHeader[] = "Disconnected from Archipelago.";
+const char kDisconnectedText[] = "Checks and items will update when reconnected.";
+
 // The save's binding, as hidden flags. The seed id and the number of received items, in base-256 digits
 const char* const kSeedFlags[] = {"ap_seed_0", "ap_seed_1", "ap_seed_2", "ap_seed_3"};
 const char* const kItemFlags[] = {"ap_items_0", "ap_items_1"};
@@ -67,6 +73,10 @@ int g_shown = 0;  // items below this index were shown before, so they're given 
 std::deque<Banner> g_banners;
 bool g_kill = false;  // a DeathLink death came in since the last frame
 
+// Last frame's state, to tell the player when it changes
+bool g_wasOurs = false;  // the loaded save was bound to the connected client's slot
+bool g_wasPlaying = false;  // and that client had said which slot it plays
+
 // Flags that scripts set during the last frame, applied at the start of this one
 std::vector<std::pair<std::string, int>> g_heldFlags;
 
@@ -101,6 +111,13 @@ void OnConnect(const json& message)
     g_slotConnected = true;
     g_saveReported = false;
     Log("client connected to the slot with seed id %08X", seed);
+}
+
+// The client lost the server, and with it the slot
+void OnDisconnect()
+{
+    g_slotConnected = false;
+    Log("the client lost the server");
 }
 
 // The slot's received items from index "start" on, and how many were shown in game before
@@ -175,6 +192,8 @@ void HandleMessages()
             type = message.value("type", "");
             if (type == "connect")
                 OnConnect(message);
+            else if (type == "disconnect")
+                OnDisconnect();
             else if (type == "items")
                 OnItems(message);
             else if (type == "texts")
@@ -356,6 +375,21 @@ void ReportChecks(const game::Frame& frame)
     g_reportAll = false;
 }
 
+// Tells the player when the loaded save starts or stops playing its slot, and where it stands when it loads
+void ShowConnection(bool ours)
+{
+    bool playing = ours && g_slotConnected;
+    bool changed = playing != g_wasPlaying || ours != g_wasOurs;
+    g_wasPlaying = playing;
+    g_wasOurs = ours;
+    if (!ours || !changed) return;
+
+    if (playing)
+        g_banners.push_back({kConnectedHeader, kConnectedText, kApLogo});
+    else
+        g_banners.push_back({kDisconnectedHeader, kDisconnectedText, kApLogo});
+}
+
 void HandleDeaths(const game::Frame& frame, bool ours, bool kill)
 {
     bool dead = game::PlayerDead(frame);
@@ -397,6 +431,7 @@ void OnFrameStart(uintptr_t simulators)
         g_profile = frame.profile;
         texts::SetProfile(frame.profile);
         g_saveReported = false;
+        g_wasOurs = false;
     }
 
     // Game time stands still while the game is paused or unfocused
@@ -416,6 +451,7 @@ void OnFrameStart(uintptr_t simulators)
             ReportChecks(frame);
     }
 
+    ShowConnection(ours);
     HandleDeaths(frame, ours, kill);
 
     // Nothing changes while the game is paused or unfocused, or while the player is dead: the game ignores most

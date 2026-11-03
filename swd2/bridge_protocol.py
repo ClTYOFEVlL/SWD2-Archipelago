@@ -54,6 +54,10 @@ def connect_message(seed: int) -> dict:
     return {"type": "connect", "seed": seed}
 
 
+def disconnect_message() -> dict:
+    return {"type": "disconnect"}
+
+
 def grants(item_ids: list[int], money: dict[int, int], tool_items: list[ItemData]) -> list[dict]:
     """How the bridge gives each received item. `money` holds each money bundle's dollars by item id, `tool_items`
     the main and progressive items of the seed's tool options."""
