@@ -200,6 +200,17 @@ class OrbContainers(OptionSet):
     valid_keys = {"Health", "Light", "Mixed", "Super"}
 
 
+class SecretAreas(OptionSet):
+    """
+    Adds the chosen kinds of secrets as locations.
+
+    Secret Areas - Hidden rooms. Most also hold a cog container or an artifact. (85 Locations)
+    Mini Secrets - Small hidden notches that only chime. Many are a gem or a cog container's spot. (35 Locations)
+    """
+    display_name = "Secret Areas"
+    valid_keys = {"Secret Areas", "Mini Secrets"}
+
+
 class CogAmount(Range):
     """
     How many Upgrade Cogs are in the pool. Logic never asks for more than 4.
@@ -250,6 +261,7 @@ class SWD2Options(PerGameCommonOptions):
     teleporter_locations: TeleporterLocations
     hell_cave_locations: HellCaveLocations
     orb_containers: OrbContainers
+    secret_areas: SecretAreas
     cog_amount: CogAmount
     filler_weights: FillerWeights
     start_inventory_from_pool: StartInventoryPool
@@ -259,7 +271,7 @@ OPTION_GROUPS = [
     OptionGroup("Goal", [GeneratorsRequired]),
     OptionGroup("Logic", [LogicDifficulty, Tricks]),
     OptionGroup("Shops", [ShopPricePercent, ShowShopItems]),
-    OptionGroup("Locations", [TeleporterLocations, HellCaveLocations, OrbContainers]),
+    OptionGroup("Locations", [TeleporterLocations, HellCaveLocations, OrbContainers, SecretAreas]),
     OptionGroup("Items", [SprintHydraulics, CogAmount, FillerWeights]),
     OptionGroup("Tool Items", [PressureBombItems, JackhammerItems, JetEngineItems, HookItems, GrenadeItems, ProgressiveMobility]),
 ]

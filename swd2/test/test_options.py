@@ -117,3 +117,32 @@ class TestOneOrbKind(SWD2TestBase):
         names = set(self.world.location_names_in_world)
         self.assertTrue(self.world.location_name_groups["Super Orb Containers"] <= names)
         self.assertFalse(self.world.location_name_groups["Health Orb Containers"] & names)
+
+
+class TestSecretAreasOnly(SWD2TestBase):
+    options = {"secret_areas": ["Secret Areas"]}
+
+    def test_no_minis(self):
+        names = set(self.world.location_names_in_world)
+        self.assertTrue(self.world.location_name_groups["Secret Areas"] <= names)
+        self.assertFalse(self.world.location_name_groups["Mini Secrets"] & names)
+
+
+class TestMiniSecretsOnly(SWD2TestBase):
+    options = {"secret_areas": ["Mini Secrets"]}
+
+    def test_no_secret_areas(self):
+        names = set(self.world.location_names_in_world)
+        self.assertTrue(self.world.location_name_groups["Mini Secrets"] <= names)
+        self.assertFalse(self.world.location_name_groups["Secret Areas"] & names)
+
+
+class TestAllSecrets(SWD2TestBase):
+    options = {"secret_areas": ["Secret Areas", "Mini Secrets"]}
+
+    def test_every_secret_is_a_location(self):
+        for group, count in (("Secret Areas", 85), ("Mini Secrets", 35)):
+            with self.subTest(group):
+                self.assertEqual(len(self.world.location_name_groups[group]), count)
+                for name in self.world.location_name_groups[group]:
+                    self.multiworld.get_location(name, self.player)

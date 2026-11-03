@@ -130,7 +130,7 @@ STORY_PATCHES = {
 
 
 def patch_location(level: script.Level, location: LocationData) -> None:
-    if location.type in ("teleporter", "secret_area", "secret_area_mini"):
+    if location.type == "teleporter":
         return
 
     flag = location.flag
@@ -165,7 +165,8 @@ def patch_location(level: script.Level, location: LocationData) -> None:
         entity.find("Definition").text = PICKUP
         entity.remove(script.get_prop(entity, "EditorPickup"))
 
-    elif location.type not in ("superorb", "mixedorb", "healthorb", "lightorb", "generator"):
+    elif location.type not in ("superorb", "mixedorb", "healthorb", "lightorb", "generator", "secret_area",
+                               "secret_area_mini"):
         raise ValueError(f"unknown location type {location.type}")
 
     level.watch("OnDestroyed", location.entity, level.set_upgrade(flag), f"AP_On_{flag}")

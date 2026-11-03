@@ -9,12 +9,12 @@ from .money import SHOP_TYPES
 if TYPE_CHECKING:
     from . import SWD2World
 
-# The orb_containers option's kinds and their types in the table
+# The orb_containers and secret_areas options kinds and their types in the table
 ORB_TYPES = {"Health": "healthorb", "Light": "lightorb", "Mixed": "mixedorb", "Super": "superorb"}
+SECRET_TYPES = {"Secret Areas": "secret_area", "Mini Secrets": "secret_area_mini"}
 
-# Secret areas are in the table but aren't locations yet
 LOCATION_TYPES = ("cog", "artifact", "podium", "yonker", "cartographer", "teleporter", "generator", *SHOP_TYPES,
-                  *ORB_TYPES.values())
+                  *ORB_TYPES.values(), *SECRET_TYPES.values())
 EL_MACHINO_TELEPORTER = "elmachino_teleporter_01"  # unlocks by itself, so it isn't a location
 
 SPRINT_PODIUM = "Temple of Guidance - Upper: Podium (Sprint Hydraulics)"
@@ -47,6 +47,8 @@ _GROUPS = {
     "Light Orb Containers": "lightorb",
     "Mixed Orb Containers": "mixedorb",
     "Super Orb Containers": "superorb",
+    "Secret Areas": "secret_area",
+    "Mini Secrets": "secret_area_mini",
 }
 LOCATION_NAME_GROUPS = {
     group: {location.name for location in ALL_LOCATIONS if location.type == kind}
@@ -68,6 +70,7 @@ def in_trials(location: LocationData) -> bool:
 def active_locations(world: "SWD2World") -> list[LocationData]:
     active = []
     orb_types = {ORB_TYPES[kind] for kind in world.options.orb_containers.value}
+    secret_types = {SECRET_TYPES[kind] for kind in world.options.secret_areas.value}
 
     for location in ALL_LOCATIONS:
         if location.type == "teleporter" and not world.options.teleporter_locations:
@@ -75,6 +78,8 @@ def active_locations(world: "SWD2World") -> list[LocationData]:
         if in_trials(location) and not world.options.hell_cave_locations:
             continue
         if location.type in ORB_TYPES.values() and location.type not in orb_types:
+            continue
+        if location.type in SECRET_TYPES.values() and location.type not in secret_types:
             continue
 
         active.append(location)
