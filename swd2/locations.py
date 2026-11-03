@@ -9,7 +9,7 @@ from .money import SHOP_TYPES
 if TYPE_CHECKING:
     from . import SWD2World
 
-# Secret areas, super orb containers and Cryptium are in the table but aren't locations yet
+# Secret areas and super orb containers are in the table but aren't locations yet
 LOCATION_TYPES = ("cog", "artifact", "podium", "yonker", "cartographer", "teleporter", "generator") + SHOP_TYPES
 EL_MACHINO_TELEPORTER = "elmachino_teleporter_01"  # unlocks by itself, so it isn't a location
 

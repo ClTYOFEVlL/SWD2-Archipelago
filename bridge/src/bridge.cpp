@@ -26,15 +26,14 @@ const char kCogIcon[] = "Icons/Currency/cogs_big";
 const char kMoneyIcon[] = "Icons/Currency/money";
 const double kBannerSeconds = 4.0;  // how long the game shows a banner, so one at a time
 
-// The save's binding lives in hidden flags, so it rolls back with the save: the seed id and the number of received
-// items it holds, as base-256 digits (a flag holds 0 to 255)
+// The save's binding, as hidden flags. The seed id and the number of received items, in base-256 digits
 const char* const kSeedFlags[] = {"ap_seed_0", "ap_seed_1", "ap_seed_2", "ap_seed_3"};
 const char* const kItemFlags[] = {"ap_items_0", "ap_items_1"};
 
 // Carson's and Clifford's price lists, whose purchase counts are checks
 const char* const kPriceLists[] = {"carson_cogs", "blueprint_vendor_02"};
 
-// Received items wait until the fall into the Temple, which sets this flag: an early Sprint could skip the earthquake
+// Received items wait until the fall into the Temple, which sets this flag
 const char kIntroDoneFlag[] = "ap_temple_lamp";
 
 struct Save {

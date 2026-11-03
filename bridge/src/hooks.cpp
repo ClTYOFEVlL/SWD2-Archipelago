@@ -15,8 +15,7 @@ namespace hooks {
 
 namespace {
 
-// Runs once a frame, also while paused. Upgrades only change here, before the simulators: changed later in a frame,
-// the next pickaxe swing can crash the game
+// Runs once a frame, also while paused. Upgrades change only here, before the simulators
 typedef void(__stdcall* SimulatorsUpdateFn)(void* simulators, void* frameTime, void* p3);
 SimulatorsUpdateFn g_simulatorsUpdate;
 

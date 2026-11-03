@@ -1826,56 +1826,6 @@
    "flag": "ap_loc_609"
   },
   {
-   "type": "cryptium",
-   "name": "Vectron - Descent: Cryptium No. 5-1 16.17.4.8",
-   "file": "Patchsets/Vectron/vectron_1_1_descent.le",
-   "area": "vectron_1_descent",
-   "layer": "Foreground",
-   "entity": "32581831",
-   "id": 651,
-   "flag": "ap_loc_651"
-  },
-  {
-   "type": "cryptium",
-   "name": "Vectron - Drop: Cryptium No. 5-4 12.18.2.1",
-   "file": "Patchsets/Vectron/vectron_1_4_drop.le",
-   "area": "vectron_1_drop",
-   "layer": "Foreground",
-   "entity": "32583935",
-   "id": 652,
-   "flag": "ap_loc_652"
-  },
-  {
-   "type": "cryptium",
-   "name": "Vectron - Drop: Cryptium No. 5-5 6.19.11.13",
-   "file": "Patchsets/Vectron/vectron_1_4_drop.le",
-   "area": "vectron_1_drop",
-   "layer": "Foreground",
-   "entity": "32581835",
-   "id": 653,
-   "flag": "ap_loc_653"
-  },
-  {
-   "type": "cryptium",
-   "name": "Vectron - Stairs: Cryptium No. 5-3 7.3.14.5",
-   "file": "Patchsets/Vectron/vectron_1_3_stairs.le",
-   "area": "vectron_1_stairs",
-   "layer": "Foreground",
-   "entity": "32581833",
-   "id": 654,
-   "flag": "ap_loc_654"
-  },
-  {
-   "type": "cryptium",
-   "name": "Vectron - Switch: Cryptium No. 5-2 10.15.9",
-   "file": "Patchsets/Vectron/vectron_1_2_switch.le",
-   "area": "vectron_1_switch",
-   "layer": "Foreground",
-   "entity": "32583943",
-   "id": 655,
-   "flag": "ap_loc_655"
-  },
-  {
    "type": "generator",
    "name": "Device of Devastation: Generator",
    "file": "Patchsets/TempleOfGuidance/temple_of_guidance_2_cave_generator.le",

@@ -49,17 +49,15 @@ def temple_exit(level: script.Level) -> None:
 
 
 def hook_gate(level: script.Level) -> None:
-    """The game's own fallback opens Rosie's Storage on entering the Oasis once every generator is destroyed. It
-    now waits for the Hook quest instead, so finishing the story past the Hook before Rosie's first talk can't leave
-    Rosie's Storage shut until the end."""
+    """Rosie's Storage gate's fallback waits for the Hook quest instead of the last generators.
+    Prevents Rosie's Storage from being shut until the end of the game."""
     # OnEnterLevel -> CheckQuestState -> EnableEntity gate_hub_small
     check = level.node(32596016, "CheckQuestState")
     script.set_prop(check, "QuestName", "quest_get_grapplinghook", expect="quest_destroy_all_generators")
 
 
 def vectron(level: script.Level) -> None:
-    """Vectron is skipped as SWD2Randomizer does. Teleporter is disabled, and a snake stone leads into the Hall
-    Arriving in the cave counts as the trip for the story."""
+    """Vectron is skipped. Its teleporter stays off, a snake stone opens the Hall, and entering the cave is the trip."""
     # The intro scene that switches the teleporter on, and its use, both check quest_vectron_helper IfActive
     for check in (32608340, 32608341):
         script.set_prop(level.node(check, "CheckQuestState"), "IfActive", "False", expect="True")
@@ -103,18 +101,14 @@ def goal(level: script.Level) -> None:
 
 
 def lamp(level: script.Level) -> None:
-    """The Temple no longer breaks the lamp: a New Game starts with the Broken Lamp, and received lamps must stay.
-    The SetUpgrade lamp 1 node in the entry scene stays in its chain but sets a harmless hidden flag instead, since
-    skipping the node left the scene stuck in testing."""
+    """The Temple's lamp-breaking node sets a hidden flag instead of breaking the lamp."""
     breaker = level.node(32569662, "SetUpgrade")
     script.set_prop(breaker, "UpgradeId", TEMPLE_LAMP_FLAG, expect="lamp")
     script.set_prop(breaker, "HideNewMarker", "True", expect="False")
 
 
 def shops(level: script.Level) -> None:
-    """Carson's cog and Clifford's blueprint are no longer handed out: how many you bought from each price list is
-    the check. Their reward nodes stay in their chains with nothing to give, since wiring the purchase past them
-    froze the player after buying, like the Temple's lamp node."""
+    """Carson's and Clifford's reward nodes give nothing. The purchase counts are the checks."""
     # After Carson's PayForPriceListItem carson_cogs
     carson = level.node(32578539, "GiveValuables")
     script.set_prop(carson, "Cogs", "0", expect="1")
@@ -171,7 +165,7 @@ def patch_location(level: script.Level, location: LocationData) -> None:
         entity.find("Definition").text = PICKUP
         entity.remove(script.get_prop(entity, "EditorPickup"))
 
-    elif location.type not in ("superorb", "cryptium", "generator"):
+    elif location.type not in ("superorb", "generator"):
         raise ValueError(f"unknown location type {location.type}")
 
     level.watch("OnDestroyed", location.entity, level.set_upgrade(flag), f"AP_On_{flag}")
