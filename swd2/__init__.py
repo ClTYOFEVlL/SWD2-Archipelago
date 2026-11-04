@@ -54,7 +54,16 @@ SLOT_OPTIONS = (
 class SWD2WebWorld(WebWorld):
     theme = "dirt"
     option_groups = OPTION_GROUPS
-    tutorials: list[Tutorial] = []
+    tutorials = [
+        Tutorial(
+            "Multiworld Setup Guide",
+            "A guide to setting up SteamWorld Dig 2 for Archipelago.",
+            "English",
+            "setup_en.md",
+            "setup/en",
+            ["Tails"],
+        )
+    ]
 
 
 class SWD2World(World):

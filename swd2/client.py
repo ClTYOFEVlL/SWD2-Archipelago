@@ -53,7 +53,7 @@ class SWD2CommandProcessor(ClientCommandProcessor):
             return False
 
         if sys.platform != "win32":
-            self.output(f"Start the copy in {game_copy.copy_dir()} from Steam or Wine (README)")
+            self.output(f"Start the copy in {game_copy.copy_dir()} from Steam or Wine (setup guide)")
             return False
 
         game_copy.launch()
@@ -349,7 +349,7 @@ class SWD2Context(CommonContext):
         if source is None:
             logger.info("No Steam or GOG install of SteamWorld Dig 2 was found: give its folder, /auto_patch <folder>.")
             if sys.platform != "win32":
-                logger.info("On Linux it must be the Windows version (README)")
+                logger.info("On Linux it must be the Windows version (setup guide)")
             return
 
         # The copy runs in a thread, so its messages go back to the client's loop
