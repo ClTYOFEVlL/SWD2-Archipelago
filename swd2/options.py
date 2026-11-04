@@ -172,42 +172,43 @@ class GeneratorsRequired(Choice):
     default = option_all
 
 
-class TeleporterLocations(DefaultOnToggle):
+class Teleportersanity(DefaultOnToggle):
     """
-    Unlocking each of the 25 teleporters (all but El Machino's) is a location. Fast travel still unlocks as usual.
+    Adds every teleporter (except El Machino's) as locations. (25 Locations)
+    Fast travel still unlocks as usual.
     """
-    display_name = "Teleporter Locations"
+    display_name = "Teleportersanity"
 
 
-class HellCaveLocations(Toggle):
+class IncludeTrials(Toggle):
     """
-    Adds the Trials (the hell caves) and their Proof of Completion. Their door needs the Sigillum Caelum et Infernum,
-    which is only in the pool when this is on.
+    Adds the Trials and their Proof of Completion. (1 Location)
+    Their door needs the Sigillum Caelum et Infernum which is only in the pool when this is on.
     """
-    display_name = "Hell Cave Locations"
+    display_name = "Include Trials"
 
 
-class OrbContainers(OptionSet):
+class Orbsanity(OptionSet):
     """
     Adds the chosen kinds of orb containers as locations.
-    
+
     Health (23 Locations)
     Light (34 Locations)
     Mixed (23 Locations)
     Super (5 Locations)
     """
-    display_name = "Orb Containers"
+    display_name = "Orbsanity"
     valid_keys = {"Health", "Light", "Mixed", "Super"}
 
 
-class SecretAreas(OptionSet):
+class Secretsanity(OptionSet):
     """
     Adds the chosen kinds of secrets as locations.
 
     Secret Areas - Hidden rooms. Most also hold a cog container or an artifact. (85 Locations)
     Mini Secrets - Small hidden notches that only chime. Many are a gem or a cog container's spot. (35 Locations)
     """
-    display_name = "Secret Areas"
+    display_name = "Secretsanity"
     valid_keys = {"Secret Areas", "Mini Secrets"}
 
 
@@ -225,7 +226,6 @@ class CogAmount(Range):
 class FillerWeights(OptionCounter):
     """
     Weights of various filler items.
-    Setting one to 0 will disable it. 
     """
     display_name = "Filler Weights"
     min = 0
@@ -341,25 +341,25 @@ TRAP_WEIGHTS = {
 @dataclass
 class SWD2Options(PerGameCommonOptions):
     death_link: DeathLink
+    trap_link: TrapLink
+    generators_required: GeneratorsRequired
     logic_difficulty: LogicDifficulty
     tricks: Tricks
-    shop_price_percent: ShopPricePercent
-    show_shop_items: ShowShopItems
+    include_trials: IncludeTrials
+    teleportersanity: Teleportersanity
+    orbsanity: Orbsanity
+    secretsanity: Secretsanity
     sprint_hydraulics: SprintHydraulics
+    cog_amount: CogAmount
+    progressive_mobility: ProgressiveMobility
     pressure_bomb_items: PressureBombItems
     jackhammer_items: JackhammerItems
     jet_engine_items: JetEngineItems
     hook_items: HookItems
     grenade_items: GrenadeItems
-    progressive_mobility: ProgressiveMobility
-    generators_required: GeneratorsRequired
-    teleporter_locations: TeleporterLocations
-    hell_cave_locations: HellCaveLocations
-    orb_containers: OrbContainers
-    secret_areas: SecretAreas
-    cog_amount: CogAmount
+    shop_price_percent: ShopPricePercent
+    show_shop_items: ShowShopItems
     filler_weights: FillerWeights
-    trap_link: TrapLink
     trap_fill_percentage: TrapFillPercentage
     leaky_tank_trap_weight: LeakyTankTrapWeight
     darkness_trap_weight: DarknessTrapWeight
@@ -374,12 +374,12 @@ class SWD2Options(PerGameCommonOptions):
 OPTION_GROUPS = [
     OptionGroup("Goal", [GeneratorsRequired]),
     OptionGroup("Logic", [LogicDifficulty, Tricks]),
+    OptionGroup("Locations", [IncludeTrials, Teleportersanity, Orbsanity, Secretsanity]),
+    OptionGroup("Items", [SprintHydraulics, CogAmount]),
+    OptionGroup("Tool Items", [ProgressiveMobility, PressureBombItems, JackhammerItems, JetEngineItems, HookItems, GrenadeItems]),
     OptionGroup("Shops", [ShopPricePercent, ShowShopItems]),
-    OptionGroup("Locations", [TeleporterLocations, HellCaveLocations, OrbContainers, SecretAreas]),
-    OptionGroup("Items", [SprintHydraulics, CogAmount, FillerWeights]),
-    OptionGroup("Tool Items", [PressureBombItems, JackhammerItems, JetEngineItems, HookItems, GrenadeItems, ProgressiveMobility]),
-    OptionGroup("Traps", [
-        TrapLink,
+    OptionGroup("Filler and Traps", [
+        FillerWeights,
         TrapFillPercentage,
         LeakyTankTrapWeight,
         DarknessTrapWeight,

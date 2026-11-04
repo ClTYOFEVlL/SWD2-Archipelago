@@ -34,7 +34,7 @@ def create_regions(world: "SWD2World") -> None:
     regions = {START: Region(START, world.player, world.multiworld)}
 
     for data in LOGIC.regions:
-        if data.name.startswith("Trials") and not world.options.hell_cave_locations:
+        if data.name.startswith("Trials") and not world.options.include_trials:
             continue
 
         # A region without a rule has nothing in it (Trials - Gauntlet)

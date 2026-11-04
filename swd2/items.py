@@ -119,7 +119,7 @@ def core_counts(world: "SWD2World") -> dict[str, int]:
         counts[name] -= 1
 
     # The Sigil only opens the Trials
-    if not world.options.hell_cave_locations:
+    if not world.options.include_trials:
         counts[SIGIL] = 0
 
     return counts

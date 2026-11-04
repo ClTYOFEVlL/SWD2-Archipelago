@@ -15,8 +15,8 @@ COMBINATIONS = list(itertools.product(
     ("hard", "normal", "easy"),  # logic_difficulty
     (False, True),  # tricks
     ("shuffled", "vanilla"),  # sprint_hydraulics
-    (True, False),  # teleporter_locations
-    (False, True),  # hell_cave_locations
+    (True, False),  # teleportersanity
+    (False, True),  # include_trials
 ))
 
 
@@ -36,8 +36,8 @@ class TestCombinations(unittest.TestCase):
                 "logic_difficulty": difficulty,
                 "tricks": tricks,
                 "sprint_hydraulics": sprint,
-                "teleporter_locations": teleporters,
-                "hell_cave_locations": trials,
+                "teleportersanity": teleporters,
+                "include_trials": trials,
             }
 
             with self.subTest(**options):
@@ -55,7 +55,7 @@ class TestCombinations(unittest.TestCase):
 class TestCogReduction(SWD2TestBase):
     # Without teleporters the only filler is the Yonker brothers 3 blueprints so 6 excluded locations turn 3 cogs into money
     options = {
-        "teleporter_locations": False,
+        "teleportersanity": False,
         "exclude_locations": [
             "El Machino: Workbench Pickaxe 1",
             "El Machino: Workbench Pickaxe 2",
@@ -72,7 +72,7 @@ class TestCogReduction(SWD2TestBase):
         self.assertEqual(sum(1 for name in names if name.endswith("Money Bundle")), 3)
 
     def test_too_many_exclusions_fail(self):
-        options = {"teleporter_locations": False, "exclude_locations": list(LOCATION_NAME_TO_ID)}
+        options = {"teleportersanity": False, "exclude_locations": list(LOCATION_NAME_TO_ID)}
         with self.assertRaises(OptionError):
             setup_multiworld(SWD2World, options=options)
 
@@ -94,8 +94,8 @@ class TestFillerWeights(SWD2TestBase):
             weights.verify_values()
 
 
-class TestOrbContainers(SWD2TestBase):
-    options = {"orb_containers": ["Health", "Light", "Mixed", "Super"]}
+class TestOrbsanity(SWD2TestBase):
+    options = {"orbsanity": ["Health", "Light", "Mixed", "Super"]}
 
     def test_every_orb_container_is_a_location(self):
         groups = self.world.location_name_groups
@@ -111,7 +111,7 @@ class TestOrbContainers(SWD2TestBase):
 
 
 class TestOneOrbKind(SWD2TestBase):
-    options = {"orb_containers": ["Super"]}
+    options = {"orbsanity": ["Super"]}
 
     def test_only_that_kind(self):
         names = set(self.world.location_names_in_world)
@@ -120,7 +120,7 @@ class TestOneOrbKind(SWD2TestBase):
 
 
 class TestSecretAreasOnly(SWD2TestBase):
-    options = {"secret_areas": ["Secret Areas"]}
+    options = {"secretsanity": ["Secret Areas"]}
 
     def test_no_minis(self):
         names = set(self.world.location_names_in_world)
@@ -129,7 +129,7 @@ class TestSecretAreasOnly(SWD2TestBase):
 
 
 class TestMiniSecretsOnly(SWD2TestBase):
-    options = {"secret_areas": ["Mini Secrets"]}
+    options = {"secretsanity": ["Mini Secrets"]}
 
     def test_no_secret_areas(self):
         names = set(self.world.location_names_in_world)
@@ -138,7 +138,7 @@ class TestMiniSecretsOnly(SWD2TestBase):
 
 
 class TestAllSecrets(SWD2TestBase):
-    options = {"secret_areas": ["Secret Areas", "Mini Secrets"]}
+    options = {"secretsanity": ["Secret Areas", "Mini Secrets"]}
 
     def test_every_secret_is_a_location(self):
         for group, count in (("Secret Areas", 85), ("Mini Secrets", 35)):

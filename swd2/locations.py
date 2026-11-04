@@ -9,7 +9,7 @@ from .money import SHOP_TYPES
 if TYPE_CHECKING:
     from . import SWD2World
 
-# The orb_containers and secret_areas options kinds and their types in the table
+# The orbsanity and secretsanity options kinds and their types in the table
 ORB_TYPES = {"Health": "healthorb", "Light": "lightorb", "Mixed": "mixedorb", "Super": "superorb"}
 SECRET_TYPES = {"Secret Areas": "secret_area", "Mini Secrets": "secret_area_mini"}
 
@@ -69,13 +69,13 @@ def in_trials(location: LocationData) -> bool:
 
 def active_locations(world: "SWD2World") -> list[LocationData]:
     active = []
-    orb_types = {ORB_TYPES[kind] for kind in world.options.orb_containers.value}
-    secret_types = {SECRET_TYPES[kind] for kind in world.options.secret_areas.value}
+    orb_types = {ORB_TYPES[kind] for kind in world.options.orbsanity.value}
+    secret_types = {SECRET_TYPES[kind] for kind in world.options.secretsanity.value}
 
     for location in ALL_LOCATIONS:
-        if location.type == "teleporter" and not world.options.teleporter_locations:
+        if location.type == "teleporter" and not world.options.teleportersanity:
             continue
-        if in_trials(location) and not world.options.hell_cave_locations:
+        if in_trials(location) and not world.options.include_trials:
             continue
         if location.type in ORB_TYPES.values() and location.type not in orb_types:
             continue

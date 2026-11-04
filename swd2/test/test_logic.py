@@ -93,8 +93,8 @@ class TestUniversalTracker(SWD2TestBase):
         options = {
             "logic_difficulty": "hard",
             "tricks": True,
-            "teleporter_locations": False,
-            "hell_cave_locations": True,
+            "teleportersanity": False,
+            "include_trials": True,
             "shop_price_percent": 55,
         }
         original = setup_multiworld(SWD2World, seed=5, options=options).worlds[1]
