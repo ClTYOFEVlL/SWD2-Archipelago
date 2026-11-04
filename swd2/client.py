@@ -5,15 +5,7 @@ import sys
 import time
 
 import Utils
-from CommonClient import (
-    ClientCommandProcessor,
-    CommonContext,
-    get_base_parser,
-    gui_enabled,
-    handle_url_arg,
-    logger,
-    server_loop,
-)
+from CommonClient import CommonContext, get_base_parser, gui_enabled, handle_url_arg, logger, server_loop
 from MultiServer import mark_raw
 from NetUtils import ClientStatus, NetworkItem
 
@@ -21,6 +13,14 @@ from . import bridge_protocol as protocol, game_copy
 from .bridge_connection import BridgeConnection
 from .data import BASE_ID, LOCATIONS
 from .items import GAME, ITEM_NAME_GROUPS, TRAP_LINK_NAMES, tool_option_items
+
+tracker_loaded = False
+try:
+    from worlds.tracker.TrackerClient import TrackerGameContext as SuperContext
+
+    tracker_loaded = True
+except ModuleNotFoundError:
+    SuperContext = CommonContext
 
 SHOWN_STORE = "swd2_items_shown"  # persistent storage: "<seed name>:<slot>" -> how many items the game has shown
 HIDDEN_NAME = "Archipelago Item"  # an item on offer, when the seed hides shop items
@@ -36,7 +36,7 @@ NAMED_LOCATIONS = {
 }
 
 
-class SWD2CommandProcessor(ClientCommandProcessor):
+class SWD2CommandProcessor(SuperContext.command_processor):
     ctx: "SWD2Context"
 
     @mark_raw
@@ -71,8 +71,9 @@ class SWD2CommandProcessor(ClientCommandProcessor):
         return True
 
 
-class SWD2Context(CommonContext):
+class SWD2Context(SuperContext):
     game = GAME
+    tags = {"AP"}
     items_handling = 0b111  # every item comes through the bridge: other worlds, your own and the starting inventory
     want_slot_data = True
     command_processor = SWD2CommandProcessor
@@ -94,7 +95,7 @@ class SWD2Context(CommonContext):
 
     async def server_auth(self, password_requested: bool = False):
         if password_requested and not self.password:
-            await super().server_auth(password_requested)
+            await CommonContext.server_auth(self, password_requested)
 
         await self.get_username()
         await self.send_connect()
@@ -124,6 +125,8 @@ class SWD2Context(CommonContext):
         return f"{self.server_seed_name}:{self.slot}"
 
     def on_package(self, cmd: str, args: dict):
+        super().on_package(cmd, args)
+
         if cmd == "Connected":
             self.slot_data = args["slot_data"]
             self.shown = Utils.persistent_load().get(SHOWN_STORE, {}).get(self.shown_key, 0)
@@ -382,6 +385,8 @@ async def run(args):
     ctx.server_task = asyncio.create_task(server_loop(ctx), name="server loop")
     bridge_task = asyncio.create_task(ctx.bridge.run(ctx.exit_event), name="bridge")
 
+    if tracker_loaded:
+        ctx.run_generator()
     if gui_enabled:
         ctx.run_gui()
     ctx.run_cli()
