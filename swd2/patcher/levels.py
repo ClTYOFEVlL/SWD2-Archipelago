@@ -107,6 +107,23 @@ def lamp(level: script.Level) -> None:
     script.set_prop(breaker, "HideNewMarker", "True", expect="False")
 
 
+def temple_gate(level: script.Level) -> None:
+    """The timed gate before Fen stays open so the rooms before it can be reached again after leaving."""
+    # The gate's floor switch toggles it on press and on release
+    opener = level.node(32569581, "ToggleEntity")
+    opener.find("Definition").text = "EnableEntity"
+    script.prop(opener, "Enable", "Boolean", "True")
+
+    enter = level.add_node("OnEnterLevel", "AP_TempleGateEnter", [
+        ("IfEnteredNormally", "Boolean", "True"),
+        ("IfFastTraveled", "Boolean", "True"),
+        ("IfLoadedGame", "Boolean", "True"),
+        ("IfLoadedCheckpoint", "Boolean", "True"),
+        ("IfRevived", "Boolean", "True"),
+    ])
+    script.connect(enter, opener)
+
+
 def shops(level: script.Level) -> None:
     """Carson's and Clifford's reward nodes give nothing. The purchase counts are the checks."""
     # After Carson's PayForPriceListItem carson_cogs
@@ -123,7 +140,7 @@ STORY_PATCHES = {
     HUB_MAIN: [hook_gate],
     VECTRON: [vectron],
     SAVING_RUSTY: [goal],
-    TEMPLE: [lamp],
+    TEMPLE: [lamp, temple_gate],
     EL_MACHINO: [shops, temple_exit],
     INTRO: [intro],
 }

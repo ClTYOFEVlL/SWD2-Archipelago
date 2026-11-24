@@ -66,7 +66,7 @@ class ShowShopItems(DefaultOnToggle):
 class SprintHydraulics(Choice):
     """
     Where the Sprint Hydraulics are.
-    Almost everything needs them. Until they arrive you have only the Temple's first few checks.
+    Until Sprint Hydraulics, the Hook Shot or the Jet Engine arrive, you have only the Temple's first few checks.
 
     Shuffled - Anywhere in the multiworld.
 

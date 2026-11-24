@@ -7,7 +7,6 @@ from .. import SWD2World
 from ..money import MONEY
 from .bases import SWD2TestBase
 
-YONKER_WEST = "West Desert - Intro: Zebulon Yonker's blueprint"
 JET_2 = "El Machino: Workbench Jet Engine 2"
 
 
@@ -58,14 +57,6 @@ class TestEasy(SWD2TestBase):
 
 
 class TestStartInventory(SWD2TestBase):
-    def test_start_items_dont_reach_yonkers_ledge(self):
-        """The bridge gives nothing before falling into Temple of Guidance so items shouldn't reach the ledge"""
-        self.collect_by_name("Progressive Jet Engine")
-        self.assertFalse(self.can_reach_location(YONKER_WEST))
-
-        self.collect_by_name("Sprint Hydraulics")
-        self.assertTrue(self.can_reach_location(YONKER_WEST))
-
     def test_items_from_the_pool_keep_their_progression(self):
         for name in ("Progressive Pressure Bomb", "Progressive Armor"):
             with self.subTest(name):
